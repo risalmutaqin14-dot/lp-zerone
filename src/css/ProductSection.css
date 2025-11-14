@@ -1,0 +1,31 @@
+
+
+
+.request-demo-btn {
+  display: inline-flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #1c76d2, #3498db);  /* Latar belakang gradasi biru */
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px 12px 13px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.request-demo-btn:hover {
+  background: linear-gradient(90deg, #3498db, #1c76d2);  /* Perubahan warna saat hover */
+  transform: translateY(-2px);  /* Efek hover untuk sedikit angkat tombol */
+}
+
+.button-text {
+  margin-right: 10px;  /* Jarak antara teks dan ikon */
+}
+
+.button-icon {
+  font-size: 18px;  /* Ukuran ikon panah */
+}
