@@ -51,7 +51,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Animated underline: move a single underline element to active/hovered link
+  // Animated underline: show underline only for active item
   useEffect(() => {
     const menu = menuRef.current;
     if (!menu) return;
@@ -59,53 +59,29 @@ const Navbar = () => {
     const updateUnderline = () => {
       const active = menu.querySelector(".nav-item.active");
       if (active) {
-        const left = active.offsetLeft;
-        const width = active.offsetWidth;
-        menu.style.setProperty("--u-left", `${left}px`);
-        menu.style.setProperty("--u-width", `${width}px`);
         menu.classList.add("underline-visible");
       } else {
         menu.classList.remove("underline-visible");
       }
     };
 
-    // Hover interactions: move underline to hovered item, restore to active on leave
-    const onMouseOver = (e) => {
-      const target = e.target.closest(".nav-item");
-      if (!target || !menu.contains(target)) return;
-      const left = target.offsetLeft;
-      const width = target.offsetWidth;
-      menu.style.setProperty("--u-left", `${left}px`);
-      menu.style.setProperty("--u-width", `${width}px`);
-      menu.classList.add("underline-visible");
-    };
-
-    const onMouseOut = (e) => {
-      // restore active
-      updateUnderline();
-    };
-
     // initial update
     const t = setTimeout(updateUnderline, 50);
     window.addEventListener("resize", updateUnderline);
-    menu.addEventListener("mouseover", onMouseOver);
-    menu.addEventListener("mouseout", onMouseOut);
 
     return () => {
       clearTimeout(t);
       window.removeEventListener("resize", updateUnderline);
-      menu.removeEventListener("mouseover", onMouseOver);
-      menu.removeEventListener("mouseout", onMouseOut);
     };
   }, [location.pathname, isMenuOpen]);
 
   return (
     <div
-      className={`mx-auto navbar py-7 flex items-center justify-between px-4 md:px-16 lg:px-32 ${
+      className={`navbar absoulute top-0 z-[999] py-4 px-4 md:px-16 lg:px-32 ${
         isScrolled ? "scrolled" : ""
       } ${!isHomePage ? "non-home" : ""}`}
     >
-      <nav className="container mx-auto flex justify-between">
+      <nav className="mx-auto flex items-center justify-between">
         <div className="logo">
           <img
             src={isHomePage && !isScrolled ? logos.whitelogo : logos.bluelogo}
@@ -149,7 +125,7 @@ const Navbar = () => {
         <div
           id="main-navigation"
           ref={menuRef}
-          className={`menu container mx-auto md:flex md:items-center md:gap-8 fixed left-1/2 -translate-x-1/2 md:static md:translate-x-0 ${
+          className={`menu md:flex md:items-center md:gap-8 fixed  md:static  md:flex-1 md:justify-end ${
             isMenuOpen
               ? "top-20 opacity-100 visible"
               : "top-[-100%] md:top-0 opacity-0 md:opacity-100 invisible md:visible"
