@@ -234,11 +234,12 @@
   /* Mobile menu colors: ensure items are visible on dark background */
   .menu.visible .nav-item,
   .menu .nav-item {
-    color: #fff;
+    color: #FFF;
   }
 
   .menu .dropdown-item {
-    color: #fff;
+    color: #000;
+    padding: 15px 25px 15px 25px;
   }
 
   /* ensure underline is not awkward on mobile - keep subtle */

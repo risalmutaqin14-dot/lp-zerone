@@ -1,10 +1,22 @@
+import React from "react";
 import { mockup } from "../data";
+import { useForm } from "react-hook-form";
 
 export default function Contact() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    // Di sini kamu bisa mengirim data ke API atau proses lebih lanjut
+  };
   return (
     <>
       <div className="webApp pt-15 lg:pt-5">
-        {/* deskripsi zerone */}
+        {/* Contact */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
             <span className="text-justify text-[24px] ">Contact US</span>
@@ -18,7 +30,6 @@ export default function Contact() {
               general questions. We’ll respond as soon as possible.
             </span>
             <div className=" lg:w-1/2 align-middle lg:pl-6">
-              
               <div className="flex mt-8 items-center">
                 <span className="mr-2 flex items-center  rounded-full p-1 mr-4">
                   <svg
@@ -56,7 +67,7 @@ export default function Contact() {
                     height="24px"
                     viewBox="0 -960 960 960"
                     width="24px"
-                    fill="#00000"
+                    fill="#000000"
                   >
                     <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
                   </svg>
@@ -68,22 +79,109 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div></div>
+          {/* Form */}
+          <div className=" p-6 rounded-[20px]  shadow-md bg-[#F5F9FF]">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+              {/* Name Field */}
+              <div>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Name"
+                  {...register("name", { required: "Name is required" })}
+                  className="w-full h-[60px] mt-1 px-3 py-2 border-2 border-[#00A9E8] rounded-[15px] focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+                {errors.name && (
+                  <span className="text-red-500 text-sm">
+                    {errors.name.message}
+                  </span>
+                )}
+              </div>
+
+              {/* Email Field */}
+              <div>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="email"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value:
+                        /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
+                      message: "Invalid email address",
+                    },
+                  })}
+                  className="w-full h-[60px] mt-1 px-3 py-2 border-2 border-[#00A9E8] rounded-[15px] focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+                {errors.email && (
+                  <span className="text-red-500 text-sm">
+                    {errors.email.message}
+                  </span>
+                )}
+              </div>
+
+              {/* Number Field */}
+              <div>
+                <input
+                  id="name"
+                  type="tel"
+                  placeholder="Phone / WhatsApp"
+                  {...register("name", { required: "Name is required" })}
+                  className="w-full h-[60px] mt-1 px-3 py-2 border-2 border-[#00A9E8] rounded-[15px] focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+                {errors.name && (
+                  <span className="text-red-500 text-sm">
+                    {errors.name.message}
+                  </span>
+                )}
+              </div>
+
+              {/* Message Field */}
+              <div>
+                <textarea
+                  id="message"
+                  placeholder="Your Message"
+                  {...register("message", { required: "Message is required" })}
+                  rows="4"
+                  className="w-full mt-1 px-3 py-2 border-2 border-[#00A9E8] rounded-[15px] focus:outline-none focus:ring-2 focus:ring-blue-400"
+                ></textarea>
+                {errors.message && (
+                  <span className="text-red-500 text-sm">
+                    {errors.message.message}
+                  </span>
+                )}
+              </div>
+
+              {/* Submit Button */}
+              <div className="container   mt-8">
+                <a href="#" className="request-demo-btn center">
+                  <span className="button-icon mr-2 flex items-center bg-[#00A9E8] rounded-full p-1 mr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#FFFFFF"
+                    >
+                      <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                    </svg>
+                  </span>
+                  <span className="button-text">Get a Solution</span>
+                </a>
+              </div>
+            </form>
+          </div>
         </div>
 
-
-
-
-
-        <div className=" container mx-auto max-w-screen-xl my-20">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d701.0432617503754!2d106.65250108970972!3d-6.303182023946195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbecde2cc1b1%3A0xa154bae00576df77!2sPT.%20Global%20Zerone%20Digital!5e0!3m2!1sid!2sid!4v1762569849687!5m2!1sid!2sid"
-              width="100%"
-              height="400px"
-              style={{ borderRadius: "20px" }}
-            />
-          </div>
-     
+        <div className=" container mx-auto max-w-screen-xl my-30">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d701.0432617503754!2d106.65250108970972!3d-6.303182023946195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbecde2cc1b1%3A0xa154bae00576df77!2sPT.%20Global%20Zerone%20Digital!5e0!3m2!1sid!2sid!4v1762569849687!5m2!1sid!2sid"
+            width="100%"
+            height="400px"
+            style={{ borderRadius: "20px" }}
+          />
+        </div>
       </div>
     </>
   );

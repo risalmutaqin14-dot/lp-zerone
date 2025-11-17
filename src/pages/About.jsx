@@ -18,26 +18,26 @@ export default function About() {
         </h3>
 
         {/* deskripsi zerone */}
-        <div className="container mx-auto lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
+        <div className="container mx-auto lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-15 sm:grid-cols-2  lg:grid-cols-2">
           <div>
-            <span className="text-justify text-[24px]">
+            <p className="[text-align:justify] text-[24px]">
               Zerone is a digital solution company focused on helping and
               ensuring business entities grow and accelerate their potential by
               using a high-quality software engineering method. We help
               companies from various backgrounds, especially educational service
               companies, schools, and project managers to utilize technology
               usage and accelerate their growth.
-            </span>
+            </p>
           </div>
           <div>
-            <span className="text-justify text-[24px]">
+            <p className="[text-align:justify] text-[24px]">
               Founded in 2021 by education technologies and developers,
               zerone.id has solid and creative team members that have proven to
               deliver high-quality software applications to maximize the goals
               of a product or project. We focus on providing high-edge software
               products, mainly for educational purposes, and also on helping
               companies to digitize their ideas or services.
-            </span>
+            </p>
           </div>
         </div>
 

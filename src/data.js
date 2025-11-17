@@ -1,3 +1,22 @@
+// Data DUmmy for blogs
+export const blogs = [
+  { id: 1, title: 'Blog Post 1', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 25, 2022' },
+  { id: 2, title: 'Blog Post 2', description: 'This is a description of blog 2', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 26, 2022' },
+  { id: 3, title: 'Blog Post 3', description: 'This is a description of blog 3', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 27, 2022' },
+  { id: 4, title: 'Blog Post 4', description: 'This is a description of blog 4', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 28, 2022' },
+  { id: 5, title: 'Blog Post 5', description: 'This is a description of blog 5', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 29, 2022' },
+  { id: 6, title: 'Blog Post 6', description: 'This is a description of blog 6', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 30, 2022' },
+  // Add more blogs as needed
+  { id: 1, title: 'Blog Post 7', description: 'This is a description of blog 1', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 25, 2022' },
+  { id: 2, title: 'Blog Post 8', description: 'This is a description of blog 2', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 26, 2022' },
+  { id: 3, title: 'Blog Post 9', description: 'This is a description of blog 3', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 27, 2022' },
+  { id: 4, title: 'Blog Post 10', description: 'This is a description of blog 4', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 28, 2022' },
+];
+
+
+
+
+
 export const logos = {
   whitelogo: "https://api.builder.io/api/v1/image/assets/TEMP/5cc82c1b74253eb2cb033c88db7f65b415db9fe7?width=210",
   bluelogo: "/assets/Zerone-biru.png",
@@ -16,6 +35,7 @@ export const heroImage = {
   bgHorizontal: "/assets/bg-linear.png",
   visimisi: "/assets/bg-vm.png",
 };
+
 
 
 export const banner = {

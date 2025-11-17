@@ -11,6 +11,13 @@ body {
   background: #fff;
 }
 
+.about-section p {
+  font-size: 24px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #505d68;
+  font-weight: 500; /* make paragraph text bold but not overly heavy */
+}
 .about-container {
   max-width: 1440px;
   margin: 0 auto;
@@ -19,6 +26,7 @@ body {
 }
 
 .about-title {
+
   text-align: center;
   font-family: Onest;
   font-size: 36px;
@@ -29,7 +37,7 @@ body {
 
 }
 
-p {
+.about-section p {
   font-size: 24px;
   margin-bottom: 60px;
   text-align: center;

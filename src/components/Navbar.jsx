@@ -134,12 +134,22 @@ const Navbar = () => {
           <NavLink
             to="/"
             className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
+            onClick={() => {
+              setIsMenuOpen(false);
+              setIsSolutionOpen(false);
+              setIsProductOpen(false);
+            }}
           >
             Home
           </NavLink>
           <NavLink
             to="/about"
             className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
+            onClick={() => {
+              setIsMenuOpen(false);
+              setIsSolutionOpen(false);
+              setIsProductOpen(false);
+            }}
           >
             About Us
           </NavLink>
@@ -161,33 +171,34 @@ const Navbar = () => {
               Solution
             </button>
             <div id="solution-submenu" className={`dropdown-menu ${isSolutionOpen ? 'open' : ''}`}>
-              <Link to="/web-app" className="dropdown-item">
+              <Link to="/web-app" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Web App Development
               </Link>
-              <Link to="/mobile-app" className="dropdown-item">
+              <Link to="/mobile-app" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Mobile App Development
               </Link>
-              <Link to="/wordpres-dev" className="dropdown-item">
+              <Link to="/wordpress-dev" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Wordpres Development
               </Link>
-              <Link to="/cms" className="dropdown-item">
+              <Link to="/cms" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Content Management System
               </Link>
-              <Link to="/uiux" className="dropdown-item">
+              <Link to="/uiux" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 UIUX Design
               </Link>
-              <Link to="/digital-marketing" className="dropdown-item">
+              <Link to="/digital-marketing" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Digital Marketing & SEO
               </Link>
-              <Link to="/patment-gateway" className="dropdown-item">
+              <Link to="/payment-gateway" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Payment Gateway Integration
               </Link>
-              <Link to="/graphic-design" className="dropdown-item">
+              <Link to="/graphic-design" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Graphic & Vidio Production
               </Link>
               <Link
                 to="/digital-strategy-consulting"
                 className="dropdown-item"
+                onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}
               >
                 Digital Strategy Consulting
               </Link>
@@ -211,25 +222,25 @@ const Navbar = () => {
               Our Product
             </button>
             <div id="product-submenu" className={`dropdown-menu ${isProductOpen ? 'open' : ''}`}>
-              <Link to="/Edunav" className="dropdown-item">
+              <Link to="/Edunav" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 EduNav
               </Link>
-              <Link to="/venti" className="dropdown-item">
+              <Link to="/venti" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Venti
               </Link>
-              <Link to="/latihan" className="dropdown-item">
+              <Link to="/latihan" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Latihan.id
               </Link>
-              <Link to="/rajin" className="dropdown-item">
+              <Link to="/rajin" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Rajin.id
               </Link>
-              <Link to="/writing-aide" className="dropdown-item">
+              <Link to="/writing-aide" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Writing Aide
               </Link>
-              <Link to="/maridukung" className="dropdown-item">
+              <Link to="/mari-dukung" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 MariDukug.com
               </Link>
-              <Link to="/jadwal-kuliah" className="dropdown-item">
+              <Link to="/jadwal-kuliah" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Jadwal Kuliah
               </Link>
             </div>
@@ -238,12 +249,22 @@ const Navbar = () => {
           <NavLink
             to="/blog"
             className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
+            onClick={() => {
+              setIsMenuOpen(false);
+              setIsSolutionOpen(false);
+              setIsProductOpen(false);
+            }}
           >
             Blog
           </NavLink>
           <NavLink
             to="/contact"
             className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
+            onClick={() => {
+              setIsMenuOpen(false);
+              setIsSolutionOpen(false);
+              setIsProductOpen(false);
+            }}
           >
             Contact
           </NavLink>
