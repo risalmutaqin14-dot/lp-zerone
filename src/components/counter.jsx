@@ -52,7 +52,7 @@ const Counter = ({ start = 0, end, duration = 3000 }) => {
 
   return (
     <div ref={counterRef} className="text-center">
-      <div className="text-4xl font-bold">
+      <div className=" text-2xl lg:text-4xl font-bold">
         {count} <span className="text-gray-500">+</span>
       </div>
     </div>

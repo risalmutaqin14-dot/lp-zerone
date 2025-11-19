@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import useScrollAnimation from "./components/useScrollAnimation";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
@@ -25,6 +26,9 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/contact";
 
 function App() {
+  // Aktifkan scroll animation untuk semua halaman
+  useScrollAnimation();
+  
   return (
     <div className="App">
       <Routes>
@@ -56,3 +60,4 @@ function App() {
 }
 
 export default App;
+

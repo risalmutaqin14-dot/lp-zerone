@@ -1,3 +1,6 @@
+import EduNav from "./pages/edunav";
+import JadwalKuliah from "./pages/JadwalKuliah";
+
 // Data DUmmy for blogs
 export const blogs = [
   { id: 1, title: 'Blog Post 1', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 25, 2022' },
@@ -39,7 +42,13 @@ export const heroImage = {
 
 
 export const banner = {
-  venti : "/assets/banner-produk/banner-produk.png"
+  edunav : "/assets/banner-produk/edunav.png",
+  venti : "/assets/banner-produk/venti.png",
+  jadwalkuliah : "/assets/banner-produk/jadwalkuliah.png",
+  latihan: "/assets/banner-produk/latihan.png",
+  rajin : "/assets/banner-produk/rajin.png",
+  writingaide : "/assets/banner-produk/writingaide.png",
+  maridukung : "/assets/banner-produk/maridukung.png",
 }
 
 export const imgstack = {
@@ -61,6 +70,28 @@ export const ilustration = {
   ilusAbout1 : "/assets/iconilustration/collaborative.png",
   ilusAbout2 : "/assets/iconilustration/customer.png",
   ilusAbout3 : "/assets/iconilustration/support.png",
+  ilusEdunav2 : "/assets/iconilustration/sp-edunav/1.png",
+  ilusEdunav3 : "/assets/iconilustration/sp-edunav/2.png",
+  ilusEdunav1 : "/assets/iconilustration/sp-edunav/3.png",
+  ilusventi1 : "/assets/iconilustration/sp-venti/1.png",
+  ilusventi2 : "/assets/iconilustration/sp-venti/2.png",
+  ilusventi3 : "/assets/iconilustration/sp-venti/3.png",
+  iluslatihan1 : "/assets/iconilustration/sp-latihan/1.png",
+  iluslatihan2 : "/assets/iconilustration/sp-latihan/2.png",
+  iluslatihan3 : "/assets/iconilustration/sp-latihan/3.png",
+  ilusrajin1 : "/assets/iconilustration/sp-rajin/1.png",
+  ilusrajin2 : "/assets/iconilustration/sp-rajin/2.png",
+  ilusrajin3 : "/assets/iconilustration/sp-rajin/3.png",
+  iluswriting1 : "/assets/iconilustration/sp-writingaide/1.png",
+  iluswriting2 : "/assets/iconilustration/sp-writingaide/2.png",
+  iluswriting3 : "/assets/iconilustration/sp-writingaide/3.png",
+  iluswriting4 : "/assets/iconilustration/sp-writingaide/4.png",
+  ilusmaridukung1 : "/assets/iconilustration/sp-maridukung/1.png",
+  ilusmaridukung2 : "/assets/iconilustration/sp-maridukung/2.png",
+  ilusmaridukung3 : "/assets/iconilustration/sp-maridukung/3.png",
+  ilusjadwalkuliah1 : "/assets/iconilustration/sp-jadwalkuliah/1.png",
+  ilusjadwalkuliah2 : "/assets/iconilustration/sp-jadwalkuliah/2.png",
+  ilusjadwalkuliah3 : "/assets/iconilustration/sp-jadwalkuliah/3.png",
 }
 
 

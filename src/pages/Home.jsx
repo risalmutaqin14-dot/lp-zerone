@@ -1,14 +1,16 @@
 import "../css/Home.css";
 import "../css/ProductSection.css";
+import "../css/Animasi.css";
 import { Partner } from "../components/partners.jsx";
 import { heroImage, servicesFeatures, imgstack } from "../data";
 import CardSwap, { Card } from "../components/visiMisi.jsx";
 import Counter from "../components/counter.jsx";
 import ProductSection from "../components/ProductSection.jsx";
 import Faq from "../components/Faq";
-import Footer from "../components/Footer.jsx";
+
 
 export default function Home() {
+  
   return (
     <>
       <div className="hero max-h-[1220px]  mx-auto relative overflow-hidden">
@@ -20,7 +22,8 @@ export default function Home() {
           />
 
           <div className="hero-content">
-            <h1 className="main-title">
+            
+            <h1 className="main-title slide-fade" >
               Transform Your Institution with Zerone Global Digital Solution.
             </h1>
 
@@ -32,9 +35,10 @@ export default function Home() {
             </p>
 
             <button className="cta-button">Explore Our Solutions</button>
-            <div className="device-mockup justify-center items-center w-full h-screen">
+            <div className="device-mockup justify-center items-center w-full h-screen ">
               <img src={heroImage.image} alt="" />
             </div>
+            
           </div>
         </div>
         <div className="bottom-gradient"></div>
@@ -45,19 +49,19 @@ export default function Home() {
 
       {/* Visi Misi Section */}
       <div
-        className="visiMisi bg-no-repeat bg-cover "
+        className="visiMisi bg-no-repeat bg-cover"
         style={{ backgroundImage: `url(${heroImage.bgHorizontal})` }}
       >
         <div className=" lg:flex container mx-auto  bg-cover bg-center">
           <div className="container lg:w-1/2 flex flex-col px-8 pt-14 sm:px-15 sm:pt-20 md:pt-30 md:px-30">
-            <span className="text-[24px] sm:text-xl text-white mb-4">
+            <span className="text-[24px] sm:text-xl text-white mb-4" >
               Our Service
             </span>
-            <h3 className="text-[36px] sm:text-3xl lg:text-4xl font-bold text-white  mb-6">
+            <h3 className="text-[36px] sm:text-3xl lg:text-4xl font-bold text-white  mb-6 ">
               We create digital <br />
               solutions that matter.
             </h3>
-            <span className="text-[18px] sm:text-lg lg:text-xl text-white  mb-6">
+            <span className="text-[18px] sm:text-lg lg:text-xl text-white  mb-6 ">
               PT Global Zerone Digital provides cutting-edge digital solutions
               for education, institutions, and community engagement. Our goal is
               to make technology simple, reliable, and impactful.
@@ -100,8 +104,8 @@ export default function Home() {
       </div>
 
       {/* counter section */}
-      <div className="counter-section text-center p-8 bg-white pt-20">
-        <p className="tagline2 text-2xl font-semibold text-gray-800">
+      <div className="counter-section text-center p-8 bg-white pt-20 ">
+        <p className="tagline2 text-2xl font-semibold text-gray-800 " >
           Global Digital Solution
         </p>
         <span className="tagline-description text-lg text-gray-600 my-4">
@@ -154,16 +158,16 @@ export default function Home() {
           </div>
 
           {/* Service Grid Section */}
-          <div className=" mt-20 grid grid-cols-1 gap-4 sm:grid-cols-3  lg:grid-cols-3">
-            <img src={servicesFeatures.cms} alt="Content Management System" />
-            <img src={servicesFeatures.appDev} alt="Mobile App Development" />
-            <img src={servicesFeatures.webDev} alt="Web App Development" />
-            <img src={servicesFeatures.wordpess} alt="wordpess Development" />
-            <img src={servicesFeatures.uiux} alt="uiux design" />
-            <img src={servicesFeatures.digmar} alt="digital marketing" />
-            <img src={servicesFeatures.payment} alt="Web App Development" />
-            <img src={servicesFeatures.desain} alt="Web App Development" />
-            <img src={servicesFeatures.strategy} alt="Web App Development" />
+          <div className=" mt-20 grid grid-cols-1 gap-4 sm:grid-cols-3  lg:grid-cols-3 ">
+            <img  src={servicesFeatures.cms} alt="Content Management System" />
+            <img  src={servicesFeatures.appDev} alt="Mobile App Development" />
+            <img  src={servicesFeatures.webDev} alt="Web App Development" />
+            <img  src={servicesFeatures.wordpess} alt="wordpess Development" />
+            <img  src={servicesFeatures.uiux} alt="uiux design" />
+            <img  src={servicesFeatures.digmar} alt="digital marketing" />
+            <img  src={servicesFeatures.payment} alt="Web App Development" />
+            <img  src={servicesFeatures.desain} alt="Web App Development" />
+            <img  src={servicesFeatures.strategy} alt="Web App Development" />
           </div>
         </section>
       </div>
@@ -173,17 +177,17 @@ export default function Home() {
 
       
       <div className="service bg-white">
-        <div className="tech-stack container mx-auto lg:flex container mx-auto  lg:px-35 p-8 bg-white pt-20 pb-20 bg-[#dfe7f2]">
+        <div className="tech-stack container mx-auto lg:flex container mx-auto  lg:px-35 p-8 bg-white lg:pt-20 pb-20 bg-[#dfe7f2]">
           <div className=" lg:w-1/2">
-            <h3 className="text-[36px] font-bold text-gray-600 mb-6 mt-15">
+            <h3 className="text-[36px] font-bold text-gray-600 mb-6 lg:mt-15">
               Built With <br></br>Modern Technologies
             </h3>
-            <span className="text-[24px] text-left  text-gray-600 mb-6 lg:mt-5">
+            <span className="text-[18px] text-[24px] mb-20 text-left  text-gray-600 mb-6 lg:mt-5 md:pr-[100px]">
               Our solutions are built using modern technologies that adapt to
               your business processes
             </span>
           </div>
-          <div className=" lg:w-1/2 align-middle">
+          <div className=" lg:w-1/2 align-middle mt-[50px] md:mt-0">
             <img src={imgstack.stackDev} alt="stack" />
           </div>
         </div>

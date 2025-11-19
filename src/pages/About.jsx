@@ -30,7 +30,7 @@ export default function About() {
             </p>
           </div>
           <div>
-            <p className="[text-align:justify] text-[24px]">
+            <p className="[text-align:justify] text-[24px] ">
               Founded in 2021 by education technologies and developers,
               zerone.id has solid and creative team members that have proven to
               deliver high-quality software applications to maximize the goals
@@ -42,7 +42,7 @@ export default function About() {
         </div>
 
         {/* Section  visi misi*/}
-        <div className="container mx-auto lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2 ">
+        <div className="container mx-auto lg:px-30 px-5 mt-8 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2 ">
           <div
             className="bg-no-repeat bg-cover p-10 text-white lg:mr-5 rounded-[20px]"
             style={{ backgroundImage: `url(${heroImage.visimisi})` }}

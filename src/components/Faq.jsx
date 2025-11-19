@@ -7,16 +7,16 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: 'How do I start working with Zerone?',
-      answer: 'Contact us through our website or email, and our team will guide you through the quick onboarding and project setup process.'
+      question: 'What is Zerone.id?',
+      answer: 'Zerone.id is a digital solutions company (Global Digital Solution) based in Tangerang, Indonesia. They focus on web application development, mobile applications, information systems, UI/UX, and other technology services.'
     },
     {
-      question: 'What services do you offer?',
-      answer: 'We offer a variety of software development services, including web development, mobile apps, and cloud solutions.'
+      question: 'Who is the Zerone solution intended for?',
+      answer: 'Zerone serves various types of clients, with particular expertise in the education sector (schools, educational institutions) and small to medium-sized enterprises.'
     },
     {
-      question: 'What is the pricing model?',
-      answer: 'We offer both fixed-price and hourly-based pricing depending on the project needs.'
+      question: 'Does Zerone have experience in large projects/public institutions?',
+      answer: 'Yes, Zerone has experience in developing applications such as EduNav, which is already used by more than 50 schools in more than 4 countries with more than 42,000 active users.'
     },
   ];
 
