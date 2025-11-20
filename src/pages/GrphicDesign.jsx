@@ -29,9 +29,9 @@ export default function GrafikDesain() {
           </div>
           <div>
             <img
-              src=""
-              alt="Digital Mareting & SEO"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
+              src={mockup.graphic}
+              alt="Graphic and Video Production"
+              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20 relative lg:left-[-80px] mb-10"
             />
           </div>
         </div>

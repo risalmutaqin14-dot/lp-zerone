@@ -29,7 +29,7 @@ export default function CMS() {
           </div>
           <div>
             <img
-              src=""
+              src={mockup.uiux}
               alt="UIUX Design"
               className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
             />

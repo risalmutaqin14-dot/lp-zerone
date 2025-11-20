@@ -27,7 +27,15 @@ export const logos = {
 };
 
 export const mockup = {
-  webapp : "/assets/mockup/webApp.png"
+  webapp : "/assets/mockup/webApp.png",
+  mobileapp : "/assets/mockup/mobileApp.png",
+  wordpress : "/assets/mockup/WORDPRESS.png",
+  cms : "/assets/mockup/cms.png",
+  uiux : "/assets/mockup/uiux.png",
+  digmar: "/assets/mockup/digmar.png",
+  payment: "/assets/mockup/payment.png",
+  digcon: "/assets/mockup/digitalconsulting.png",
+  graphic: "/assets/mockup/desaingrafis.png",
 }
 
 export const heroImage = {
@@ -49,6 +57,13 @@ export const banner = {
   rajin : "/assets/banner-produk/rajin.png",
   writingaide : "/assets/banner-produk/writingaide.png",
   maridukung : "/assets/banner-produk/maridukung.png",
+  mobileedunav : "/assets/banner-produk/Mobile/edunav.png",
+  mobileventi : "/assets/banner-produk/Mobile/venti.png",
+  mobilejadwalkuliah : "/assets/banner-produk/Mobile/jadwal.png",
+  mobilelatihan: "/assets/banner-produk/Mobile/latihan.png",
+  mobilerajin : "/assets/banner-produk/Mobile/rajin.png",
+  mobilewritingaide : "/assets/banner-produk/Mobile/writing.png",
+  mobilemaridukung : "/assets/banner-produk/Mobile/maridukung.png",
 }
 
 export const imgstack = {

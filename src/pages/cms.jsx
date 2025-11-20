@@ -29,9 +29,9 @@ export default function CMS() {
           </div>
           <div>
             <img
-              src=""
+              src={mockup.cms}
               alt="CMS development"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
+              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20 relative lg:left-[-50px] left-[-5px]"
             />
           </div>
         </div>

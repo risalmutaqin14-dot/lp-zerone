@@ -25,9 +25,9 @@ export default function Payment() {
           </div>
           <div>
             <img
-              src=""
-              alt="Digital Strategy Consulting"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
+              src={mockup.payment}
+              alt="Payment Gateway Integration"
+              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20 relative lg:left-[-80px]"
             />
           </div>
         </div>

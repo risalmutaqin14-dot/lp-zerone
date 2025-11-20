@@ -26,7 +26,7 @@ export default function WordpressDev() {
           </div>
           <div>
             <img
-              src={mockup.webapp}
+              src={mockup.wordpress}
               alt="website/wordpress development"
               className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
             />

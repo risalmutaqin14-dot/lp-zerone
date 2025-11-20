@@ -32,7 +32,7 @@ export default function WebApp() {
             <img
               src={mockup.webapp}
               alt="webApp"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
+              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20 relative lg:left-[-80px] left-[-10px]"
             />
           </div>
         </div>

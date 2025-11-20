@@ -5,7 +5,7 @@ export default function DigitalStrategy() {
     <>
       <div className="webApp pt-15 lg:pt-5">
         {/* deskripsi zerone */}
-        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
+        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1  sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
             <h3 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
               Digital Strategy
@@ -26,9 +26,9 @@ export default function DigitalStrategy() {
           </div>
           <div>
             <img
-              src=""
+              src={mockup.digcon}
               alt="Digital Strategy Consulting"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
+              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20 relative lg:left-[-80px] left-[-18px]"
             />
           </div>
         </div>

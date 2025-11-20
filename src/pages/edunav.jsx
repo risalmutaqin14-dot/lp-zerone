@@ -4,22 +4,25 @@ export default function EduNav() {
   return (
     <>
       <div className="webApp pt-20 lg:pt-5">
-        <div className="product-banner mt-35 container mx-auto lg:max-w-6xl">
+        <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block">
           <img className="rounded-[20px]" src={banner.edunav} alt="edunav" />
         </div>
+        <div className="product-banner mt-1 container mx-auto lg:hidden max-w-[370px] drop-shadow-xl">
+          <img className="rounded-[20px] container mx-auto " src={banner.mobileedunav} alt="edunav" />
+        </div>
         <div className="container mx-auto px-5">
-          <h3 className="text-[24px] mt-20 md:text-2xl lg:text-4xl font-bold text-Black text-center pt-10  mb-6">
+          <h3 className="text-[24px] my-10 md:my-15 sm:text-3xl lg:text-4xl font-bold text-Black text-center">
             The Most Advanced and Complete
-            <br className="hidden md:inline" />
+            <br className="hidden md:inline" />&nbsp;
             School Information System Suitable
-            <br className="hidden md:inline" />
+            <br className="hidden md:inline" />&nbsp;
             for Your School.
           </h3>
         </div>
 
         <div className="container mx-auto mt-0 lg:px-30 lg:mt-10">
           <div
-            className="mt-10 p-[30px] grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 bg-no-repeat bg-cover rounded-[20px] pt-0 pb-10 lg:py-20"
+            className="my-10 px-3 md:px-[250px] grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 bg-no-repeat bg-cover rounded-[20px] "
             
           >
             {/* Box 1 */}

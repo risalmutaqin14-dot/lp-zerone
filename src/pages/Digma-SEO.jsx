@@ -31,7 +31,7 @@ export default function DigmaSEO() {
           </div>
           <div>
             <img
-              src=""
+              src={mockup.digmar}
               alt="Digital Mareting & SEO"
               className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
             />
