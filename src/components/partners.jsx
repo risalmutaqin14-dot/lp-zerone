@@ -18,11 +18,13 @@ export default function partnerSection() {
     <section className="about-section">
       <div className="about-container">
         <h2 className="about-title slide-fade">Be Recognized Be Different</h2>
-        <p className="font-light text-[16px] lg:text-[25px] leading-7 ">
+        <h3 className="font-light text-center text-[16px] lg:text-[25px] leading-7 ">
           There're a lot of product same as you. How can the customer select
           your <br className="hidden md:inline" />
           product instead? You need apply a special and attractive way!
-        </p>
+        </h3>
+        <br />
+  
         <hr className="mx-my-6 border-t border-slate-300 w-250 mx-auto" />
 
         <div className="partners-carousel" aria-hidden="false">

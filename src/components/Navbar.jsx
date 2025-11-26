@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation, Link } from "react-router-dom";
 import { logos } from "../data";
+import "../css/NavbarTop.css"
 
-import "../css/Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -127,8 +127,8 @@ const Navbar = () => {
           ref={menuRef}
           className={`menu md:flex md:items-center md:gap-8 fixed  md:static  md:flex-1 md:justify-end ${
             isMenuOpen
-              ? "top-20 opacity-100 visible"
-              : "top-[-100%] md:top-0 opacity-0 md:opacity-100 invisible md:visible"
+              ? " top-20 opacity-100"
+              : "top-[-100%] md:top-0 opacity-0 md:opacity-100" 
           } transition-all duration-300 ease-in-out`}
         >
           <NavLink
@@ -238,13 +238,25 @@ const Navbar = () => {
                 Writing Aide
               </Link>
               <Link to="/mari-dukung" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
-                MariDukug.com
+                MariDukung.com
               </Link>
               <Link to="/jadwal-kuliah" className="dropdown-item" onClick={() => { setIsMenuOpen(false); setIsSolutionOpen(false); setIsProductOpen(false); }}>
                 Jadwal Kuliah
               </Link>
             </div>
           </div>
+
+          <NavLink
+            to="/portfolio"
+            className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
+            onClick={() => {
+              setIsMenuOpen(false);
+              setIsSolutionOpen(false);
+              setIsProductOpen(false);
+            }}
+          >
+            Portfolio
+          </NavLink>
 
           <NavLink
             to="/blog"

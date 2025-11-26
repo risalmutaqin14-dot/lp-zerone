@@ -1,5 +1,4 @@
-import EduNav from "./pages/edunav";
-import JadwalKuliah from "./pages/JadwalKuliah";
+
 
 // Data DUmmy for blogs
 export const blogs = [
@@ -18,12 +17,131 @@ export const blogs = [
 
 
 
+// card portfolio
+const cards = [
+  {
+    id: 1,
+    title: "Komodo Competition",
+    alt: "Komodo Competition",
+    description: "This is a description of blog 1",
+    image: "/assets/portfolio/komodo.png",
+    author: "Zerone Global",
+    date: "January 25, 2022",
+    link: "#",
+  },
+  {
+    id: 2,
+    title: "EDUSTEAM",
+    description: "This is a description of blog 2",
+    image: "/assets/portfolio/steam.png",
+    author: "Zerone Global",
+    date: "January 26, 2022",
+    link: "#",
+  },
+  {
+    id: 3,
+    title: "Rajin.id",
+    description: "This is a description of blog 3",
+    image: "/assets/portfolio/rajinID.png",
+    author: "Zerone Global",
+    date: "January 27, 2022",
+    link: "#",
+  },
+  {
+    id: 4,
+    title: "OSEBI",
+    description: "This is a description of blog 4",
+    image: "/assets/portfolio/osebi.png",
+    author: "Zerone Global",
+    date: "January 28, 2022",
+    link: "#",
+  },
+  {
+    id: 5,
+    title: "ISPO",
+    description: "This is a description of blog 5",
+    image: "/assets/portfolio/ispo.png",
+    author: "Zerone Global",
+    date: "January 29, 2022",
+    link: "#",
+  },
+  {
+    id: 6,
+    title: "HELLOGLOB",
+    description: "This is a description of blog 6",
+    image: "/assets/portfolio/helloglob.png",
+    author: "Zerone Global",
+    date: "January 30, 2022",
+    link: "#",
+  },
+    {
+    id: 7,
+    title: "Festival Sains Budaya",
+    description: "This is a description of blog 6",
+    image: "/assets/portfolio/festivalsainsbudaya.png",
+    author: "Zerone Global",
+    date: "January 30, 2022",
+    link: "#",
+  },
+      {
+    id: 8,
+    title: "EDUNAV",
+    description: "This is a description of blog 6",
+    image: "/assets/portfolio/edunav.png",
+    author: "Zerone Global",
+    date: "January 30, 2022",
+    link: "#",
+  },
+      {
+    id: 9,
+    title: "EDUFLIP",
+    description: "This is a description of blog 6",
+    image: "/assets/portfolio/eduflip.png",
+    author: "Zerone Global",
+    date: "January 30, 2022",
+    link: "#",
+  },
+      {
+    id: 10,
+    title: "EDUCAMP",
+    description: "This is a description of blog 6",
+    image: "/assets/portfolio/educamp.png",
+    author: "Zerone Global",
+    date: "January 30, 2022",
+    link: "#",
+  },
+];
+
+export default cards;
+
+
+export const stackDev = {
+  aws : "/assets/stack/aws.png",
+  mysql : "assets/stack/mysql.png",
+  php : "assets/stack/php.png",
+  wix : "assets/stack/wix.png",
+  java : "assets/stack/java.png",
+  android : "assets/stack/android.png",
+  google : "assets/stack/google.png",
+  laravel : "assets/stack/laravel.png",
+  wordpess : "assets/stack/wordpress.png",
+  microsoftnet : "assets/stack/microsoft.png",
+  nextjs : "assets/stack/nextjs.png",
+  varcel : "assets/stack/varcel.png",
+  react : "assets/stack/react.png",
+  node : "assets/stack/node.png",
+  flutter : "assets/stack/flutter.png",
+}
+
+
 
 
 export const logos = {
   whitelogo: "https://api.builder.io/api/v1/image/assets/TEMP/5cc82c1b74253eb2cb033c88db7f65b415db9fe7?width=210",
   bluelogo: "/assets/Zerone-biru.png",
-  komdigi: "/assets/komdigi.png"
+  komdigi: "/assets/komdigi.png",
+  playstore : "/assets/playstore.png",
+  appStore : "/assets/AppStore.png"
 };
 
 export const mockup = {
@@ -66,9 +184,11 @@ export const banner = {
   mobilemaridukung : "/assets/banner-produk/Mobile/maridukung.png",
 }
 
-export const imgstack = {
-  stackDev : "/assets/lp/stack.png",
+export const whychoose = {
+  whychooseus : "/assets/lp/whychooseus.png",
 }
+
+
 
 export const ourteam = {
   team1 : "/assets/OurTeam/team1.png",
@@ -94,6 +214,8 @@ export const ilustration = {
   iluslatihan1 : "/assets/iconilustration/sp-latihan/1.png",
   iluslatihan2 : "/assets/iconilustration/sp-latihan/2.png",
   iluslatihan3 : "/assets/iconilustration/sp-latihan/3.png",
+  iluslatihan4 : "/assets/iconilustration/sp-latihan/4.png",
+  iluslatihan5 : "/assets/iconilustration/sp-latihan/5.png",
   ilusrajin1 : "/assets/iconilustration/sp-rajin/1.png",
   ilusrajin2 : "/assets/iconilustration/sp-rajin/2.png",
   ilusrajin3 : "/assets/iconilustration/sp-rajin/3.png",
@@ -123,21 +245,13 @@ export const servicesFeatures = {
 }
 
 export const partnerLogos = [
-  {
-    id: 1,
-    name: "Al-Azhar 9",
-    image: "/assets/logo-partner/AL-AZHAR-9.png"
-  },
+
   {
     id: 2,
     name: "Al-Azhar Serpong",
     image: "/assets/logo-partner/al-azhar-serpong.png"
   },
-  {
-    id: 3,
-    name: "Al-Mashduql",
-    image: "/assets/logo-partner/al-mashduql.png"
-  },
+
   {
     id: 4,
     name: "Al-Azhar BSD",
@@ -203,11 +317,7 @@ export const partnerLogos = [
     name: "Pribadi Premiere School",
     image: "/assets/logo-partner/pribadi-premiere-school.png"
   },
-  {
-    id: 17,
-    name: "RUSHD",
-    image: "/assets/logo-partner/RUSHD.png"
-  },
+
   {
     id: 18,
     name: "Sampoerna Academy",
@@ -228,9 +338,5 @@ export const partnerLogos = [
     name: "SEMESTA",
     image: "/assets/logo-partner/SEMESTA.png"
   },
-  {
-    id: 22,
-    name: "SMP 8 AL AZHAR",
-    image: "/assets/logo-partner/SMP-8-AL-AZHAR-LOGO-150x150.png"
-  }
+
 ];

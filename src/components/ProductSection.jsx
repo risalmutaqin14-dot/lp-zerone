@@ -1,132 +1,212 @@
-// import React, { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
+import "../css/ProductSection.css";
+import { banner as dataBanner } from "../data";
 
-// const ProductSection = () => {
-//   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
-//   const [imageLoaded, setImageLoaded] = useState(false); // State untuk memastikan gambar sudah dimuat
-//   const banners = [
-//     "/assets/banner-produk/edunav.png",
-//     "/assets/banner-produk/venti.png",
-//     "/assets/banner-produk/jadwalkuliah.png",
-//     "/assets/banner-produk/latihan.png",
-//     "/assets/banner-produk/rajin.png",
-//     "/assets/banner-produk/writingaide.png",
-//     "/assets/banner-produk/maridukung.png",
-//   ];
-
-//   const sectionRef = useRef(null);
-
-//   const handleScroll = () => {
-//     if (sectionRef.current) {
-//       const sectionHeight = sectionRef.current.clientHeight;
-//       const scrollPosition = window.scrollY;
-//       const newIndex = Math.floor(scrollPosition / sectionHeight);
-//       if (newIndex < banners.length && newIndex !== currentBannerIndex) {
-//         setCurrentBannerIndex(newIndex);
-//       }
-//     }
-//   };
-
-//   const handleImageLoad = () => {
-//     setImageLoaded(true); // Update state ketika gambar selesai dimuat
-//   };
-
-//   useEffect(() => {
-//     window.addEventListener("scroll", handleScroll);
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   }, []); // Hanya sekali saat komponen pertama kali dirender
-
-//   return (
-//     <div
-//       className="container mx-auto product-section px-8 pt-25 pb-25 bg-white"
-//       ref={sectionRef}
-//     >
-//       <p className="tagline2 text-2xl font-semibold text-gray-800">
-//         The Future of Digital Innovation
-//       </p>
-//       <p className="tagline-description text-lg text-[20px] text-gray-600">
-//         Discover innovative digital products by Zerone Global Solution that
-//         empower
-//         <br className="hidden lg:inline" />
-//         businesses to scale, optimize operations, and create lasting impact
-//         through technology.
-//       </p>
-
-//       <div className="product-banner container mx-auto lg:max-w-6xl">
-//         <img
-//           src={banners[currentBannerIndex]}
-//           alt={`Banner ${currentBannerIndex + 1}`}
-//           style={{
-//             width: "100%", // Gambar akan mengisi lebar kontainer
-//             transition: "opacity 0.5s ease-in-out",
-//             opacity: imageLoaded ? 1 : 0, // Mengatur opacity berdasarkan status pemuatan gambar
-//           }}
-//           onLoad={handleImageLoad} // Memanggil handleImageLoad ketika gambar selesai dimuat
-//         />
-//         {!imageLoaded && <div>Loading...</div>}{" "}
-//         {/* Menampilkan loading state */}
-//       </div>
-//       <div className="container mx-auto align-center text-center mt-8">
-//         <a href="#" className="request-demo-btn center">
-//           <span className="button-icon mr-2 flex items-center bg-[#00A9E8] rounded-full p-1 mr-4">
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               height="24px"
-//               viewBox="0 -960 960 960"
-//               width="24px"
-//               fill="#FFFFFF"
-//             >
-//               <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
-//             </svg>
-//           </span>
-//           <span className="button-text">Request Demo</span>
-//         </a>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProductSection;
-
-
-import React, { useState, useEffect } from "react";
-import { banner } from './data'; // Mengimpor data banner dari file data.js
-import './ProductSection.css';
-
-const App = () => {
-  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
-  const banners = Object.values(banner); // Mengambil semua nilai URL gambar dari objek banner
-
+export default function ProdukDesktop({ banner } = {}) {
+  const banners = banner ?? dataBanner;
   useEffect(() => {
     const handleScroll = () => {
-      const sectionHeight = window.innerHeight;
-      const scrollPosition = window.scrollY;
-      const newIndex = Math.floor(scrollPosition / sectionHeight);
-      if (newIndex < banners.length && newIndex !== currentBannerIndex) {
-        setCurrentBannerIndex(newIndex);
-      }
+      const sections = document.querySelectorAll(".section img");
+
+      sections.forEach((img) => {
+        const rect = img.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Hitung seberapa jauh elemen masuk ke viewport
+        const visible = Math.max(
+          0,
+          Math.min(windowHeight, windowHeight - rect.top)
+        );
+
+        // Normalisasi ke range 0 - 1
+        const progress = visible / windowHeight;
+
+        // Scale dari 1.2 → 1.0
+        const scale = 1.2 - progress * 0.3;
+
+        img.style.transform = `scale(${scale})`;
+        img.style.transition = "transform 0.2s ease-out";
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [currentBannerIndex, banners.length]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="container">
-      {banners.map((bannerUrl, index) => (
-        <div
-          className="section"
-          key={index}
-          style={{
-            backgroundImage: `url(${bannerUrl})`, // Menggunakan URL gambar dari objek banner
-          }}
-        ></div>
-      ))}
-    </div>
-  );
-};
+    <>
+    
+    {/* Produk Tab Dekstop Vieww*/}
+      <div>
+        <div className="containerProduk mx-auto bg-white hidden lg:block pt-20">
+          {/* Latar belakang putih di produk */}
+          {/* Setiap section di sini akan memiliki gambar dengan background putih */}
+          <div className="section ">
+            <img
+              className=" md:max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.edunav}
+              alt="Edunav School management system"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.latihan}
+              alt="Latihan - platform ujian"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.rajin}
+              alt="Rajin - bimbingan belajar"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.venti}
+              alt="Venti - event management system"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.jadwalkuliah}
+              alt="Jadwalkuliah - website manajemen jadwal kuliah"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.writingaide}
+              alt="Writingaide - AI untuk latihan test TOEFL, IELST, GCSE"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.maridukung}
+              alt="Maridukung - Platform berbagi bersama"
+            />
+          </div>
+        </div>
+      </div>
 
-export default App;
+
+      {/* Produk Tab tab Vieww*/}
+      <div className="tabHorizontal">
+        <div className="containerProduk mx-auto bg-white hidden md:block lg:hidden pt-20">
+          {/* Latar belakang putih di produk */}
+          {/* Setiap section di sini akan memiliki gambar dengan background putih */}
+          <div className="section ">
+            <img
+              className=" md:max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.edunav}
+              alt="Edunav School management system"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.latihan}
+              alt="Latihan - platform ujian"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.rajin}
+              alt="Rajin - bimbingan belajar"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.venti}
+              alt="Venti - event management system"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.jadwalkuliah}
+              alt="Jadwalkuliah - website manajemen jadwal kuliah"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.writingaide}
+              alt="Writingaide - AI untuk latihan test TOEFL, IELST, GCSE"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[1050px] mx-auto rounded-[20px]"
+              src={banners.maridukung}
+              alt="Maridukung - Platform berbagi bersama"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Product Mobile View */}
+      <div className="sectioncontainer bg-white">
+        <div className="containerProduk mx-auto bg-white block sm:hidden">
+          {/* Latar belakang putih di produk */}
+          {/* Setiap section di sini akan memiliki gambar dengan background putih */}
+          <div className="section ">
+            <img
+              className="max-w-[360px] mx-auto rounded-[20px]"
+              src={banners.mobileedunav}
+              alt="Edunav"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[360px] mx-auto rounded-[20px]"
+              src={banners.mobilelatihan}
+              alt="Latihan"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[360px] mx-auto rounded-[20px]"
+              src={banners.mobilerajin}
+              alt="Rajin"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[360px] mx-auto rounded-[20px]"
+              src={banners.mobileventi}
+              alt="Venti"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[360px] mx-auto rounded-[20px]"
+              src={banners.mobilejadwalkuliah}
+              alt="Jadwalkuliah"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[360px] mx-auto rounded-[20px]"
+              src={banners.mobilewritingaide}
+              alt="Writingaide"
+            />
+          </div>
+          <div className="section">
+            <img
+              className="max-w-[360px] mx-auto rounded-[20px]"
+              src={banners.mobilemaridukung}
+              alt="Maridukung"
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

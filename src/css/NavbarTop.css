@@ -8,6 +8,7 @@
   z-index: 200;
   transition: background-color 900ms ease, box-shadow 800ms ease;
 }
+ 
 
 .navbar.scrolled {
   position: sticky;
@@ -122,6 +123,8 @@
 
 .dropdown-item:hover {
   background-color: #007bff;
+  color: #FFF;
+  border-radius: 10px;
 }
 
 /* Underline bar - only visible when there's an active item */
@@ -134,7 +137,7 @@
 }
 
 .nav-item.active {
-  color: #007bff;
+  color: #F5C857;
 }
 
 /* Underline for active nav item */
@@ -145,7 +148,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #007bff;
+  background-color: #F5C857;
   border-radius: 2px;
   animation: slideIn 220ms cubic-bezier(.2,.9,.2,1);
 }
@@ -176,7 +179,7 @@
 /* Mobile menu styles (centered) */
 @media (max-width: 768px) {
   .menu {
-    background-color: rgba(0, 0, 0, 0.9);
+    background: linear-gradient(135deg, #007bff, #0161D2);
     padding: 0.75rem 1rem;
     border-radius: 12px;
     box-shadow: 0 12px 40px rgba(2,6,23,0.14);
@@ -191,17 +194,33 @@
     max-width: 520px;
     display: none;
     align-items: center;
+    color: #FFF;
   }
+
 
   /* toggled open in JSX will add 'visible' class */
   .menu.visible {
     display: flex;
   }
 
+  .navbar.scrolled .menu {
+    background: linear-gradient(135deg, #007bff, #0161D2);
+  }
+
+  .navbar.scrolled .nav-item.active {
+    color: #fff;
+  }
+
   .menu .nav-item {
     padding: 0.6rem 1rem;
     width: 100%;
     text-align: center;
+    color: #FFF;
+    font-size: 16px;
+  }
+
+  .menu .nav-item.active {
+    color: #fff;
   }
 
   /* Mobile: dropdowns are hidden by default; `.open` will expand them */
@@ -228,7 +247,11 @@
 
   .relative .dropdown-item {
     padding: 10px 0;
-    color: inherit;
+    color: #FFF;
+  }
+
+  .relative .dropdown-menu.open .dropdown-item {
+    background-color: rgba(1, 97, 210, 0.2);
   }
 
   /* Mobile menu colors: ensure items are visible on dark background */
@@ -238,8 +261,14 @@
   }
 
   .menu .dropdown-item {
-    color: #000;
+    color: #FFF;
     padding: 15px 25px 15px 25px;
+    font-size: 14px;
+  }
+
+  .menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFF;
   }
 
   /* ensure underline is not awkward on mobile - keep subtle */

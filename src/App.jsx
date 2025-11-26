@@ -22,8 +22,11 @@ import WritingAide from "./pages/WritingAide";
 import MariDukung from "./pages/MariDukung";
 import JadwalKuliah from "./pages/JadwalKuliah";
 
+import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import Contact from "./pages/contact";
+
+import FAQs from "./pages/FAQ";
 
 function App() {
   // Aktifkan scroll animation untuk semua halaman
@@ -35,7 +38,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/web-app" element={<WebApp />} />
-        <Route path="/contact" element={<Contact />} />
+        
         <Route path="/wordpress-dev" element={<WordpressDev />} />
         <Route path="/cms" element={<CMS />} />
         <Route path="/uiux" element={<UIUX />} />
@@ -53,7 +56,11 @@ function App() {
         <Route path="/mari-dukung" element={<MariDukung />} />
         <Route path="/jadwal-kuliah" element={<JadwalKuliah />} />
 
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+
+        <Route path="/FAQs" element={<FAQs />} />
       </Routes>
     </div>
   );

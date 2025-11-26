@@ -20,7 +20,7 @@ export default function About() {
         {/* deskripsi zerone */}
         <div className="container mx-auto lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-15 sm:grid-cols-2  lg:grid-cols-2">
           <div>
-            <p className="[text-align:justify] text-[24px]">
+            <p className="[text-align:justify] text-[20px]">
               Zerone is a digital solution company focused on helping and
               ensuring business entities grow and accelerate their potential by
               using a high-quality software engineering method. We help
@@ -30,7 +30,7 @@ export default function About() {
             </p>
           </div>
           <div>
-            <p className="[text-align:justify] text-[24px] ">
+            <p className="[text-align:justify] text-[20px] ">
               Founded in 2021 by education technologies and developers,
               zerone.id has solid and creative team members that have proven to
               deliver high-quality software applications to maximize the goals

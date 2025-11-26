@@ -8,15 +8,52 @@ const Faq = () => {
   const faqs = [
     {
       question: 'What is Zerone.id?',
-      answer: 'Zerone.id is a digital solutions company (Global Digital Solution) based in Tangerang, Indonesia. They focus on web application development, mobile applications, information systems, UI/UX, and other technology services.'
+      answer: 'zerOne.id.id is an information technology company that provides integrated digital solutions. We develop systems that streamline administration, strengthen security, and support scalable operations for organizations across multiple sectors.'
     },
     {
-      question: 'Who is the Zerone solution intended for?',
-      answer: 'Zerone serves various types of clients, with particular expertise in the education sector (schools, educational institutions) and small to medium-sized enterprises.'
+      question: 'What products does zerOne.id offer?',
+      answer: (
+      <div>
+        <p>
+          zerOne.id provides a complete ecosystem of digital platforms designed to support operations, administration, learning, assessments, events, and data management.
+        </p>
+        <p>Our key products are:</p>
+        <ul>
+          <li>Edunav Integrated School Information System</li>
+          <li>Latihan.id Secure CBT and Assessment Platform</li>
+          <li>Venti.id Event and Ticketing Management Platform</li>
+          <li>WritingAide AI Writing and Feedback Assistant</li>
+          <li>Rajin.id Tutoring and Learning Platform</li>
+          <li>MariDukung.com Crowdfunding Platform</li>
+          <li>JadwalKuliah.id College Directory and Schedule Platform</li>
+        </ul>
+        <p>
+          These products are ready to use, cloud based, and built to support organizations across various sectors.
+        </p>
+      </div>
+    )
     },
     {
-      question: 'Does Zerone have experience in large projects/public institutions?',
-      answer: 'Yes, Zerone has experience in developing applications such as EduNav, which is already used by more than 50 schools in more than 4 countries with more than 42,000 active users.'
+      question: 'What IT services does zerOne.id provide?',
+      answer: (
+      <div>
+        <p>
+          In addition to our products, we offer professional IT development services for organizations that need custom technology solutions. Our services include:
+        </p>
+        <ul>
+          <li>Custom Web Application Development</li>
+          <li>CMS Development and Implementation</li>
+          <li>UI and UX Design Services</li>
+          <li>Payment Gateway Integration</li>
+          <li>System Integration and API Development</li>
+          <li>Data Migration and Digital Transformation Support</li>
+        </ul>
+        <p>
+          These services allow organizations to build tailored systems that meet unique operational needs beyond our existing products.
+        </p>
+      </div>
+    )
+
     },
   ];
 
