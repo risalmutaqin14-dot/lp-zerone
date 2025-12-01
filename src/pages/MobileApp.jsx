@@ -1,9 +1,9 @@
-import { mockup } from "../data";
+import { mockup, solutionAppDev } from "../data";
 
 export default function MobileApp() {
   return (
     <>
-      <div className="webApp pt-15 lg:pt-5">
+      <div className="webApp pt-15 lg:pt-5 bg-white">
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
@@ -39,16 +39,27 @@ export default function MobileApp() {
             />
           </div>
         </div>
-        <div className="container mx-auto px-5">
-          <h3 className=" text-center text-[16px] lg:text-[20px] lg:mt-20 mt-10 ">
-            Interested in developing a web-based system that can help simplify
-            your organization's tasks?
-          </h3>
-          <h3 className=" text-[16px] lg:text-[20px] font-bold itaic text-center pb-10">
-            Don't hesitate to consult us about your digitization issues, Zerone
-            is always ready to help!
-          </h3>
+        <div className="container mx-auto mt-30 mb-15">
+          
+            <h3 className="text-[24px] md:text-[36px] font-bold text-center text-black mb-3 pt-2">
+              Digital Transformation
+              <br className="hidden md:inline" />&nbsp;Through User-Centered UI/UX Design
+            </h3>
+            <h5 className="text-[16px] md:text-[18px] text-center">
+              End-to-End Digital Product Design Solutions: UI/UX, User Research,
+              Prototyping, and Design Systems. <br className="hidden md:inline" />&nbsp;Develop successful products with
+              our team of experts.
+            </h5>
+          
         </div>
+
+        <section className="features-section container mx-auto  lg:px-35 bg-white">
+          <div className="mt-5 mb-10  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
+            <img src={solutionAppDev.appDev1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Content Management System" />
+            <img src={solutionAppDev.appDev2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Mobile App Development" />
+            <img src={solutionAppDev.appDev3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Web App Development" />
+          </div>
+        </section>
       </div>
     </>
   );

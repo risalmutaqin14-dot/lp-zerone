@@ -1,6 +1,6 @@
 
 
-// Data DUmmy for blogs
+// Data Dummy for blogs
 export const blogs = [
   { id: 1, title: 'Blog Post 1', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 25, 2022' },
   { id: 2, title: 'Blog Post 2', description: 'This is a description of blog 2', image: '/assets/dummy-blog.jpg', author: 'Zerone Global', date: 'January 26, 2022' },
@@ -24,7 +24,7 @@ const cards = [
     title: "Komodo Competition",
     alt: "Komodo Competition",
     description: "This is a description of blog 1",
-    image: "/assets/portfolio/komodo.png",
+    image: "/assets/portfolio/komodo.webp",
     author: "Zerone Global",
     date: "January 25, 2022",
     link: "#",
@@ -33,7 +33,7 @@ const cards = [
     id: 2,
     title: "EDUSTEAM",
     description: "This is a description of blog 2",
-    image: "/assets/portfolio/steam.png",
+    image: "/assets/portfolio/steam.webp",
     author: "Zerone Global",
     date: "January 26, 2022",
     link: "#",
@@ -42,7 +42,7 @@ const cards = [
     id: 3,
     title: "Rajin.id",
     description: "This is a description of blog 3",
-    image: "/assets/portfolio/rajinID.png",
+    image: "/assets/portfolio/rajinID.webp",
     author: "Zerone Global",
     date: "January 27, 2022",
     link: "#",
@@ -51,7 +51,7 @@ const cards = [
     id: 4,
     title: "OSEBI",
     description: "This is a description of blog 4",
-    image: "/assets/portfolio/osebi.png",
+    image: "/assets/portfolio/osebi.webp",
     author: "Zerone Global",
     date: "January 28, 2022",
     link: "#",
@@ -60,7 +60,7 @@ const cards = [
     id: 5,
     title: "ISPO",
     description: "This is a description of blog 5",
-    image: "/assets/portfolio/ispo.png",
+    image: "/assets/portfolio/ispo.webp",
     author: "Zerone Global",
     date: "January 29, 2022",
     link: "#",
@@ -69,7 +69,7 @@ const cards = [
     id: 6,
     title: "HELLOGLOB",
     description: "This is a description of blog 6",
-    image: "/assets/portfolio/helloglob.png",
+    image: "/assets/portfolio/helloglob.webp",
     author: "Zerone Global",
     date: "January 30, 2022",
     link: "#",
@@ -78,7 +78,7 @@ const cards = [
     id: 7,
     title: "Festival Sains Budaya",
     description: "This is a description of blog 6",
-    image: "/assets/portfolio/festivalsainsbudaya.png",
+    image: "/assets/portfolio/festivalsainsbudaya.webp",
     author: "Zerone Global",
     date: "January 30, 2022",
     link: "#",
@@ -87,7 +87,7 @@ const cards = [
     id: 8,
     title: "EDUNAV",
     description: "This is a description of blog 6",
-    image: "/assets/portfolio/edunav.png",
+    image: "/assets/portfolio/edunav.webp",
     author: "Zerone Global",
     date: "January 30, 2022",
     link: "#",
@@ -96,7 +96,7 @@ const cards = [
     id: 9,
     title: "EDUFLIP",
     description: "This is a description of blog 6",
-    image: "/assets/portfolio/eduflip.png",
+    image: "/assets/portfolio/eduflip.webp",
     author: "Zerone Global",
     date: "January 30, 2022",
     link: "#",
@@ -105,13 +105,12 @@ const cards = [
     id: 10,
     title: "EDUCAMP",
     description: "This is a description of blog 6",
-    image: "/assets/portfolio/educamp.png",
+    image: "/assets/portfolio/educamp.webp",
     author: "Zerone Global",
     date: "January 30, 2022",
     link: "#",
   },
 ];
-
 export default cards;
 
 
@@ -156,37 +155,82 @@ export const mockup = {
   graphic: "/assets/mockup/desaingrafis.png",
 }
 
+
+
+
+
+// Solution Data Image
+
+export const solutionUIUX = {
+  uiux1 : "/assets/mockup//UIUX/EdunavParentThumbnail.png",
+  uiux2 : "/assets/mockup//UIUX/Edunav Student Thumbnail.png",
+  uiux3 : "/assets/mockup//UIUX/Edunav Teacher Thumbnail.png",
+  uiux4 : "/assets/mockup//UIUX/Edunav Web-app Thumbnail.png",
+  uiux5 : "/assets/mockup//UIUX/Helloglob Thumbnail.png",
+  uiux6 : "/assets/mockup//UIUX/Latihan.id Mockup 1.png",
+  uiux7 : "/assets/mockup//UIUX/Latihan.id Mockup 2.png",
+  uiux8 : "/assets/mockup//UIUX/Writing Aide.png",
+}
+
+export const solutionDesain = {
+  desain1 : "assets/mockup/desain/zerone.png",
+  desain2 : "assets/mockup/desain/edunav.png",
+  desain3 : "assets/mockup/desain/venti.png",
+}
+
+export const solutionWordpress = {
+  webpres1 : "assets/mockup/web-design/pakar-belia.png",
+  webpres2 : "assets/mockup/web-design/hibiscus.png",
+  webpres3 : "assets/mockup/web-design/kesatuan-bangsa.png",
+  webpres4 : "assets/mockup/web-design/competition-website.png",
+  webpres5 : "assets/mockup/web-design/edunav.png",
+  webpres6 : "assets/mockup/web-design/semesta.png",
+}
+
+export const solutionAppDev = {
+  appDev1 : "assets/mockup/AppDev/latihan.png",
+  appDev2 : "assets/mockup/AppDev/venti.png",
+  appDev3 : "assets/mockup/AppDev/rajin.png",
+}
+
+// End Solution Data Image
+
+
+
+
+
+
 export const heroImage = {
-  image: "/assets/device-hero.png",
+  image: "/assets/device-hero.webp",
   bgHero: "/assets/bg-hero.png",
   visi: "/assets/Vission.png",
   misi: "/assets/Mission.png",
   bgHorizontal: "/assets/bg-linear.png",
   visimisi: "/assets/bg-vm.png",
 };
+export const whychoose = {
+  whychooseus : "/assets/lp/whychooseus.webp",
+}
 
 
 
 export const banner = {
-  edunav : "/assets/banner-produk/edunav.png",
-  venti : "/assets/banner-produk/venti.png",
-  jadwalkuliah : "/assets/banner-produk/jadwalkuliah.png",
-  latihan: "/assets/banner-produk/latihan.png",
-  rajin : "/assets/banner-produk/rajin.png",
-  writingaide : "/assets/banner-produk/writingaide.png",
-  maridukung : "/assets/banner-produk/maridukung.png",
-  mobileedunav : "/assets/banner-produk/Mobile/edunav.png",
-  mobileventi : "/assets/banner-produk/Mobile/venti.png",
-  mobilejadwalkuliah : "/assets/banner-produk/Mobile/jadwal.png",
-  mobilelatihan: "/assets/banner-produk/Mobile/latihan.png",
-  mobilerajin : "/assets/banner-produk/Mobile/rajin.png",
-  mobilewritingaide : "/assets/banner-produk/Mobile/writing.png",
-  mobilemaridukung : "/assets/banner-produk/Mobile/maridukung.png",
+  edunav : "/assets/banner-produk/edunav.webp",
+  venti : "/assets/banner-produk/venti.webp",
+  jadwalkuliah : "/assets/banner-produk/jadwalkuliah.webp",
+  latihan: "/assets/banner-produk/latihan.webp",
+  rajin : "/assets/banner-produk/rajin.webp",
+  writingaide : "/assets/banner-produk/writingaide.webp",
+  maridukung : "/assets/banner-produk/maridukung.webp",
+  mobileedunav : "/assets/banner-produk/Mobile/edunav.webp",
+  mobileventi : "/assets/banner-produk/Mobile/venti.webp",
+  mobilejadwalkuliah : "/assets/banner-produk/Mobile/jadwal.webp",
+  mobilelatihan: "/assets/banner-produk/Mobile/latihan.webp",
+  mobilerajin : "/assets/banner-produk/Mobile/rajin.webp",
+  mobilewritingaide : "/assets/banner-produk/Mobile/writing.webp",
+  mobilemaridukung : "/assets/banner-produk/Mobile/maridukung.webp",
 }
 
-export const whychoose = {
-  whychooseus : "/assets/lp/whychooseus.png",
-}
 
 
 

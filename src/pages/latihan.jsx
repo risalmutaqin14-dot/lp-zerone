@@ -4,7 +4,7 @@ export default function Latihan() {
   return (
     <>
       <div className="webApp pt-20 lg:pt-5">
-        <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block">
+        <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img
             className="rounded-[20px]"
             src={banner.latihan}

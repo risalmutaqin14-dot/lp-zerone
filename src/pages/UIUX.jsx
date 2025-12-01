@@ -1,9 +1,9 @@
-import { mockup } from "../data";
+import { mockup, solutionUIUX } from "../data";
 
 export default function CMS() {
   return (
     <>
-      <div className="webApp pt-15 lg:pt-5">
+      <div className="webApp pt-15 lg:pt-5 bg-white">
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
@@ -14,7 +14,7 @@ export default function CMS() {
               What Makes Your Applications and Websites Easy to Access
             </span>
             <br /> <br />
-        <p className="[text-align:justify]">
+            <p className="[text-align:justify]">
               UI stands for user interface. Meanwhile, UX stands for user
               experience. Both play a very important role in digital products
               such as applications and websites. UI functions to design the
@@ -35,14 +35,31 @@ export default function CMS() {
             />
           </div>
         </div>
-        <div className="container mx-auto px-5">
-          <h3 className=" text-center text-[16px] lg:text-[20px] lg:mt-20 mt-10 ">
-            “If you think good design is expensive, you should look at the cost of bad design.”
-          </h3>
-          <h3 className=" text-[16px] lg:text-[20px] font-bold itaic text-center pb-10">
-            Ralf Speth
-          </h3>
+
+        <div className="container mx-auto mt-10 mb-10">
+          
+            <h3 className="text-[24px] md:text-[36px] font-bold text-center text-black mb-3 pt-2">
+              Digital Transformation
+              <br className="hidden md:inline" />&nbsp;Through User-Centered UI/UX Design
+            </h3>
+            <h5 className="text-[16px] md:text-[18px] text-center">
+              End-to-End Digital Product Design Solutions: UI/UX, User Research,
+              Prototyping, and Design Systems. <br className="hidden md:inline" />&nbsp;Develop successful products with
+              our team of experts.
+            </h5>
+          
         </div>
+
+        <section className="features-section container mx-auto  lg:px-35 bg-white">
+          <div className="mt-5 mb-10  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
+            <img src={solutionUIUX.uiux1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Content Management System" />
+            <img src={solutionUIUX.uiux2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Mobile App Development" />
+            <img src={solutionUIUX.uiux3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Web App Development" />
+            <img src={solutionUIUX.uiux4} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="wordpess Development" />
+            <img src={solutionUIUX.uiux5} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="uiux design" />
+            <img src={solutionUIUX.uiux6} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="digital marketing" />
+          </div>
+        </section>
       </div>
     </>
   );

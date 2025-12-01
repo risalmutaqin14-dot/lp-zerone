@@ -1,7 +1,6 @@
 .containerProduk {
   position: relative;
   width: 100%;
-  padding-bottom: 80px;
 }
 
 .containerProduk.sticky-padding {
@@ -10,7 +9,7 @@
 
 .containerProduk .section {
   position: sticky;
-  padding-top: 120px;
+  
   top: 0;
   width: 100%;
 }

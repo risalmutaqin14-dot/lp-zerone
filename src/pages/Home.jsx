@@ -21,7 +21,7 @@ export default function Home() {
           <img
             className="background-pattern bg-cover bg-no-repeat"
             src={heroImage.bgHero}
-            alt=""
+            alt="bg-zerone-global"
           />
 
           <div className="hero-content">
@@ -80,7 +80,7 @@ export default function Home() {
             md:h-[500px] 
             relative 
             top-[120px] 
-            md:top-[145px] 
+            md:top-[158px] 
             left-[-130px] 
             sm:left-[-10px]
             md:left-[-100px] 
@@ -99,7 +99,7 @@ export default function Home() {
                   <img src={heroImage.visi} alt="visi zerone" />
                 </Card>
                 <Card>
-                  <img src={heroImage.misi} alt="" />
+                  <img src={heroImage.misi} alt="misi zerone" />
                 </Card>
               </CardSwap>
             </div>
@@ -162,16 +162,16 @@ export default function Home() {
           </div>
 
           {/* Service Grid Section */}
-          <div className=" mt-20 grid grid-cols-1 gap-4 sm:grid-cols-3  lg:grid-cols-3 ">
-            <img src={servicesFeatures.cms} alt="Content Management System" />
-            <img src={servicesFeatures.appDev} alt="Mobile App Development" />
-            <img src={servicesFeatures.webDev} alt="Web App Development" />
-            <img src={servicesFeatures.wordpess} alt="wordpess Development" />
-            <img src={servicesFeatures.uiux} alt="uiux design" />
-            <img src={servicesFeatures.digmar} alt="digital marketing" />
-            <img src={servicesFeatures.payment} alt="Web App Development" />
-            <img src={servicesFeatures.desain} alt="Web App Development" />
-            <img src={servicesFeatures.strategy} alt="Web App Development" />
+          <div className=" mt-20 grid grid-cols-2 gap-4 md:gap-6 sm:grid-cols-3  lg:grid-cols-3 justify-items-center">
+            <img src={servicesFeatures.cms} alt="Content Management System - Zerone Global Digital Solution" />
+            <img src={servicesFeatures.appDev} alt="Mobile App Development - Zerone Global Digital Solution" />
+            <img src={servicesFeatures.webDev} alt="Web App Development - Zerone Global Digital Solution" />
+            <img src={servicesFeatures.wordpess} alt="wordpess Development - Zerone Global Digital Solution" />
+            <img src={servicesFeatures.uiux} alt="uiux design - Zerone Global Digital Solution" />
+            <img src={servicesFeatures.digmar} alt="digital marketing - Zerone Global Digital Solution" />
+            <img src={servicesFeatures.payment} alt="Web App Development - Zerone Global Digital Solution" />
+            <img src={servicesFeatures.desain} alt="Web App Development - Zerone Global Digital Solution" />
+            <img src={servicesFeatures.strategy} alt="Web App Development - Zerone Global Digital Solution" />
           </div>
         </section>
       </div>
@@ -199,7 +199,7 @@ export default function Home() {
             <img
               className="w-[550px] mx-auto pl-[20px]"
               src={whychoose.whychooseus}
-              alt=""
+              alt="why chose us?"
             />
           </div>
         </div>
@@ -240,7 +240,7 @@ export default function Home() {
             />
           </div>
           <div className=" lg:w-1/2 align-middle lg:pl-6">
-            <h3 className="text-[26px] font-bold text-gray-600 mb-6 mt-5">
+            <h3 className="text-[26px] font-bold text-gray-600 mb-6 mt-15 md:mt-0">
               Let’s Connect and Collaborate
             </h3>
             <h4 className="text-[24px] text-left  text-gray-600 mb-6 lg:mt-5">
@@ -314,24 +314,28 @@ export default function Home() {
           <div className=" lg:w-1/2 align-middle p-[15px]">
             <Faq />
             {/* button */}
-            <div className="w-[250px] mt-7 mb-4 sm:mb-0 mx-auto md:mx-0">
-              <Link
-                to="/faqs"
-                className="download flex items-center border-2 bg-[linear-gradient(90deg,#1c76d2,#3498db)] border-[#00A9E8] rounded-[50px] px-3 py-3"
-              >
-                <span className="button-icon flex items-center bg-[#00A9E8] rounded-full p-1 mr-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    fill="#FFFFFF"
-                  >
-                    <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
-                  </svg>
-                </span>
-                <span className="text-white">See More FAQs</span>
-              </Link>
+            <div className="flex mt-6 container mx-auto">
+              <div className="w-[200px] mb-4 sm:mb-0">
+                <a
+                  href="/faqs"
+                  className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
+                >
+                  <span className="button-icon flex items-center bg-white rounded-full p-1 mr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#0092d7"
+                    >
+                      <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                    </svg>
+                  </span>
+                  <span className="text-white pl-3 font-medium">
+                    See More FAQs
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

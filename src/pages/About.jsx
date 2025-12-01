@@ -1,81 +1,92 @@
-import { logos, heroImage, ilustration, ourteam } from "../data";
+import { logos, heroImage, ilustration, ourteam, whychoose } from "../data";
 import "../css/About.css";
-
 
 export default function About() {
   return (
     <>
-      <div className="about-page">
-        <div className="container mx-auto py-5 pt-50">
-          <img
-            src={logos.bluelogo}
-            className="lg:w-100 w-50 d-block mx-auto img-fluid"
-            alt=""
-          />
-        </div>
-        <h3 className="text-[36px] sm:text-3xl lg:text-4xl font-bold text-Black text-center pt-10  mb-6">
-          About Zerone
-        </h3>
-
+      <div className="about-page bg-white pt-30">
         {/* deskripsi zerone */}
-        <div className="container mx-auto lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-15 sm:grid-cols-2  lg:grid-cols-2">
-          <div>
-            <p className="[text-align:justify] text-[20px]">
-              Zerone is a digital solution company focused on helping and
-              ensuring business entities grow and accelerate their potential by
-              using a high-quality software engineering method. We help
-              companies from various backgrounds, especially educational service
-              companies, schools, and project managers to utilize technology
-              usage and accelerate their growth.
-            </p>
-          </div>
-          <div>
-            <p className="[text-align:justify] text-[20px] ">
-              Founded in 2021 by education technologies and developers,
-              zerone.id has solid and creative team members that have proven to
-              deliver high-quality software applications to maximize the goals
-              of a product or project. We focus on providing high-edge software
-              products, mainly for educational purposes, and also on helping
-              companies to digitize their ideas or services.
-            </p>
-          </div>
+        <div className="bg-white">
+          <section className="features-section container mx-auto  lg:px-35 p-8 bg-white pt-20">
+            <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between space-y-8 lg:space-y-0">
+              <div className=" lg:w-1/3">
+                <h3 className="text-[24px] text-left  text-gray-600 mb-1">
+                  About Us
+                </h3>
+                <h2 className="text-[36px] font-bold text-gray-600 mb-6">
+                  Zerone Gobal <br />
+                  Digital Solution
+                </h2>
+              </div>
+
+              <h4 className="lg:w-2/3 text-left  text-gray-500">
+                <div>
+                  <p className="[text-align:justify] text-[18px]">
+                    Zerone is a digital solution company focused on helping and
+                    ensuring business entities grow and accelerate their
+                    potential by using a high-quality software engineering
+                    method. We help companies from various backgrounds,
+                    especially educational service companies, schools, and
+                    project managers to utilize technology usage and accelerate
+                    their growth.
+                  </p>
+
+                  <p className="[text-align:justify] text-[18px] ">
+                    Founded in 2021 by education technologies and developers,
+                    zerone.id has solid and creative team members that have
+                    proven to deliver high-quality software applications to
+                    maximize the goals of a product or project. We focus on
+                    providing high-edge software products, mainly for
+                    educational purposes, and also on helping companies to
+                    digitize their ideas or services.
+                  </p>
+                </div>
+              </h4>
+            </div>
+          </section>
         </div>
 
-        {/* Section  visi misi*/}
-        <div className="container mx-auto lg:px-30 px-5 mt-8 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2 ">
-          <div
-            className="bg-no-repeat bg-cover p-10 text-white lg:mr-5 rounded-[20px]"
-            style={{ backgroundImage: `url(${heroImage.visimisi})` }}
-          >
-            <h3 className="text-[30px] font-bold text-Black mb-4">
-              Our Vision
-            </h3>
-            <ul className="">
-              <li className="mb-2 text-[24px]">
-                To become the most trusted digital partner for education and
-                community innovation in Southeast Asia.
-              </li>
-            </ul>
+        <div className="container mx-auto grid lg:grid-cols-2 lg:px-35 p-8 bg-white pt-20 ">
+          {/* Kolom 2: Gambar */}
+          <div className="flex items-center justify-left mt-[50px] md:mt-0">
+            <img
+              className="w-[450px] max-w-full"
+              src={whychoose.whychooseus}
+              alt="why choose us?"
+            />
           </div>
-
-          <div
-            className="bg-no-repeat bg-cover p-10 text-white lg:mr-5 rounded-[20px]"
-            style={{ backgroundImage: `url(${heroImage.visimisi})` }}
-          >
-            <h3 className="text-[30px] font-bold text-Black mb-4">
-              Our Mission
-            </h3>
-            <ul className="custom-list">
-              <li className="mb-2 text-[24px]">
-                Simplify digital transformation for schools & institutions
-              </li>
-              <li className="mb-2 text-[24px]">
-                Empower learning with modern, integrated platforms
-              </li>
-              <li className="mb-2 text-[24px]">
-                Enable efficient community engagement and event management
-              </li>
-            </ul>
+          {/* Kolom 1: Vision & Mission */}
+          <div>
+            <div className="vision shadow-xl rounded-[20px] p-10 shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+              <h3 className="text-[30px] font-bold text-Black mb-4 text-gray-600">
+                Our Vision
+              </h3>
+              <ul>
+                <li className="[text-align:justify] text-[18px]">
+                  To become the most trusted digital partner for education{" "}
+                  &nbsp;
+                  <br className="hidden md:inline" />
+                  and community innovation in Southeast Asia.
+                </li>
+              </ul>
+            </div>
+            <br />
+            <div className="mission shadow-xl rounded-[20px] p-10 shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+              <h3 className="text-[30px] font-bold text-Black mb-4 text-gray-600">
+                Our Mission
+              </h3>
+              <ul className="custom-list list-disc list-inside">
+                <li className="[text-align:justify] text-[18px]">
+                  Simplify digital transformation for schools & institutions
+                </li>
+                <li className="[text-align:justify] text-[18px]">
+                  Empower learning with modern, integrated platforms
+                </li>
+                <li className="[text-align:justify] text-[18px]">
+                  Enable efficient community engagement and event management
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -91,7 +102,7 @@ export default function About() {
             }}
           >
             {/* Box 1 */}
-            <div className="w-full text-center m-2">
+            <div className="w-full text-center m-2 px-15">
               <img
                 src={ilustration.ilusAbout1}
                 className="w-20 mx-auto pb-5"
@@ -106,7 +117,7 @@ export default function About() {
             </div>
 
             {/* Box 2 */}
-            <div className="w-full text-center m-2">
+            <div className="w-full text-center m-2 px-15">
               <img
                 src={ilustration.ilusAbout2}
                 className="w-20 mx-auto pb-5"
@@ -122,7 +133,7 @@ export default function About() {
             </div>
 
             {/* Box 3 */}
-            <div className="w-full text-center m-2">
+            <div className="w-full text-center m-2 px-15">
               <img
                 src={ilustration.ilusAbout3}
                 className="w-20 mx-auto pb-5"
@@ -141,9 +152,16 @@ export default function About() {
 
         {/* Section  Our Team*/}
         <div className="container mx-auto lg:px-30 px-5 lg:mt-20 mb-20">
-          <h3 className="text-[36px] sm:text-3xl lg:text-4xl font-bold text-Black text-center pt-10  mb-[50px]">
-            Our Team
-          </h3>
+          <div className="text-center mb-20">
+                <h3 className="text-[24px]   text-gray-600 mb-1">
+                  Our Team
+                </h3>
+                <h2 className="text-[36px] font-bold text-gray-600 mb-6">
+                  Zerone Global Digital Solution <br />
+                  Experts Behind Your Project Success
+                </h2>
+              </div>
+          
           <div className=" mt-5 grid grid-cols-2 gap-5 sm:grid-cols-4  lg:grid-cols-4">
             <img src={ourteam.team1} alt="" />
             <img src={ourteam.team1} alt="" />
@@ -158,7 +176,6 @@ export default function About() {
           </div>
         </div>
       </div>
-      
     </>
   );
 }

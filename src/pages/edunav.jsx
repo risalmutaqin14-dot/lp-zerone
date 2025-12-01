@@ -4,12 +4,12 @@ export default function EduNav() {
   return (
     <>
       <div className="webApp pt-20 lg:pt-5 container mx-auto">
-        <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block">
+        <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img className="rounded-[20px]" src={banner.edunav} alt="edunav" />
         </div>
         <div className="product-banner mt-2 container mx-auto md:hidden max-w-[370px] drop-shadow-xl">
           <img
-            className="rounded-[20px] container mx-auto "
+            className="rounded-[20px] container mx-auto shadow-lg"
             src={banner.mobileedunav}
             alt="edunav"
           />

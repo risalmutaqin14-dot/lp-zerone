@@ -4,7 +4,7 @@ export default function WritingAide() {
   return (
     <>
       <div className="webApp pt-20 lg:pt-5">
-        <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block">
+        <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img className="rounded-[20px]" src={banner.writingaide} alt="Writing-Aide Banner" />
         </div>
         <div className="product-banner mt-2 container mx-auto md:hidden max-w-[370px] drop-shadow-xl">

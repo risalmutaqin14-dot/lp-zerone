@@ -16,3 +16,9 @@
   top: 0;
   color: white; /* Menyesuaikan warna bullet */
 }
+
+.custom-list {
+  list-style: none !important; /* JANGAN ada ini */
+  padding-left: 0 !important; /* JANGAN ada ini */
+  color: black;
+}

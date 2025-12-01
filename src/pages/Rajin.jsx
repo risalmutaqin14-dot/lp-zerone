@@ -3,8 +3,8 @@ import { banner, ilustration, logos } from "../data";
 export default function Rajin() {
   return (
     <>
-      <div className="webApp pt-20 lg:pt-5">
-        <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block">
+      <div className="webApp pt-20 lg:pt-5 bg-white">
+        <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img
             className="rounded-[20px]"
             src={banner.rajin}
@@ -13,7 +13,7 @@ export default function Rajin() {
         </div>
         <div className="product-banner mt-2 container mx-auto md:hidden max-w-[370px] drop-shadow-xl">
           <img
-            className="rounded-[20px] mx-auto"
+            className="rounded-[20px] mx-auto shadow-lg"
             src={banner.mobilerajin}
             alt="rajin.id"
           />

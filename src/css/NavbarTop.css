@@ -8,20 +8,18 @@
   z-index: 200;
   transition: background-color 900ms ease, box-shadow 800ms ease;
 }
- 
 
 .navbar.scrolled {
   position: sticky;
   background-color: #ffffff; /* putih ketika scroll */
-   backdrop-filter: blur(10px);
-  box-shadow: 0 6px 20px rgba(2,6,23,0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.08);
 }
-
 
 /* Style untuk halaman selain home */
 .navbar.non-home {
   background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar.non-home .nav-item {
@@ -80,7 +78,7 @@
   min-width: 200px;
   background: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 8px 30px rgba(2,6,23,0.12);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.12);
   padding: 6px 0;
   z-index: 1000;
   opacity: 0;
@@ -123,7 +121,7 @@
 
 .dropdown-item:hover {
   background-color: #007bff;
-  color: #FFF;
+  color: #fff;
   border-radius: 10px;
 }
 
@@ -137,20 +135,20 @@
 }
 
 .nav-item.active {
-  color: #F5C857;
+  color: #f5c857;
 }
 
 /* Underline for active nav item */
 .nav-item.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #F5C857;
+  background-color: #f5c857;
   border-radius: 2px;
-  animation: slideIn 220ms cubic-bezier(.2,.9,.2,1);
+  animation: slideIn 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
 }
 
 @keyframes slideIn {
@@ -173,16 +171,60 @@
   color: #007bff;
 }
 
+/* Aturan baru: Terapkan gaya 'aktif' pada tombol dropdown jika dropdown-menu di dalamnya terbuka */
+.relative .nav-item[aria-expanded="true"] {
+    /* Terapkan gaya warna teks aktif */
+    color: #F5C857; /* Atau warna aktif yang Anda gunakan */
+}
+
+.relative .nav-item[aria-expanded="true"]::after {
+    /* Duplikasi properti garis bawah dari .nav-item.active::after */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #F5C857; /* Sesuaikan dengan warna aktif */
+    border-radius: 2px;
+    /* Anda mungkin tidak perlu animasi di sini jika itu hanya untuk memastikan underline muncul */
+}
+
+/* Untuk mode scrolled (jika warna aktif berubah) */
+.navbar.scrolled .relative .nav-item[aria-expanded="true"] {
+    color: #007bff; /* Sesuaikan dengan warna aktif saat scrolled */
+}
+
+.navbar.scrolled .relative .nav-item[aria-expanded="true"]::after {
+    background-color: #007bff; /* Sesuaikan dengan warna aktif saat scrolled */
+}
+
 
 
 
 /* Mobile menu styles (centered) */
 @media (max-width: 768px) {
+  .navbar.scrolled .nav-item {
+    color: #fff;
+  }
+
+  .navbar.non-home .nav-item {
+    color: #fff; 
+  }
+
+  .menu .nav-item.active {
+    color: #fff;
+  }
+  .navbar.non-home {
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
   .menu {
-    background: linear-gradient(135deg, #007bff, #0161D2);
+    background: linear-gradient(135deg, #007bff, #0161d2);
     padding: 0.75rem 1rem;
     border-radius: 12px;
-    box-shadow: 0 12px 40px rgba(2,6,23,0.14);
+    box-shadow: 0 12px 40px rgba(2, 6, 23, 0.14);
     z-index: 998;
     flex-direction: column;
     transition: all 220ms ease;
@@ -192,19 +234,11 @@
     transform: translateX(-50%);
     width: calc(100% - 32px);
     max-width: 520px;
-    display: none;
-    align-items: center;
-    color: #FFF;
-  }
-
-
-  /* toggled open in JSX will add 'visible' class */
-  .menu.visible {
-    display: flex;
+    color: #fff;
   }
 
   .navbar.scrolled .menu {
-    background: linear-gradient(135deg, #007bff, #0161D2);
+    background: linear-gradient(135deg, #007bff, #0161d2);
   }
 
   .navbar.scrolled .nav-item.active {
@@ -215,7 +249,7 @@
     padding: 0.6rem 1rem;
     width: 100%;
     text-align: center;
-    color: #FFF;
+    color: #fff;
     font-size: 16px;
   }
 
@@ -223,7 +257,12 @@
     color: #fff;
   }
 
+  .navbar.non-home .nav-item {
+    color: #fff;
+  }
+
   /* Mobile: dropdowns are hidden by default; `.open` will expand them */
+  /* Mobile: dropdowns are hidden by default */
   .relative .dropdown-menu {
     position: static;
     transform: none;
@@ -241,13 +280,24 @@
   .relative .dropdown-menu.open {
     opacity: 1;
     pointer-events: auto;
-    max-height: 800px; /* allow expansion */
-    padding: 8px 0;
+    max-height: 800px;
+    width: 300px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .relative .dropdown-item {
-    padding: 10px 0;
-    color: #FFF;
+    padding: 0;
+    color: #fff;
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+    justify-content: center;
   }
 
   .relative .dropdown-menu.open .dropdown-item {
@@ -257,23 +307,22 @@
   /* Mobile menu colors: ensure items are visible on dark background */
   .menu.visible .nav-item,
   .menu .nav-item {
-    color: #FFF;
+    color: #fff;
   }
 
   .menu .dropdown-item {
-    color: #FFF;
+    color: #fff;
     padding: 15px 25px 15px 25px;
     font-size: 14px;
   }
 
   .menu .dropdown-item:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    color: #FFF;
+    color: #fff;
   }
 
   /* ensure underline is not awkward on mobile - keep subtle */
-  .menu::after { display: none; }
+  .menu::after {
+    display: none;
+  }
 }
-
-/* Dropdown Menu */
-/* fallback normalization (duplicates removed) - final dropdown rules kept above */

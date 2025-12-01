@@ -69,7 +69,7 @@
 .chart__bar {
   height: 30px;
   margin-bottom: 10px;
-  background: linear-gradient(to left, #0161D2, #00a9e8);
+  background: linear-gradient(to right, #00bbd7, #0092d7, #6e92d7);
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   opacity: 0;

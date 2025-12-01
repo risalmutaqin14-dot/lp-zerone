@@ -154,29 +154,29 @@ export default function Contact() {
               </div>
 
               {/* Submit Button */}
-              <div className="flex  mt-4">
-                <div className="w-[200px] mb-4 sm:mb-0">
-                  <a
-                    href="https://writing-aide.zerone.id/"
-                    className="download flex items-center border-2 bg-[linear-gradient(90deg,#1c76d2,#3498db)] border-[#00A9E8] rounded-[50px] px-3 py-3"
-                  >
-                    <span className="button-icon flex items-center bg-[#00A9E8] rounded-full p-1 mr-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#FFFFFF"
-                      >
-                        <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
-                      </svg>
-                    </span>
-                    <span className="text-white pl-3 font-medium">
-                      Try it for free
-                    </span>
-                  </a>
-                </div>
+              <div className="flex mt-6 container mx-auto">
+              <div className="w-[200px] mb-4 sm:mb-0">
+                <a
+                  href="/faqs"
+                  className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
+                >
+                  <span className="button-icon flex items-center bg-white rounded-full p-1 mr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#0092d7"
+                    >
+                      <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                    </svg>
+                  </span>
+                  <span className="text-white pl-3 font-medium">
+                    Submit
+                  </span>
+                </a>
               </div>
+            </div>
             </form>
           </div>
         </div>
