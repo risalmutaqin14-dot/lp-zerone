@@ -14,7 +14,7 @@ export default function JadwalKuliah() {
 
         {/* button request demo */}
         <div className="flex justify-center mt-20">
-          <div className="w-[210px] ">
+          <div className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-[210px] ">
             <a
               href="https://jadwalkuliah.id/"
               className="download flex items-center border-2 bg-[linear-gradient(90deg,#1c76d2,#3498db)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -51,7 +51,7 @@ export default function JadwalKuliah() {
             
           >
             {/* Box 1 */}
-            <div className="w-full text-center m-2">
+            <div className="shadow-lg w-full text-center m-2 p-5 rounded-[15px] bg-[#F5F9FF] rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
               <img
                 src={ilustration.ilusjadwalkuliah1}
                 className="w-20 mx-auto pb-5"
@@ -62,7 +62,7 @@ export default function JadwalKuliah() {
             </div>
 
             {/* Box 2 */}
-            <div className="w-full text-center m-2">
+            <div className="shadow-lg w-full text-center m-2 p-5 rounded-[15px] bg-[#F5F9FF] rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
               <img
                 src={ilustration.ilusjadwalkuliah2}
                 className="w-20 mx-auto pb-5"
@@ -73,7 +73,7 @@ export default function JadwalKuliah() {
             </div>
 
             {/* Box 3 */}
-            <div className="w-full text-center m-2">
+            <div className="shadow-lg w-full text-center m-2 p-5 rounded-[15px] bg-[#F5F9FF] rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
               <img
                 src={ilustration.ilusjadwalkuliah3}
                 className="w-20 mx-auto pb-5"

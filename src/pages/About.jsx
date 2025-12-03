@@ -1,6 +1,7 @@
 import { logos, heroImage, ilustration, ourteam, whychoose } from "../data";
 import "../css/About.css";
 
+
 export default function About() {
   return (
     <>
@@ -163,16 +164,17 @@ export default function About() {
               </div>
           
           <div className=" mt-5 grid grid-cols-2 gap-5 sm:grid-cols-4  lg:grid-cols-4">
-            <img src={ourteam.team1} alt="" />
-            <img src={ourteam.team1} alt="" />
-            <img src={ourteam.team1} alt="" />
-            <img src={ourteam.team1} alt="" />
-            <img src={ourteam.team1} alt="" />
-            <img src={ourteam.team1} alt="" />
-            <img src={ourteam.team1} alt="" />
-            <img src={ourteam.team1} alt="" />
-            <img src={ourteam.team1} alt="" />
-            <img src={ourteam.team1} alt="" />
+            <img src={ourteam.team1} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team2} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team3} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team4} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team5} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team6} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team7} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team8} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team9} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team10} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team11} alt="Zerone Digital Solution Expert Team" />
           </div>
         </div>
       </div>

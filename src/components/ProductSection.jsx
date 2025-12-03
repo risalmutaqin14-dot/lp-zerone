@@ -36,7 +36,7 @@ export default function ProdukDesktop({ banner } = {}) {
   return (
     <>
       {/* Produk Tab Dekstop Vieww*/}
-      <div className="section">
+      <div className="section" id="product">
         <div className="containerProduk mx-auto pt-30 bg-white hidden lg:block ">
           <h2 className="tagline2 text-2xl font-semibold text-gray-800 ">
             The Future of Digital Innovation

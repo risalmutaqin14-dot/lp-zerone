@@ -1,4 +1,4 @@
-import { mockup } from "../data";
+import { mockup, solutionDigmar } from "../data";
 
 export default function DigmaSEO() {
   return (
@@ -47,6 +47,13 @@ export default function DigmaSEO() {
             Bruce Clay
           </h3>
         </div>
+        <section className="features-section container mx-auto  lg:px-35 bg-white">
+          <div className="mt-5 mb-10  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
+            <img src={solutionDigmar.digmar1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Content Management System" />
+            <img src={solutionDigmar.digmar2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Mobile App Development" />
+            <img src={solutionDigmar.digmar3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Web App Development" />
+          </div>
+        </section>
       </div>
     </>
   );

@@ -178,6 +178,17 @@ const Navbar = () => {
               className={`dropdown-menu ${isSolutionOpen ? "open" : ""}`}
             >
               <Link
+                to="/ai-app-automation-development"
+                className="dropdown-item"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  setIsSolutionOpen(false);
+                  setIsProductOpen(false);
+                }}
+              >
+                AI App & Automation Develpment
+              </Link>
+              <Link
                 to="/web-app"
                 className="dropdown-item"
                 onClick={() => {
@@ -263,7 +274,7 @@ const Navbar = () => {
                   setIsProductOpen(false);
                 }}
               >
-                Graphic & Vidio Production
+                Graphic & Video Production
               </Link>
               <Link
                 to="/digital-strategy-consulting"

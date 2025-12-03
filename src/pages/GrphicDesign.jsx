@@ -8,7 +8,7 @@ export default function GrafikDesain() {
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
             <h3 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
-              Grafhic and Vidio
+              Graphic and Video
               <br /> Production
             </h3>
             <span className="text-justify text-[18px] md:text-[24px] ">

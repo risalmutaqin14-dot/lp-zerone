@@ -3,7 +3,7 @@ import "../css/ProductSection.css";
 import "../css/Animasi.css";
 import { Partner } from "../components/partners.jsx";
 import { heroImage, servicesFeatures, whychoose } from "../data";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import CardSwap, { Card } from "../components/visiMisi.jsx";
 import Counter from "../components/counter.jsx";
 import ProductSection from "../components/ProductSection.jsx";
@@ -36,7 +36,31 @@ export default function Home() {
               organizations, and communities across Southeast Asia.
             </h3>
 
-            <button className="cta-button">Explore Our Solutions</button>
+            {/* button */}
+            <div className="flex justify-center items-center mt-6 container mx-auto">
+              <div className="w-[250px] mb-4 sm:mb-0">
+                <a
+                  href="#product"
+                  className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-white border-[#00A9E8] rounded-[50px] px-3 py-3"
+                >
+                  <span className="button-icon flex items-center bg-[#0092d7] rounded-full p-1 mr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#fff"
+                    >
+                      <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                    </svg>
+                  </span>
+                  <span className="text-[#0092d7] pl-3 font-semibold">
+                    Explore Our Solution
+                  </span>
+                </a>
+              </div>
+            </div>
+
             <div className="device-mockup justify-center items-center w-full h-screen ">
               <img
                 src={heroImage.image}
@@ -163,15 +187,51 @@ export default function Home() {
 
           {/* Service Grid Section */}
           <div className=" mt-20 grid grid-cols-2 gap-4 md:gap-6 sm:grid-cols-3  lg:grid-cols-3 justify-items-center">
-            <img src={servicesFeatures.cms} alt="Content Management System - Zerone Global Digital Solution" />
-            <img src={servicesFeatures.appDev} alt="Mobile App Development - Zerone Global Digital Solution" />
-            <img src={servicesFeatures.webDev} alt="Web App Development - Zerone Global Digital Solution" />
-            <img src={servicesFeatures.wordpess} alt="wordpess Development - Zerone Global Digital Solution" />
-            <img src={servicesFeatures.uiux} alt="uiux design - Zerone Global Digital Solution" />
-            <img src={servicesFeatures.digmar} alt="digital marketing - Zerone Global Digital Solution" />
-            <img src={servicesFeatures.payment} alt="Web App Development - Zerone Global Digital Solution" />
-            <img src={servicesFeatures.desain} alt="Web App Development - Zerone Global Digital Solution" />
-            <img src={servicesFeatures.strategy} alt="Web App Development - Zerone Global Digital Solution" />
+            <img
+              src={servicesFeatures.cms}
+              alt="Content Management System - Zerone Global Digital Solution"
+              className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            />
+            <img
+              src={servicesFeatures.appDev}
+              alt="Mobile App Development - Zerone Global Digital Solution"
+              className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            />
+            <img
+              src={servicesFeatures.webDev}
+              alt="Web App Development - Zerone Global Digital Solution"
+              className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            />
+            <img
+              src={servicesFeatures.wordpess}
+              alt="wordpess Development - Zerone Global Digital Solution"
+              className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            />
+            <img
+              src={servicesFeatures.uiux}
+              alt="uiux design - Zerone Global Digital Solution"
+              className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            />
+            <img
+              src={servicesFeatures.digmar}
+              alt="digital marketing - Zerone Global Digital Solution"
+              className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            />
+            <img
+              src={servicesFeatures.payment}
+              alt="Web App Development - Zerone Global Digital Solution"
+              className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            />
+            <img
+              src={servicesFeatures.desain}
+              alt="Web App Development - Zerone Global Digital Solution"
+              className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            />
+            <img
+              src={servicesFeatures.strategy}
+              alt="Web App Development - Zerone Global Digital Solution"
+              className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            />
           </div>
         </section>
       </div>
@@ -275,7 +335,9 @@ export default function Home() {
                   <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
                 </svg>
               </span>
-              <p className="button-text text-[18px] text-center md:text-left mt-3 md:mt-0">info@zerone.id</p>
+              <p className="button-text text-[18px] text-center md:text-left mt-3 md:mt-0">
+                info@zerone.id
+              </p>
             </div>
             <div className="md:flex mt-2 items-center">
               <span className="mr-2 flex rounded-full p-1 mr-4 ">

@@ -7,13 +7,14 @@ module.exports = {
     'html.js :where([class*="taos:"]:not(.taos-init))',
   ],
   theme: {
-    extend: {
-      // keep custom extensions minimal here; you can add keyframes/animation
-      // definitions later if you need more advanced custom animations
+extend: {
+      fontFamily: {
+        // Mengganti font 'sans' Tailwind dengan Plus Jakarta Sans
+        sans: ['"Plus Jakarta Sans"', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   plugins: [
-    // taos plugin (if you use the TAOS data attributes for scroll animations)
     require('taos'),
   ],
 };

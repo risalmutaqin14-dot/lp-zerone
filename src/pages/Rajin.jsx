@@ -22,7 +22,7 @@ export default function Rajin() {
         {/* button request demo */}
         <div className="md:flex contaier mx-auto justify-center gap-8 items-center mt-[60px] px-4">
           {/* Tombol kiri - Download Aplikasi */}
-          <div className="w-[250px] mb-4 sm:mb-0 mx-auto md:mx-0">
+          <div className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-[250px] mb-4 sm:mb-0 mx-auto md:mx-0">
             <a
               href="https://play.google.com/store/apps/details?id=com.zerone.rajin&pcampaignid=web_share"
               className="download flex items-center border-2 border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -39,7 +39,7 @@ export default function Rajin() {
           </div>
 
           {/* Tombol kanan - Request Demo Aplikasi */}
-          <div className="w-[250px] mb-4 sm:mb-0 mx-auto md:mx-0">
+          <div className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-[250px] mb-4 sm:mb-0 mx-auto md:mx-0">
             <a
               href=""
               className="download flex items-center border-2 bg-[linear-gradient(90deg,#1c76d2,#3498db)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -71,7 +71,7 @@ export default function Rajin() {
         <div className="container mx-auto  lg:px-30 lg:mt-10">
           <div className="my-10 px-3 lg:px-[200px] grid grid-cols-3 gap-4 md:grid-cols-3 lg:grid-cols-3 bg-no-repeat bg-cover rounded-[20px]  ">
             {/* Box 1 */}
-            <div className="w-full text-center m-2">
+            <div className="shadow-lg w-full text-center m-2 p-5 rounded-[15px] bg-[#F5F9FF] rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
               <img
                 src={ilustration.ilusrajin1}
                 className="w-20 mx-auto pb-5"
@@ -83,7 +83,7 @@ export default function Rajin() {
             </div>
 
             {/* Box 2 */}
-            <div className="w-full text-center m-2">
+            <div className="shadow-lg w-full text-center m-2 p-5 rounded-[15px] bg-[#F5F9FF] rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
               <img
                 src={ilustration.ilusrajin2}
                 className="w-20 mx-auto pb-5"
@@ -95,7 +95,7 @@ export default function Rajin() {
             </div>
 
             {/* Box 3 */}
-            <div className="w-full text-center m-2">
+            <div className="shadow-lg w-full text-center m-2 p-5 rounded-[15px] bg-[#F5F9FF] rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
               <img
                 src={ilustration.ilusrajin3}
                 className="w-20 mx-auto pb-5"

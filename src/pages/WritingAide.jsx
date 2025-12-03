@@ -14,7 +14,7 @@ export default function WritingAide() {
 
         {/* button request demo */}
         <div className="flex justify-center mt-20">
-          <div className="w-[200px] mb-4 sm:mb-0">
+          <div className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-[200px] mb-4 sm:mb-0">
             <a
               href="https://writing-aide.zerone.id/"
               className="download flex items-center border-2 bg-[linear-gradient(90deg,#1c76d2,#3498db)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -51,7 +51,7 @@ export default function WritingAide() {
             
           >
             {/* Box 1 */}
-            <div className="w-full text-center m-2">
+            <div className="shadow-lg w-full text-center m-2 p-5 rounded-[15px] bg-[#F5F9FF] rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
               <img
                 src={ilustration.iluswriting1}
                 className="w-20 mx-auto pb-5"
@@ -63,11 +63,11 @@ export default function WritingAide() {
             </div>
 
             {/* Box 2 */}
-            <div className="w-full text-center m-2">
+            <div className="shadow-lg w-full text-center m-2 p-5 rounded-[15px] bg-[#F5F9FF] rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
               <img
                 src={ilustration.iluswriting2}
                 className="w-20 mx-auto pb-5"
-                alt="Collaborative"
+                alt="Customer Oriented"
               />
               <span className="text-justify text-[16px] md:text-[20px] text-grey-600">
                 IELTS
@@ -75,7 +75,7 @@ export default function WritingAide() {
             </div>
 
             {/* Box 3 */}
-            <div className="w-full text-center m-2">
+            <div className="shadow-lg w-full text-center m-2 p-5 rounded-[15px] bg-[#F5F9FF] rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
               <img
                 src={ilustration.iluswriting3}
                 className="w-20 mx-auto pb-5"
@@ -87,7 +87,7 @@ export default function WritingAide() {
             </div>
 
             {/* Box 4 */}
-            <div className="w-full text-center m-2">
+            <div className="shadow-lg w-full text-center m-2 p-5 rounded-[15px] bg-[#F5F9FF] rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
               <img
                 src={ilustration.iluswriting4}
                 className="w-20 mx-auto pb-5"

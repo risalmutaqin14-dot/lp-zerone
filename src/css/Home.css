@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Nunito+Sans:wght@400;500&family=Ubuntu:wght@400&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Nunito+Sans:wght@400;500&family=Ubuntu:wght@400&display=swap");
+*/
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Onest:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  font-family: 'Plus Jakarta Sans', sans-serif;;
+}
 
 .hero-line {
   width: 100%;
@@ -36,9 +42,10 @@
   width: 100%;
   color: #fff;
   text-align: center;
-  font-family: Onest, -apple-system, Roboto, Helvetica, sans-serif;
+  /* Perubahan di sini: Menggunakan nama font yang benar */
+  font-family: 'Plus Jakarta Sans', sans-serif; 
   font-size: 49px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 120%;
   margin: 0 0 30px 0;
 }
@@ -48,7 +55,7 @@
   max-width: 100%;
   color: #fff;
   text-align: center;
-  font-family: "Nunito Sans", -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 25px;
   font-weight: 400;
   line-height: 120%;
@@ -57,7 +64,7 @@
 
 .tagline2 {
   text-align: center;
-  font-family: Onest;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
   font-size: 36px;
   font-weight: 700;
   color: #1a202c;
@@ -70,13 +77,14 @@
   text-align: center;
   color: #505d68;
   font-weight: 500;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
 }
 
 .description {
   width: 555px;
   max-width: 100%;
   text-align: center;
-  font-family: "Nunito Sans", -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
   font-size: 18px;
   font-weight: 400;
   line-height: 153%;
@@ -92,7 +100,7 @@
   border: none;
   color: #000;
   text-align: center;
-  font-family: Ubuntu, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;

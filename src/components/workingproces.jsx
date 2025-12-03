@@ -2,27 +2,27 @@ import React from "react";
 import "../css/workingproces.css";
 const cardsData = [
   {
-    color: "#00a9e8",
+    color: "#00bbd7",
     icon: "fa-solid fa-user",
     title: "Requirement",
     content:
       "The process of understanding system requirements",
   },
   {
-    color: "#0161D2",
+    color: "#0092d7",
     icon: "fa-solid fa-house",
     title: "UI/UX Design",
     content:
       "The process of designing sketches, wireframes, visuals",
   },
   {
-    color: "#00a9e8",
+    color: "#00bbd7",
     icon: "fa-solid fa-wifi",
     title: "Prototype",
     content: "Initial model to validate the design",
   },
   {
-    color: "#0161D2",
+    color: "#0092d7",
     icon: "fa-solid fa-cart-shopping",
     title: "Development",
     content:

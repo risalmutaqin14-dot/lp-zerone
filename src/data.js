@@ -27,7 +27,7 @@ const cards = [
     image: "/assets/portfolio/komodo.webp",
     author: "Zerone Global",
     date: "January 25, 2022",
-    link: "#",
+    link: "https://komodocompetition.com/",
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ const cards = [
     image: "/assets/portfolio/rajinID.webp",
     author: "Zerone Global",
     date: "January 27, 2022",
-    link: "#",
+    link: "https://rajin.id/",
   },
   {
     id: 4,
@@ -143,6 +143,10 @@ export const logos = {
   appStore : "/assets/AppStore.png"
 };
 
+
+
+
+
 export const mockup = {
   webapp : "/assets/mockup/webApp.png",
   mobileapp : "/assets/mockup/mobileApp.png",
@@ -153,31 +157,34 @@ export const mockup = {
   payment: "/assets/mockup/payment.png",
   digcon: "/assets/mockup/digitalconsulting.png",
   graphic: "/assets/mockup/desaingrafis.png",
+  zeroneAI : "/assets/mockup/zeroneAI.png"
+  
 }
-
-
-
-
 
 // Solution Data Image
-
-export const solutionUIUX = {
-  uiux1 : "/assets/mockup//UIUX/EdunavParentThumbnail.png",
-  uiux2 : "/assets/mockup//UIUX/Edunav Student Thumbnail.png",
-  uiux3 : "/assets/mockup//UIUX/Edunav Teacher Thumbnail.png",
-  uiux4 : "/assets/mockup//UIUX/Edunav Web-app Thumbnail.png",
-  uiux5 : "/assets/mockup//UIUX/Helloglob Thumbnail.png",
-  uiux6 : "/assets/mockup//UIUX/Latihan.id Mockup 1.png",
-  uiux7 : "/assets/mockup//UIUX/Latihan.id Mockup 2.png",
-  uiux8 : "/assets/mockup//UIUX/Writing Aide.png",
+export const solutionAI = {
+  ai1 : "/assets/mockup/AI/1.png",
+  ai2 : "/assets/mockup/AI/2.png",
+  ai3 : "/assets/mockup/AI/3.png",
+  ai4 : "/assets/mockup/AI/4.png",
+  ai5 : "/assets/mockup/AI/5.png",
+  ai6 : "/assets/mockup/AI/6.png",
 }
-
+export const solutionUIUX = {
+  uiux1 : "/assets/mockup/UIUX/EdunavParentThumbnail.png",
+  uiux2 : "/assets/mockup/UIUX/Edunav Student Thumbnail.png",
+  uiux3 : "/assets/mockup/UIUX/Edunav Teacher Thumbnail.png",
+  uiux4 : "/assets/mockup/UIUX/Edunav Web-app Thumbnail.png",
+  uiux5 : "/assets/mockup/UIUX/Helloglob Thumbnail.png",
+  uiux6 : "/assets/mockup/UIUX/Latihan.id Mockup 1.png",
+  uiux7 : "/assets/mockup/UIUX/Latihan.id Mockup 2.png",
+  uiux8 : "/assets/mockup/UIUX/Writing Aide.png",
+}
 export const solutionDesain = {
   desain1 : "assets/mockup/desain/zerone.png",
   desain2 : "assets/mockup/desain/edunav.png",
   desain3 : "assets/mockup/desain/venti.png",
 }
-
 export const solutionWordpress = {
   webpres1 : "assets/mockup/web-design/pakar-belia.png",
   webpres2 : "assets/mockup/web-design/hibiscus.png",
@@ -186,13 +193,29 @@ export const solutionWordpress = {
   webpres5 : "assets/mockup/web-design/edunav.png",
   webpres6 : "assets/mockup/web-design/semesta.png",
 }
-
 export const solutionAppDev = {
   appDev1 : "assets/mockup/AppDev/latihan.png",
   appDev2 : "assets/mockup/AppDev/venti.png",
   appDev3 : "assets/mockup/AppDev/rajin.png",
 }
-
+export const solutionWebApp = {
+  webApp1 : "assets/mockup/webApp/dashboard edunav.png",
+  webApp2 : "assets/mockup/webApp/dashboard latihanID.png",
+  webApp3 : "assets/mockup/webApp/dashboard venti.png",
+}
+export const solutionpayment = {
+  payment1 : "assets/mockup/payment/payment gateway.png",
+  payment2 : "assets/mockup/payment/pay - payment gateway.png",
+  payment3 : "assets/mockup/payment/confirmation - payment gateway.png",
+}
+export const solutionDigmar = {
+  digmar1 : "assets/mockup/digmar/1.png",
+  digmar2 : "assets/mockup/digmar/2.png",
+  digmar3 : "assets/mockup/digmar/3.png",
+}
+export const solutionDigitalStrategy = {
+  digstra1 : "assets/mockup/digitalStrategi/digital strategy consulting.png",
+}
 // End Solution Data Image
 
 
@@ -236,13 +259,16 @@ export const banner = {
 
 export const ourteam = {
   team1 : "/assets/OurTeam/team1.png",
-  team2 : "/assets/OurTeam/team2.png",
-  team3 : "/assets/OurTeam/team3.png",
-  team4 : "/assets/OurTeam/team4.png",
-  team5 : "/assets/OurTeam/team5.png",
-  team6 : "/assets/OurTeam/team6.png",
-  team7 : "/assets/OurTeam/team7.png",
-  team8 : "/assets/OurTeam/team8.png",  
+  team2 : "/assets/OurTeam/2.png",
+  team3 : "/assets/OurTeam/3.png",
+  team4 : "/assets/OurTeam/4.png",
+  team5 : "/assets/OurTeam/5.png",
+  team6 : "/assets/OurTeam/6.png",
+  team7 : "/assets/OurTeam/7.png",
+  team8 : "/assets/OurTeam/8.png", 
+  team9 : "/assets/OurTeam/9.png", 
+  team10 : "/assets/OurTeam/10.png", 
+  team11: "/assets/OurTeam/11.png",  
 }
 
 export const ilustration = {

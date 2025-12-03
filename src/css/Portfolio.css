@@ -133,7 +133,7 @@
   position: absolute;
   bottom: 0rem;
   padding: 1rem;
-  color: #444;
+  
   transition: background-color 1.5s ease;
   z-index: 2;
   width: 100%;
@@ -163,7 +163,7 @@
 }
 
 .news-card:hover .news-card__text-wrapper {
-  background-color: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(to right, #00bbd7, #0092d7, #6e92d7);
 }
 
 .news-card:hover .news-card__title {

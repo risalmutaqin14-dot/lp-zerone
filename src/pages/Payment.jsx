@@ -1,4 +1,4 @@
-import { mockup } from "../data";
+import { mockup, solutionpayment } from "../data";
 
 export default function Payment() {
   return (
@@ -40,6 +40,13 @@ export default function Payment() {
             Tell us your needs, and Zerone will make them happen, exactly as you want.
           </h3>
         </div>
+        <section className="features-section container mx-auto  lg:px-35 bg-white">
+                          <div className="pb-20  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
+                            <img src={solutionpayment.payment1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Payment Gateway Integration" />
+                            <img src={solutionpayment.payment2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Payment Gateway Integration" />
+                            <img src={solutionpayment.payment3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Payment Gateway Integration" />
+                          </div>
+                        </section>
       </div>
     </>
   );

@@ -1,9 +1,9 @@
-import { mockup } from "../data";
+import { mockup, solutionDigitalStrategy } from "../data";
 
 export default function DigitalStrategy() {
   return (
     <>
-      <div className="webApp pt-15 lg:pt-5">
+      <div className="webApp pt-15 lg:pt-5 bg-white">
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1  sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
@@ -41,6 +41,11 @@ export default function DigitalStrategy() {
             Consult and tell us your needs only with Zerone!
           </h3>
         </div>
+        <section className="features-section container mx-auto  lg:px-35 bg-white">
+            <div className="mt-5 mb-10  grid grid-cols-1 ">
+            <img src={solutionDigitalStrategy.digstra1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Ai App & Automation Development" />
+            </div>
+        </section>
       </div>
     </>
   );

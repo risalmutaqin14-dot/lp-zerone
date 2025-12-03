@@ -1,9 +1,9 @@
-import { mockup } from "../data";
+import { mockup, solutionWebApp } from "../data";
 
 export default function WebApp() {
   return (
     <>
-      <div className="webApp pt-15 lg:pt-5">
+      <div className="webApp pt-15 lg:pt-5 bg-white">
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
@@ -46,6 +46,13 @@ export default function WebApp() {
             is always ready to help!
           </h3>
         </div>
+                <section className="features-section container mx-auto  lg:px-35 bg-white">
+                  <div className="pb-20  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
+                    <img src={solutionWebApp.webApp3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="web app development - venti.id" />
+                    <img src={solutionWebApp.webApp2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="web app development - latihan.id" />
+                    <img src={solutionWebApp.webApp1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="web app development - edunav" />
+                  </div>
+                </section>
       </div>
     </>
   );

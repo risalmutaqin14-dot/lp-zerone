@@ -42,22 +42,21 @@ export default function MobileApp() {
         <div className="container mx-auto mt-30 mb-15">
           
             <h3 className="text-[24px] md:text-[36px] font-bold text-center text-black mb-3 pt-2">
-              Digital Transformation
-              <br className="hidden md:inline" />&nbsp;Through User-Centered UI/UX Design
+              Digital Solutions that 
+              <br className="hidden md:inline" />&nbsp;Increase Business Productivity
             </h3>
             <h5 className="text-[16px] md:text-[18px] text-center">
-              End-to-End Digital Product Design Solutions: UI/UX, User Research,
-              Prototyping, and Design Systems. <br className="hidden md:inline" />&nbsp;Develop successful products with
-              our team of experts.
+              We build Android & iOS applications that are scalable, secure, 
+              Prototyping, and Design Systems. <br className="hidden md:inline" />&nbsp;and ready to compete in the global market
             </h5>
           
         </div>
 
         <section className="features-section container mx-auto  lg:px-35 bg-white">
-          <div className="mt-5 mb-10  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
-            <img src={solutionAppDev.appDev1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Content Management System" />
-            <img src={solutionAppDev.appDev2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Mobile App Development" />
-            <img src={solutionAppDev.appDev3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Web App Development" />
+          <div className=" mb-20  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
+            <img src={solutionAppDev.appDev1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Mobile App Development - Latihan.id" />
+            <img src={solutionAppDev.appDev2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Mobile App Development - vanti.id" />
+            <img src={solutionAppDev.appDev3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Mobile App Development - Rajin.id" />
           </div>
         </section>
       </div>

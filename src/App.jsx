@@ -13,6 +13,7 @@ import DigmaSEO from "./pages/Digma-SEO";
 import Payment from "./pages/Payment";
 import GrafikDesain from "./pages/GrphicDesign";
 import DigitalStrategy from "./pages/DigitalStrategy";
+import AiAppAutomation from "./pages/AIApp-automation"
 
 import EduNav from "./pages/edunav";
 import Venti from "./pages/venti";
@@ -39,6 +40,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/web-app" element={<WebApp />} />
         
+        <Route path="/ai-app-automation-development" element={<AiAppAutomation />}></Route>
         <Route path="/wordpress-dev" element={<WordpressDev />} />
         <Route path="/cms" element={<CMS />} />
         <Route path="/uiux" element={<UIUX />} />

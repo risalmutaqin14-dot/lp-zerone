@@ -103,7 +103,7 @@ export default function WordpressDev() {
           </h5>
         </div>
         <section className="features-section container mx-auto  lg:px-35 bg-white">
-          <div className="pt-5 mb-10  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
+          <div className="mb-20  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
             <img
               src={solutionWordpress.webpres1}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
