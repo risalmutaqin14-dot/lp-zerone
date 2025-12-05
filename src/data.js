@@ -136,11 +136,12 @@ export const stackDev = {
 
 
 export const logos = {
-  whitelogo: "https://api.builder.io/api/v1/image/assets/TEMP/5cc82c1b74253eb2cb033c88db7f65b415db9fe7?width=210",
+  whitelogo: "/assets/Zerone-Putih.png",
   bluelogo: "/assets/Zerone-biru.png",
   komdigi: "/assets/komdigi.png",
   playstore : "/assets/playstore.png",
-  appStore : "/assets/AppStore.png"
+  appStore : "/assets/AppStore.png",
+  instagram : "/assets/Instagram.webp"
 };
 
 
@@ -253,7 +254,13 @@ export const banner = {
   mobilewritingaide : "/assets/banner-produk/Mobile/writing.webp",
   mobilemaridukung : "/assets/banner-produk/Mobile/maridukung.webp",
 }
-
+export const sosialmedia ={
+  socialEdunav : "/assets/banner-produk/sosmed/sosmed edunav.png",
+  socialVenti : "/assets/banner-produk/sosmed/sosmed venti.png",
+  socialRajin : "/assets/banner-produk/sosmed/sosmed rajin.png",
+  socialMaridukung :"/assets/banner-produk/sosmed/sosmed maridukung.png",
+  socialWritingAide : "/assets/banner-produk/sosmed/sosmed writing aide.png",
+}
 
 
 

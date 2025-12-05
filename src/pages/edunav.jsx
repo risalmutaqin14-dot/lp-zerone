@@ -1,9 +1,9 @@
-import { banner, ilustration, logos } from "../data";
+import { banner, ilustration, logos, sosialmedia } from "../data";
 
 export default function EduNav() {
   return (
     <>
-      <div className="webApp pt-20 lg:pt-5 container mx-auto">
+      <div className="webApp pt-20 lg:pt-5 container mx-auto bg-white">
         <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img className="rounded-[20px]" src={banner.edunav} alt="edunav" />
         </div>
@@ -94,6 +94,49 @@ export default function EduNav() {
               </span>
               <span className="text-white">Request App Demo</span>
             </a>
+          </div>
+        </div>
+
+
+
+        {/* soial media section */}
+        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-start px-7 sm:px-20 lg:px-40 my-30">
+          <div className="lg:w-1/2">
+          <img
+            className="rounded-[20px] container mx-auto w-[350px]"
+            src={sosialmedia.socialEdunav}
+            alt="social media edunav"
+          />
+          </div>
+
+          {/* Right Section */}
+          <div className="lg:w-1/2">
+          <h3 className="text-lg lg:text-xl text-gray-600 mt-20 md:mt-10 mb-2">
+              Follow Us On
+            </h3>
+            <h2 className="text-2xl lg:text-4xl font-bold text-gray-700 mb-6 leading-snug">
+              Social Media
+            </h2>
+            <p className="[text-align:justify] text-base lg:text-lg text-gray-500 leading-relaxed">
+              Improve your school's administrative efficiency! Follow Edunav on social media for system implementation tips, feature updates, and guides for easier, more integrated school data management.
+            </p>
+
+            {/* button */}
+            <div className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-[250px] mb-4 mt-8 sm:mb-0 mx-auto md:mx-0">
+            <a
+              href="https://www.instagram.com/edunav.sis/"
+              className="download flex items-center border-2 border-[#00A9E8] rounded-[50px] px-3 py-3"
+            >
+              <span className="button-icon flex items-center rounded-full p-1 mr-2">
+                <img
+                  src={logos.instagram}
+                  className="w-5"
+                  alt="https://www.instagram.com/edunav.sis/"
+                />
+              </span>
+              <span className="button-text">Follow Instagram</span>
+            </a>
+          </div>
           </div>
         </div>
 

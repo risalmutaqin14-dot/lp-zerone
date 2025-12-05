@@ -16,7 +16,7 @@ function Blog() {
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
 
   return (
-    <div className="container mx-auto mt-[100px] blog-page">
+    <div className="container mx-auto pt-[50px] blog-page bg-white">
       <div className="container mx-auto px-5">
         <h3 className="text-[30px] mt-20 sm:text-3xl lg:text-4xl font-bold text-Black text-center pt-10  mb-6">
           Digital Insights from <br />

@@ -1,11 +1,12 @@
 .containerProduk {
   position: relative;
   width: 100%;
+  padding-top: 100px;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-.containerProduk.sticky-padding {
-  padding-top: 20px; /* padding saat sticky */
-}
+
 
 .containerProduk .section {
   position: sticky;

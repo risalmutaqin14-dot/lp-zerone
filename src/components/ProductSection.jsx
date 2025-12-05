@@ -56,7 +56,7 @@ export default function ProdukDesktop({ banner } = {}) {
               alt="Edunav School management system"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
+              <div className="w-[200px]  sm:mb-0">
                 <a
                   href="/edunav"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -86,7 +86,7 @@ export default function ProdukDesktop({ banner } = {}) {
               alt="Latihan - platform ujian"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
+              <div className="w-[200px]  sm:mb-0">
                 <a
                   href="/latihan"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -116,7 +116,7 @@ export default function ProdukDesktop({ banner } = {}) {
               alt="Rajin - bimbingan belajar"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
+              <div className="w-[200px] sm:mb-0">
                 <a
                   href="/rajin"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -146,7 +146,7 @@ export default function ProdukDesktop({ banner } = {}) {
               alt="Venti - event management system"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
+              <div className="w-[200px]  sm:mb-0">
                 <a
                   href="/venti"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -176,7 +176,7 @@ export default function ProdukDesktop({ banner } = {}) {
               alt="Jadwalkuliah - website manajemen jadwal kuliah"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
+              <div className="w-[200px]  sm:mb-0">
                 <a
                   href="/jadwal-kuliah"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -206,7 +206,7 @@ export default function ProdukDesktop({ banner } = {}) {
               alt="Writingaide - AI untuk latihan test TOEFL, IELST, GCSE"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
+              <div className="w-[200px]  sm:mb-0">
                 <a
                   href="/writing-aide"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -236,7 +236,7 @@ export default function ProdukDesktop({ banner } = {}) {
               alt="Writingaide - AI untuk latihan test TOEFL, IELST, GCSE"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
+              <div className="w-[200px]  sm:mb-0">
                 <a
                   href="/mari-dukung"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -281,7 +281,7 @@ export default function ProdukDesktop({ banner } = {}) {
               alt="Edunav School management system"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
+              <div className="w-[200px] sm:mb-0">
                 <a
                   href="/edunav"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -311,7 +311,7 @@ export default function ProdukDesktop({ banner } = {}) {
               alt="Latihan - platform ujian"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
+              <div className="w-[200px] sm:mb-0">
                 <a
                   href="/latihan"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -341,7 +341,7 @@ export default function ProdukDesktop({ banner } = {}) {
               alt="Rajin - bimbingan belajar"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
+              <div className="w-[200px]  sm:mb-0">
                 <a
                   href="/rajin"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -488,7 +488,7 @@ export default function ProdukDesktop({ banner } = {}) {
       </div>
 
       {/* Product Mobile View */}
-      <div className="sectioncontainer bg-white pt-20 block sm:hidden">
+      <div className="sectioncontainer bg-white pt-20 block sm:hidden mb-20">
         <h2 className="tagline2 text-2xl font-semibold text-gray-800 ">
           The Future of Digital Innovation
         </h2>
@@ -673,7 +673,7 @@ export default function ProdukDesktop({ banner } = {}) {
               src={banners.mobilemaridukung}
               alt="Maridukung"
             />
-            <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
+            <div className="w-[200px] sm:mb-0 mx-auto">
               <a
                 href="/mari-dukung"
                 className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"

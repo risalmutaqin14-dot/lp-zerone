@@ -3,7 +3,7 @@ import { mockup, solutionAI, solutionDesain } from "../data";
 export default function AiAppAutomation() {
   return (
     <>
-      <div className="webApp pt-15 lg:pt-5 bg-white pb-30">
+      <div className="webApp pt-15 md:pt-4 bg-white pb-30">
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
@@ -27,6 +27,30 @@ export default function AiAppAutomation() {
                 "efficiency is doing things right, effectiveness is doing the right things."
             </p>
             <p className="font-bold">- Peter Drucker</p>
+            {/* button */}
+            <div className="flex mt-6 container mx-auto">
+              <div className="w-[240px] mb-4 sm:mb-0">
+                <a
+                  href="/contact"
+                  className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
+                >
+                  <span className="button-icon flex items-center bg-white rounded-full p-1 mr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#0092d7"
+                    >
+                      <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                    </svg>
+                  </span>
+                  <span className="text-white pl-3 font-medium">
+                    Get The Solution
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
           <div>
             <img

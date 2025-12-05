@@ -26,7 +26,32 @@ export default function CMS() {
               your UI/UX, the more confident and likely customers are to engage
               and purchase.
             </p>
+            {/* button */}
+            <div className="flex mt-7 container mx-auto">
+              <div className="w-[240px] mb-4 sm:mb-0">
+                <a
+                  href="/contact"
+                  className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
+                >
+                  <span className="button-icon flex items-center bg-white rounded-full p-1 mr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#0092d7"
+                    >
+                      <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                    </svg>
+                  </span>
+                  <span className="text-white pl-3 font-medium">
+                    Get The Solution
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
+
           <div>
             <img
               src={mockup.uiux}
@@ -37,27 +62,50 @@ export default function CMS() {
         </div>
 
         <div className="container mx-auto mt-10 mb-10">
-          
-            <h3 className="text-[24px] md:text-[36px] font-bold text-center text-black mb-3 pt-2">
-              Digital Transformation
-              <br className="hidden md:inline" />&nbsp;Through User-Centered UI/UX Design
-            </h3>
-            <h5 className="text-[16px] md:text-[18px] text-center">
-              End-to-End Digital Product Design Solutions: UI/UX, User Research,
-              Prototyping, and Design Systems. <br className="hidden md:inline" />&nbsp;Develop successful products with
-              our team of experts.
-            </h5>
-          
+          <h3 className="text-[24px] md:text-[36px] font-bold text-center text-black mb-3 pt-2">
+            Digital Transformation
+            <br className="hidden md:inline" />
+            &nbsp;Through User-Centered UI/UX Design
+          </h3>
+          <h5 className="text-[16px] md:text-[18px] text-center">
+            End-to-End Digital Product Design Solutions: UI/UX, User Research,
+            Prototyping, and Design Systems. <br className="hidden md:inline" />
+            &nbsp;Develop successful products with our team of experts.
+          </h5>
         </div>
 
         <section className="features-section container mx-auto  lg:px-35 bg-white">
           <div className="mt-5 mb-10  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
-            <img src={solutionUIUX.uiux1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Content Management System" />
-            <img src={solutionUIUX.uiux2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Mobile App Development" />
-            <img src={solutionUIUX.uiux3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Web App Development" />
-            <img src={solutionUIUX.uiux4} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="wordpess Development" />
-            <img src={solutionUIUX.uiux5} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="uiux design" />
-            <img src={solutionUIUX.uiux6} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="digital marketing" />
+            <img
+              src={solutionUIUX.uiux1}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="Content Management System"
+            />
+            <img
+              src={solutionUIUX.uiux2}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="Mobile App Development"
+            />
+            <img
+              src={solutionUIUX.uiux3}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="Web App Development"
+            />
+            <img
+              src={solutionUIUX.uiux4}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="wordpess Development"
+            />
+            <img
+              src={solutionUIUX.uiux5}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="uiux design"
+            />
+            <img
+              src={solutionUIUX.uiux6}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="digital marketing"
+            />
           </div>
         </section>
       </div>

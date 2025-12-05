@@ -32,7 +32,7 @@ const cardsData = [
 
 export default function ULCards() {
   return (
-    <div className="py-[80px]">
+    <div className="pb-[80px]">
       <h2 className="text-[36px] font-bold text-gray-600 mb-6 text-center">
         The Right Solution Through a Clear Process
       </h2>

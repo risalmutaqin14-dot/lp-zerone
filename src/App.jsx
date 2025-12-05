@@ -25,6 +25,7 @@ import JadwalKuliah from "./pages/JadwalKuliah";
 
 import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
+import PostDetail from "./pages/BlogDetail";
 import Contact from "./pages/contact";
 
 import FAQs from "./pages/FAQ";
@@ -34,7 +35,7 @@ function App() {
   useScrollAnimation();
   
   return (
-    <div className="App">
+    <div className="App bg-white">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -60,6 +61,7 @@ function App() {
 
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/post/:id" element={<PostDetail />} />
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/FAQs" element={<FAQs />} />

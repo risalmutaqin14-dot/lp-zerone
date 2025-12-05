@@ -3,7 +3,6 @@ import React from "react";
 import "../css/Footer.css"; // Pastikan menambahkan file CSS untuk styling
 import { logos } from "../data";
 
-
 // Pastikan Footer adalah fungsi komponen
 const Footer = () => {
   return (
@@ -17,22 +16,57 @@ const Footer = () => {
               organizations, and communities across Southeast Asia.
             </span>
           </div>
-          <div className="footer-social">
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Facebook
-            </a>
-            <i className="fa-brands fa-instagram"></i>
+          <div className="footer-social mt-4">
+            <div className="flex items-center gap-">
+              <a
+                href="https://wa.me/6281370000299?text=Hi%2C%20I%20want%20to%20ask%20about%20zerOne.id%20service"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="text-[#25D366] hover:text-[#1ebe57] transition-colors duration-200 transition-all duration-300 hover:scale-115 hover:shadow-2xl cursor-pointer"
+              >
+                <i className="fa-brands fa-whatsapp text-2xl"></i>
+              </a>
+
+              <a
+                href="https://www.instagram.com/zerone.global/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="bg-gradient-to-br from-[#f58529] via-[#dd2a7b] to-[#8134af] bg-clip-text text-transparent hover:opacity-90 transition-opacity duration-200 transition-all duration-300 hover:scale-115 hover:shadow-2xl cursor-pointer"
+              >
+                <i className="fa-brands fa-instagram text-2xl"></i>
+              </a>
+
+              <a
+                href="https://www.facebook.com/global.zerone"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-[#1877F2] hover:text-[#145db8] transition-colors duration-200 transition-all duration-300 hover:scale-115 hover:shadow-2xl cursor-pointer"
+              >
+                <i className="fa-brands fa-facebook text-2xl"></i>
+              </a>
+
+              <a
+                href="https://www.youtube.com/@zeroneglobal"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="text-[#FF0000] hover:text-[#cc0000] transition-colors duration-200 transition-all duration-300 hover:scale-115 hover:shadow-2xl cursor-pointer"
+              >
+                <i className="fa-brands fa-youtube text-2xl"></i>
+              </a>
+
+              <a
+                href="https://www.threads.com/@zerone.global"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black hover:text-neutral-700 dark:text-white dark:hover:text-neutral-300 transition-colors duration-200 transition-all duration-300 hover:scale-115 hover:shadow-2xl cursor-pointer"
+              >
+                <i className="fa-brands fa-threads text-2xl"></i>
+              </a>
+            </div>
           </div>
         </div>
 

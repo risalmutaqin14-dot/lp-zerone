@@ -1,6 +1,12 @@
-import React from "react";
-import { mockup } from "../data";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  faPhone,
+  faEnvelope,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Contact() {
   const {
@@ -9,10 +15,27 @@ export default function Contact() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // Di sini kamu bisa mengirim data ke API atau proses lebih lanjut
+  // state untuk pesan feedback
+  const [submitMessage, setSubmitMessage] = useState(null);
+  const [isError, setIsError] = useState(false);
+
+  const onSubmit = async (data) => {
+    try {
+      // simulasi submit ke API
+      console.log("Form data:", data);
+
+      // kalau berhasil
+      setSubmitMessage(
+        "✅ Thank you! Your message has been sent successfully. Our team will get back to you soon."
+      );
+      setIsError(false);
+    } catch (err) {
+      // kalau gagal
+      setSubmitMessage("❌ Oops, something went wrong. Please try again.");
+      setIsError(true);
+    }
   };
+
   return (
     <>
       <div className="webApp pt-15 lg:pt-5">
@@ -29,58 +52,67 @@ export default function Contact() {
               Connect with us for project inquiries, technical support, or
               general questions. We’ll respond as soon as possible.
             </span>
-            <div className=" lg:w-1/2 align-middle lg:pl-6">
+            <div className="lg:w-2/3 align-middle lg:pl-6">
+              {/* Phone */}
               <div className="flex mt-8 items-center">
-                <span className="mr-2 flex items-center  rounded-full p-1 mr-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    fill="#000000"
-                  >
-                    <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
-                  </svg>
+                <span className="mr-4 flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-black">
+                  <FontAwesomeIcon icon={faPhone} className="text-lg" />
                 </span>
-                <span className="button-text text-[18px]">
-                  +62 813 7000 2999 | (021) 2784 6241
-                </span>
+                <a
+                  href="tel:+622127846241"
+                  className="button-text text-[18px] hover:text-blue-600 transition-colors"
+                >
+                  (021) 2784 6241
+                </a>
               </div>
-              <div className="flex mt-2 items-center">
-                <span className="mr-2 flex items-center  rounded-full p-1 mr-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    fill="#000000"
-                  >
-                    <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
-                  </svg>
+
+              {/* WhatsApp */}
+              <div className="flex mt-3 items-center">
+                <span className="mr-4 flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-black">
+                  <FontAwesomeIcon icon={faWhatsapp} className="text-lg" />
                 </span>
-                <span className="button-text text-[18px]">info@zerone.id</span>
+                <a
+                  href="https://wa.me/6281370002999"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button-text text-[18px] hover:text-blue-600 transition-colors"
+                >
+                  +62 813-7000-0299
+                </a>
               </div>
-              <div className="flex mt-2 items-center">
-                <span className="mr-2 flex rounded-full p-1 mr-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    fill="#000000"
-                  >
-                    <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
-                  </svg>
+
+              {/* Email */}
+              <div className="flex mt-3 items-center">
+                <span className="mr-4 flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-black">
+                  <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
                 </span>
-                <span className="button-text text-[18px]">
+                <a
+                  href="mailto:info@zerone.id"
+                  className="button-text text-[18px] hover:text-blue-600 transition-colors"
+                >
+                  info@zerone.id
+                </a>
+              </div>
+
+              {/* Location */}
+              <div className="flex mt-3 items-start">
+                <span className="w-25 mr-4 flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-black">
+                  <FontAwesomeIcon icon={faLocationDot} className="text-lg" />
+                </span>
+                <a
+                  href="https://www.google.com/maps/place/My+Republic+Plaza,+Wing+A,+Zone+6+Green+Office+Park,+BSD+City,+Tangerang,+Banten,+Indonesia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button-text text-[18px] hover:text-blue-600 transition-colors"
+                >
                   My Republic Plaza, Wing A, Zone 6 Green Office Park, BSD City,
                   Tangerang, Banten – Indonesia
-                </span>
+                </a>
               </div>
             </div>
           </div>
           {/* Form */}
-          <div className=" p-6 rounded-[20px]  shadow-md bg-[#F5F9FF]">
+          <div className="p-6 rounded-[20px] shadow-md bg-[#F5F9FF]">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               {/* Name Field */}
               <div>
@@ -103,7 +135,7 @@ export default function Contact() {
                 <input
                   id="email"
                   type="email"
-                  placeholder="email"
+                  placeholder="Email"
                   {...register("email", {
                     required: "Email is required",
                     pattern: {
@@ -121,18 +153,18 @@ export default function Contact() {
                 )}
               </div>
 
-              {/* Number Field */}
+              {/* Phone Field */}
               <div>
                 <input
-                  id="name"
+                  id="phone"
                   type="tel"
                   placeholder="Phone / WhatsApp"
-                  {...register("name", { required: "Name is required" })}
+                  {...register("phone", { required: "Phone is required" })}
                   className="w-full h-[60px] mt-1 px-3 py-2 border-2 border-[#00A9E8] rounded-[15px] focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
-                {errors.name && (
+                {errors.phone && (
                   <span className="text-red-500 text-sm">
-                    {errors.name.message}
+                    {errors.phone.message}
                   </span>
                 )}
               </div>
@@ -154,29 +186,36 @@ export default function Contact() {
               </div>
 
               {/* Submit Button */}
-              <div className="flex mt-6 container mx-auto">
-              <div className="w-[200px] mb-4 sm:mb-0">
-                <a
-                  href="/faqs"
-                  className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
+              <div className="flex mt-6 ">
+                <button
+                  type="submit"
+                  className="w-[160px] transition duration-300 ease-in-out hover:scale-105 flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-4 py-3"
                 >
                   <span className="button-icon flex items-center bg-white rounded-full p-1 mr-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      height="24px"
+                      height="20px"
                       viewBox="0 -960 960 960"
-                      width="24px"
+                      width="20px"
                       fill="#0092d7"
                     >
                       <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
                     </svg>
                   </span>
-                  <span className="text-white pl-3 font-medium">
-                    Submit
-                  </span>
-                </a>
+                  <span className="text-white pl-2 font-medium">Submit</span>
+                </button>
               </div>
-            </div>
+
+              {/* Feedback Message */}
+              {submitMessage && (
+                <div
+                  className={`mt-4 text-sm font-medium ${
+                    isError ? "text-red-600" : "text-green-600"
+                  }`}
+                >
+                  {submitMessage}
+                </div>
+              )}
             </form>
           </div>
         </div>

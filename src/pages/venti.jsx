@@ -1,9 +1,9 @@
-import { banner, ilustration, logos } from "../data";
+import { banner, ilustration, logos, sosialmedia } from "../data";
 
 export default function Venti() {
   return (
     <>
-      <div className="webApp pt-10 lg:pt-5">
+      <div className="webApp pt-10 lg:pt-5 bg-white">
         <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img
             className="rounded-[20px]"
@@ -82,9 +82,50 @@ export default function Venti() {
           </div>
         </div>
 
+        {/* soial media section */}
+        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-start px-7 sm:px-20 lg:px-40 my-30">
+          <div className="lg:w-1/2">
+            <img
+              className="rounded-[20px] container mx-auto w-[350px]"
+              src={sosialmedia.socialVenti}
+              alt="social media venti"
+            />
+          </div>
+
+          {/* Right Section */}
+          <div className="lg:w-1/2">
+            <h3 className="text-lg lg:text-xl text-gray-600 mt-20 md:mt-10 mb-2">
+              Follow Us On
+            </h3>
+            <h2 className="text-2xl lg:text-4xl font-bold text-gray-700 mb-6 leading-snug">
+              Social Media
+            </h2>
+            <p className="[text-align:justify] text-base lg:text-lg text-gray-500 leading-relaxed">
+              Want your event to be a success? Follow Venti for ticketing management tips, promotional strategies, and platform feature updates. The ultimate ticketing solution for all types of events and competitions.
+            </p>
+
+            {/* button */}
+            <div className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-[250px] mb-4 mt-8 sm:mb-0 mx-auto md:mx-0">
+              <a
+                href="https://www.instagram.com/ventiid/"
+                className="download flex items-center border-2 border-[#00A9E8] rounded-[50px] px-3 py-3"
+              >
+                <span className="button-icon flex items-center rounded-full p-1 mr-2">
+                  <img
+                    src={logos.instagram}
+                    className="w-5"
+                    alt="https://www.instagram.com/ventiid/"
+                  />
+                </span>
+                <span className="button-text">Follow Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className="container mx-auto px-5">
           <h3 className="text-[24px] my-10 md:my-15 sm:text-3xl lg:text-4xl font-bold text-Black text-center">
-            Efficient, All‑in‑One Event & Ticketing 
+            Efficient, All‑in‑One Event & Ticketing
             <br className="hidden md:inline" />
             &nbsp; Solution for Seamless Experiences
           </h3>
