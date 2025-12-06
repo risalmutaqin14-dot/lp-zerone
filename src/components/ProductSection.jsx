@@ -53,7 +53,8 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className=" md:max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.edunav}
-              alt="Edunav School management system"
+              loading="lazy"
+              alt="Edunav School management system, sistem information school"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px]  sm:mb-0">
@@ -83,7 +84,8 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.latihan}
-              alt="Latihan - platform ujian"
+              loading="lazy"
+              alt="Latihan - platform ujian yang aman dan mendukung safe exam browser"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px]  sm:mb-0">
@@ -113,7 +115,8 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.rajin}
-              alt="Rajin - bimbingan belajar"
+              loading="lazy"
+              alt="Rajin - bimbingan belajar yang lengkap berbagai mata pelajaran dan tryout ujian"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px] sm:mb-0">
@@ -143,7 +146,8 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.venti}
-              alt="Venti - event management system"
+              loading="lazy"
+              alt="Venti - event management system, tiket online"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px]  sm:mb-0">
@@ -173,6 +177,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.jadwalkuliah}
+              loading="lazy"
               alt="Jadwalkuliah - website manajemen jadwal kuliah"
             />
             <div className="flex justify-center mt-4 container mx-auto">
@@ -203,6 +208,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.writingaide}
+              loading="lazy"
               alt="Writingaide - AI untuk latihan test TOEFL, IELST, GCSE"
             />
             <div className="flex justify-center mt-4 container mx-auto">
@@ -233,6 +239,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.maridukung}
+              loading="lazy"
               alt="Writingaide - AI untuk latihan test TOEFL, IELST, GCSE"
             />
             <div className="flex justify-center mt-4 container mx-auto">
@@ -278,7 +285,8 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[780px] mx-auto rounded-[20px] px-4 md:px-0"
               src={banners.edunav}
-              alt="Edunav School management system"
+              loading="lazy"
+              alt="Edunav School management system, sistem informasi sekolah yang lengkap"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px] sm:mb-0">
@@ -308,7 +316,8 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.latihan}
-              alt="Latihan - platform ujian"
+              loading="lazy"
+              alt="Latihan - platform ujian aman dan caggih, mendukung safe exam browser dll"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px] sm:mb-0">
@@ -338,6 +347,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.rajin}
+              loading="lazy"
               alt="Rajin - bimbingan belajar"
             />
             <div className="flex justify-center mt-4 container mx-auto">
@@ -368,6 +378,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.venti}
+              loading="lazy"
               alt="Venti - event management system"
             />
             <div className="flex justify-center mt-4 container mx-auto">
@@ -398,6 +409,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.jadwalkuliah}
+              loading="lazy"
               alt="Jadwalkuliah - website manajemen jadwal kuliah"
             />
             <div className="flex justify-center mt-4 container mx-auto">
@@ -428,6 +440,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.writingaide}
+              loading="lazy"
               alt="Writingaide - AI untuk latihan test TOEFL, IELST, GCSE"
             />
             <div className="flex justify-center mt-4 container mx-auto">
@@ -458,6 +471,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.maridukung}
+              loading="lazy"
               alt="Maridukung - Platform berbagi bersama"
             />
             <div className="flex justify-center mt-4 container mx-auto">
@@ -503,7 +517,8 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobileedunav}
-              alt="Edunav"
+              loading="lazy"
+              alt="Edunav manajemen sekolah, sistem informasi sekolah"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
               <a
@@ -531,6 +546,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobilelatihan}
+              loading="lazy"
               alt="Latihan"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
@@ -559,7 +575,8 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobilerajin}
-              alt="Rajin"
+              loading="lazy"
+              alt="Rajin.id bimbel yang menawarkan pengalaman lebih dengan pengajar yang profesional"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
               <a
@@ -587,7 +604,8 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobileventi}
-              alt="Venti"
+              loading="lazy"
+              alt="Venti - website manajemen tiket acara seperti seminar, olahraga, workshop dan masih banyak lainnya"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
               <a
@@ -615,6 +633,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobilejadwalkuliah}
+              loading="lazy"
               alt="Jadwalkuliah"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
@@ -643,6 +662,7 @@ export default function ProdukDesktop({ banner } = {}) {
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobilewritingaide}
+              loading="lazy"
               alt="Writingaide"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
@@ -672,6 +692,7 @@ export default function ProdukDesktop({ banner } = {}) {
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobilemaridukung}
               alt="Maridukung"
+              loading="lazy"
             />
             <div className="w-[200px] sm:mb-0 mx-auto">
               <a

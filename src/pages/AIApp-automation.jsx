@@ -1,33 +1,43 @@
-import { mockup, solutionAI, solutionDesain } from "../data";
+import React from "react";
+import { Helmet } from 'react-helmet-async';
+import { mockup, solutionAI } from "../data";
 
 export default function AiAppAutomation() {
   return (
     <>
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>AI App & Automation Development | Zerone.id</title>
+        <meta
+          name="description"
+          content="Zerone.id menyediakan Jasa Pengembangan Aplikasi AI & Otomasi untuk membantu bisnis Anda. Kami mengotomatisasi alur kerja krusial dan membangun aplikasi cerdas guna meningkatkan efisiensi serta akselerasi pertumbuhan bisnis."
+        />
+        <meta
+          name="keywords"
+          content="AI development, app automation, business automation, intelligent applications, Zerone, automation services"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/ai-app-automation" />
+      </Helmet>
+
       <div className="webApp pt-15 md:pt-4 bg-white pb-30">
-        {/* deskripsi zerone */}
+        {/* Hero Section */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
-            <h3 className="text-[24px] md:text-[36px] font-bold text-black pt-2">
-              AI App &
-              <br /> Automation Development
-            </h3>
+            <h1 className="text-[24px] md:text-[36px] font-bold text-black pt-2">
+              AI App &<br /> Automation Development
+            </h1>
             <br />
             <p className="[text-align:justify]">
-              Zerone.id’s AI App & Automation Development service empowers
-              businesses to build intelligent applications while automating
-              critical workflows end-to-end. We combine advanced AI models,
-              smart integrations, and process automation to eliminate manual
-              work, reduce errors, and accelerate growth. From custom AI apps to
-              fully automated business systems, we help organizations operate
-              with greater efficiency and intelligence. Our solutions ensure
-              that technology not only works faster—but works smarter for your
-              business.
-            </p><br /><br />
-            <p className="text-[14px] italic">
-                "efficiency is doing things right, effectiveness is doing the right things."
+              Zerone.id’s AI App & Automation Development service empowers businesses to build intelligent applications while automating critical workflows end-to-end. We combine advanced AI models, smart integrations, and process automation to eliminate manual work, reduce errors, and accelerate growth. From custom AI apps to fully automated business systems, we help organizations operate with greater efficiency and intelligence. Our solutions ensure that technology not only works faster—but works smarter for your business.
             </p>
-            <p className="font-bold">- Peter Drucker</p>
-            {/* button */}
+            <br /><br />
+            <p className="text-[14px] italic">
+                "Efficiency is doing things right, effectiveness is doing the right things."
+            </p>
+            <p className="font-bold">- Peter Drucker</p>
+
+            {/* Call to Action Button */}
             <div className="flex mt-6 container mx-auto">
               <div className="w-[240px] mb-4 sm:mb-0">
                 <a
@@ -38,7 +48,7 @@ export default function AiAppAutomation() {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="24px"
-                      viewBox="0 -960 960 960"
+                      viewBox="http://www.w3.org/2000/svg"
                       width="24px"
                       fill="#0092d7"
                     >
@@ -61,25 +71,51 @@ export default function AiAppAutomation() {
           </div>
         </div>
 
-        <div className="container mx-auto mt- mb-10">
-          <h3 className="text-[24px] md:text-[36px] font-bold text-center text-black mb-3 pt-2">
-            Smart Integrations 
-            <br className="hidden md:inline" />
+        {/* Smart Integrations Section */}
+        <div className="container mx-auto mt-10 mb-10">
+          <h2 className="text-[24px] md:text-[36px] font-bold text-center text-black mb-3 pt-2">
+            Smart Integrations <br className="hidden md:inline" />
             &nbsp;to Reduce Errors and Manual Work
+          </h2>
+          <h3 className="text-[16px] md:text-[18px] text-center">
+            Our solutions reduce manual work, minimize errors, and accelerate growth.
           </h3>
-          <h5 className="text-[16px] md:text-[18px] text-center">
-            Our solutions reduce manual work, minimize errors, and accelerate growth.{" "}
-          </h5>
         </div>
-        <section className="features-section container mx-auto  lg:px-35 bg-white">
-            <div className="mt-5 mb-10  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
-            <img src={solutionAI.ai1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Ai App & Automation Development" />
-            <img src={solutionAI.ai2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Ai App & Automation Development" />
-            <img src={solutionAI.ai3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Ai App & Automation Development" />
-            <img src={solutionAI.ai4} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Ai App & Automation Development" />
-            <img src={solutionAI.ai5} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Ai App & Automation Development" />
-            <img src={solutionAI.ai6} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Ai App & Automation Development" />
-            </div>
+
+        {/* Features Section */}
+        <section className="features-section container mx-auto lg:px-35 bg-white">
+          <div className="mt-5 mb-10 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-3">
+            <img
+              src={solutionAI.ai1}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="AI Automation Development"
+            />
+            <img
+              src={solutionAI.ai2}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="Smart AI Integration"
+            />
+            <img
+              src={solutionAI.ai3}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="Process Automation Solutions"
+            />
+            <img
+              src={solutionAI.ai4}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="Custom AI Solutions"
+            />
+            <img
+              src={solutionAI.ai5}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="AI App Development"
+            />
+            <img
+              src={solutionAI.ai6}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="Automated Business Systems"
+            />
+          </div>
         </section>
       </div>
     </>

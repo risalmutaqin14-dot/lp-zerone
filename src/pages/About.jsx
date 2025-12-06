@@ -1,23 +1,32 @@
 import { logos, heroImage, ilustration, ourteam, whychoose } from "../data";
 import "../css/About.css";
-
+import { Helmet } from 'react-helmet-async';
 
 export default function About() {
   return (
     <>
+    <Helmet>
+        <title>Tentang Zerone Global | Solusi Digital Pendidikan & Institusi</title>
+        <meta 
+          name="description" 
+          content="Pelajari tentang Zerone Global, perusahaan solusi digital yang membantu sekolah, institusi, dan manajer proyek di Asia Tenggara dengan rekayasa perangkat lunak berkualitas tinggi." 
+        />
+        <link rel="canonical" href="https://www.zerone.id/about" />
+      </Helmet>
+
       <div className="about-page bg-white pt-30">
         {/* deskripsi zerone */}
         <div className="bg-white">
           <section className="features-section container mx-auto  lg:px-35 p-8 bg-white pt-20">
             <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between space-y-8 lg:space-y-0">
               <div className=" lg:w-1/3">
-                <h3 className="text-[24px] text-left  text-gray-600 mb-1">
+                <h2 className="text-[24px] text-left  text-gray-600 mb-1">
                   About Us
-                </h3>
-                <h2 className="text-[36px] font-bold text-gray-600 mb-6">
+                </h2>
+                <h1 className="text-[36px] font-bold text-gray-600 mb-6">
                   Zerone Gobal <br />
                   Digital Solution
-                </h2>
+                </h1>
               </div>
 
               <h4 className="lg:w-2/3 text-left  text-gray-500">
@@ -53,7 +62,7 @@ export default function About() {
             <img
               className="w-[450px] max-w-full"
               src={whychoose.whychooseus}
-              alt="why choose us?"
+              alt="kenapa harus memilih kami sebagai solusi kebuthan anda?"
             />
           </div>
           {/* Kolom 1: Vision & Mission */}
@@ -108,6 +117,7 @@ export default function About() {
                 src={ilustration.ilusAbout1}
                 className="w-20 mx-auto pb-5"
                 alt="Customer Oriented"
+                loading="lazy"
               />
               <h3 className="text-[20px] font-semibold text-white">
                 Customer Oriented
@@ -123,6 +133,7 @@ export default function About() {
                 src={ilustration.ilusAbout2}
                 className="w-20 mx-auto pb-5"
                 alt="Collaborative"
+                loading="lazy"
               />
               <h3 className="text-[20px] font-semibold text-white">
                 Collaborative
@@ -139,6 +150,7 @@ export default function About() {
                 src={ilustration.ilusAbout3}
                 className="w-20 mx-auto pb-5"
                 alt="Support 24/7"
+                loading="lazy"
               />
               <h3 className="text-[20px] font-semibold text-white">
                 Support 24/7
@@ -164,17 +176,17 @@ export default function About() {
               </div>
           
           <div className=" mt-5 grid grid-cols-2 gap-5 sm:grid-cols-4  lg:grid-cols-4">
-            <img src={ourteam.team1} alt="Zerone Digital Solution Expert Team" />
-            <img src={ourteam.team2} alt="Zerone Digital Solution Expert Team" />
-            <img src={ourteam.team3} alt="Zerone Digital Solution Expert Team" />
-            <img src={ourteam.team4} alt="Zerone Digital Solution Expert Team" />
-            <img src={ourteam.team5} alt="Zerone Digital Solution Expert Team" />
-            <img src={ourteam.team6} alt="Zerone Digital Solution Expert Team" />
-            <img src={ourteam.team7} alt="Zerone Digital Solution Expert Team" />
-            <img src={ourteam.team8} alt="Zerone Digital Solution Expert Team" />
-            <img src={ourteam.team9} alt="Zerone Digital Solution Expert Team" />
-            <img src={ourteam.team10} alt="Zerone Digital Solution Expert Team" />
-            <img src={ourteam.team11} alt="Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team1} loading="lazy" alt="diector - Zerone Digital Solution" />
+            <img src={ourteam.team2} loading="lazy" alt="software enginer 1 - Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team3} loading="lazy" alt="software enginer 2 - Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team4} loading="lazy" alt="software enginer 3 - Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team5} loading="lazy" alt="software enginer 4 - Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team6} loading="lazy" alt="software enginer 5 - Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team7} loading="lazy" alt="software enginer 6 - Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team8} loading="lazy" alt="Website Desain - Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team9} loading="lazy" alt="UIUX desain - Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team10} loading="lazy" alt="graphic desain & vidio editor - Zerone Digital Solution Expert Team" />
+            <img src={ourteam.team11} loading="lazy" alt="digital marketing - Zerone Digital Solution Expert Team" />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { Helmet } from 'react-helmet-async';
 import {
   faPhone,
   faEnvelope,
@@ -38,6 +39,21 @@ export default function Contact() {
 
   return (
     <>
+    <Helmet>
+        <title>Hubungi Kami | Zerone Global Digital Solution</title>
+        <meta 
+          name="description" 
+          content="Hubungi Zerone Global untuk pertanyaan proyek, dukungan teknis, atau kolaborasi. Temukan kontak telepon, WhatsApp, email, dan alamat kantor kami di BSD City, Indonesia." 
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/contact" />
+        {/* Tambahan: Opsional untuk Social Media (Open Graph) */}
+        <meta property="og:title" content="Hubungi Zerone Global untuk Solusi Digital Terbaik" />
+        <meta property="og:description" content="Kirim pesan atau hubungi kami langsung via WhatsApp/Telepon. Kami siap membantu proyek digital Anda." />
+        <meta property="og:url" content="https://www.zerone.id/contact" />
+      </Helmet>
+
+      
       <div className="webApp pt-15 lg:pt-5">
         {/* Contact */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">

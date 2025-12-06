@@ -12,16 +12,32 @@ import Workingproces from "../components/workingproces.jsx";
 import ProgresBar from "../components/ProgresBar.jsx";
 import Stack from "../components/stack.jsx";
 import Testimonials from "../components/testimonial.jsx";
+import { Helmet } from 'react-helmet-async';
 
 export default function Home() {
   return (
     <>
+    <Helmet>
+        <title>Transform Your Institution with Zerone Global Digital Solution</title>
+        <meta
+          name="description"
+          content="Zerone Global menghadirkan solusi digital terpercaya, aman, dan skalabel bagi sekolah, organisasi, dan komunitas di seluruh Asia Tenggara. Kami hadir untuk memberdayakan inovasi dan mendorong kesuksesan Anda."
+        />
+        <meta
+          name="keywords"
+          content="Zerone Global, digital solutions, school management, secure solutions, scalable solutions, jasa pembuatan aplikasi AI, otomatisasi bisnis, digital consultant, integrasi AI, Sistem Informasi Sekolah, aplikasi manajemen sekolah, platform tiket event, "
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id" />
+      </Helmet>
+
+
       <div className="hero max-h-[1220px]  mx-auto relative overflow-hidden">
         <div className="hero-line align-middle justify-center items-center w-full h-screen">
           <img
             className="background-pattern bg-cover bg-no-repeat"
             src={heroImage.bgHero}
-            alt="bg-zerone-global"
+            alt="Background Pattern Solusi Digital Zerone Global"
           />
 
           <div className="hero-content">
@@ -64,7 +80,7 @@ export default function Home() {
             <div className="device-mockup justify-center items-center w-full h-screen ">
               <img
                 src={heroImage.image}
-                alt="Dashboard Edunav - School Information System (SIS)"
+                alt="Tampilan Dashboard Edunav Sistem Informasi Sekolah (SIS) Zerone Global"
               />
             </div>
           </div>
@@ -120,10 +136,10 @@ export default function Home() {
                 pauseOnHover={false}
               >
                 <Card>
-                  <img src={heroImage.visi} alt="visi zerone" />
+                  <img src={heroImage.visi} alt="Visi perusahaan Zerone Global" />
                 </Card>
                 <Card>
-                  <img src={heroImage.misi} alt="misi zerone" />
+                  <img src={heroImage.misi} alt="Misi perusahaan Zerone Global" />
                 </Card>
               </CardSwap>
             </div>
@@ -136,12 +152,12 @@ export default function Home() {
         <h2 className="tagline2 text-2xl font-semibold text-gray-800 ">
           Global Digital Solution
         </h2>
-        <h3 className="tagline-description text-lg text-gray-600 my-4">
+        <h4 className="tagline-description text-lg text-gray-600 my-4">
           We drive meaningful digital transformation that enables people,{" "}
           <br className="hidden md:inline" />
           businesses, and institutions to achieve lasting impact through
           technology.
-        </h3>
+        </h4>
 
         <div className="container mx-auto mt-20 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-4 lg:px-60 justify-items-center">
           <div className="mx-10 transition-all duration-500 transform hover:scale-110">
@@ -189,47 +205,56 @@ export default function Home() {
           <div className=" mt-20 grid grid-cols-2 gap-4 md:gap-6 sm:grid-cols-3  lg:grid-cols-3 justify-items-center">
             <img
               src={servicesFeatures.cms}
-              alt="Content Management System - Zerone Global Digital Solution"
+              loading="lazy"
+              alt="Layanan Solusi Content Management System (CMS) - Zerone Global Digital Solution"
               className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
             />
             <img
               src={servicesFeatures.appDev}
-              alt="Mobile App Development - Zerone Global Digital Solution"
+              loading="lazy"
+              alt="Layanan Pengembangan / jasa pembuatan Mobile App Development - Zerone Global Digital Solution"
               className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
             />
             <img
               src={servicesFeatures.webDev}
-              alt="Web App Development - Zerone Global Digital Solution"
+              loading="lazy"
+              alt="Layanan Pengembangan Website, jasa pembuata website, Web App Development - Zerone Global Digital Solution"
               className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
             />
             <img
               src={servicesFeatures.wordpess}
-              alt="wordpess Development - Zerone Global Digital Solution"
+              loading="lazy"
+              alt="Layanan atau jasa pengembanga website berbasis wordpess Development - Zerone Global Digital Solution"
               className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
             />
             <img
               src={servicesFeatures.uiux}
-              alt="uiux design - Zerone Global Digital Solution"
+              loading="lazy"
+              alt="Layanan User Interface & User Experience (UIUX) design - Zerone Global Digital Solution"
               className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
             />
             <img
               src={servicesFeatures.digmar}
-              alt="digital marketing - Zerone Global Digital Solution"
+              loading="lazy"
+              alt="Layanan konsultasi digital marketing - Zerone Global Digital Solution"
               className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
             />
             <img
               src={servicesFeatures.payment}
-              alt="Web App Development - Zerone Global Digital Solution"
+              loading="lazy"
+              alt="Layanan Integrasi Payment Gateway - Zerone Global Digital Solution"
               className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
             />
             <img
               src={servicesFeatures.desain}
-              alt="Web App Development - Zerone Global Digital Solution"
+              loading="lazy"
+              alt="Layanan desain grafis dan vidio production - Zerone Global Digital Solution"
               className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
             />
             <img
               src={servicesFeatures.strategy}
-              alt="Web App Development - Zerone Global Digital Solution"
+              loading="lazy"
+              alt="Layanan digital strategi consulting - Zerone Global Digital Solution"
               className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
             />
           </div>
@@ -260,6 +285,7 @@ export default function Home() {
               className="w-[550px] mx-auto pl-[20px]"
               src={whychoose.whychooseus}
               alt="why chose us?"
+              loading="lazy"
             />
           </div>
         </div>
@@ -296,6 +322,7 @@ export default function Home() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d701.0432617503754!2d106.65250108970972!3d-6.303182023946195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbecde2cc1b1%3A0xa154bae00576df77!2sPT.%20Global%20Zerone%20Digital!5e0!3m2!1sid!2sid!4v1762569849687!5m2!1sid!2sid"
               width="100%"
               height="400px"
+              loading="lazy"
               style={{ borderRadius: "20px" }}
             />
           </div>
