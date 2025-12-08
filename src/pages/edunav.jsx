@@ -1,9 +1,33 @@
 import { banner, ilustration, logos, sosialmedia } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function EduNav() {
   return (
     <>
       <div className="webApp pt-20 lg:pt-5 container mx-auto bg-white">
+        <Helmet>
+        <title>Edunav | School Information System by Zerone Global</title>
+        <meta
+          name="description"
+          content="Edunav adalah sistem informasi sekolah terintegrasi dari Zerone Global. Membantu digitalisasi akademik, administrasi, keuangan, absensi, komunikasi, dan keterlibatan orang tua dalam satu platform."
+        />
+        <meta name="robots" content="index, follow" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://www.zerone.id/edunav" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Edunav | School Information System by Zerone Global" />
+        <meta
+          property="og:description"
+          content="Edunav membantu sekolah beroperasi lebih efisien dengan sistem informasi terintegrasi untuk akademik, administrasi, dan komunikasi."
+        />
+        <meta property="og:url" content="https://www.zerone.id/edunav" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
         <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img className="rounded-[20px]" src={banner.edunav} alt="edunav" />
         </div>
@@ -16,9 +40,9 @@ export default function EduNav() {
         </div>
         <div className="container mx-auto flex flex-col lg:flex-row justify-between items-start px-7 sm:px-20 lg:px-40 mt-20">
           <div className="lg:w-1/3">
-            <h3 className="text-lg lg:text-xl text-gray-600 mb-4">
+            <h1 className="text-lg lg:text-xl text-gray-600 mb-4">
               Our Product
-            </h3>
+            </h1>
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-700 mb-6 leading-snug">
               What is Edunav ?
             </h2>
@@ -114,12 +138,12 @@ export default function EduNav() {
           <h3 className="text-lg lg:text-xl text-gray-600 mt-20 md:mt-10 mb-2">
               Follow Us On
             </h3>
-            <h2 className="text-2xl lg:text-4xl font-bold text-gray-700 mb-6 leading-snug">
+            <h3 className="text-2xl lg:text-4xl font-bold text-gray-700 mb-6 leading-snug">
               Social Media
-            </h2>
-            <p className="[text-align:justify] text-base lg:text-lg text-gray-500 leading-relaxed">
+            </h3>
+            <h4 className="[text-align:justify] text-base lg:text-lg text-gray-500 leading-relaxed">
               Improve your school's administrative efficiency! Follow Edunav on social media for system implementation tips, feature updates, and guides for easier, more integrated school data management.
-            </p>
+            </h4>
 
             {/* button */}
             <div className="shadow-lg rounded-[50px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-[250px] mb-4 mt-8 sm:mb-0 mx-auto md:mx-0">

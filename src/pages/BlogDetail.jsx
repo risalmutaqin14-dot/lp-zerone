@@ -52,7 +52,7 @@ function PostDetail() {
         <meta name="description" content={post.description} />
         <meta name="keywords" content={`blog, ${post.title}, ${post.author}, automation`} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://www.zerone.id/blog/${id}`} />
+        <link rel="canonical" href={`https://www.zerone.id/post/${id}`} />
       </Helmet>
 
       <div className="container mx-auto px-5 lg:px-50 pt-[150px] pb-10 bg-white">

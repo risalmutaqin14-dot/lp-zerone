@@ -1,20 +1,42 @@
 import { mockup, solutionDesain } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function GrafikDesain() {
   return (
     <>
       <div className="webApp pt-15 lg:pt-2 bg-white">
+        <Helmet>
+        <title>Graphic & Video Production | Zerone Global Digital Solution</title>
+        <meta
+          name="description"
+          content="Zerone Global menyediakan layanan Graphic Design & Video Production profesional untuk branding, promosi, dan konten marketing. Solusi kreatif kami membantu bisnis menarik perhatian pelanggan dengan visual yang kuat dan video yang memikat."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/graphic-design" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Graphic & Video Production | Zerone Global Digital Solution" />
+        <meta
+          property="og:description"
+          content="Solusi Graphic Design & Video Production dari Zerone Global membantu bisnis meningkatkan branding dan promosi dengan konten visual yang profesional."
+        />
+        <meta property="og:url" content="https://www.zerone.id/graphic-design" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
-            <h3 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
               Graphic and Video
               <br /> Production
-            </h3>
-            <span className="text-justify text-[18px] md:text-[24px] ">
+            </h1>
+            <h2 className="text-justify text-[18px] md:text-[24px] ">
               Video and Graphics That Captivate Your Prospective Customers
-            </span>
-            <br /> <br />
+            </h2>
+            <br />
             <p className="[text-align:justify]">
               Both videos and graphics are often relied upon in business.
               Introducing products, boosting branding, and maximizing sales are

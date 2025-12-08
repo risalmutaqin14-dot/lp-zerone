@@ -1,21 +1,44 @@
 import { mockup, ilustration, solutionWordpress } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function WordpressDev() {
   return (
     <>
       <div className="webApp pt-15 lg:pt-5 bg-white">
+        <Helmet>
+        <title>WordPress Development | Zerone Global Digital Solution</title>
+        <meta
+          name="description"
+          content="Zerone Global menyediakan layanan pengembangan Website & WordPress profesional untuk bisnis Anda. Solusi digital kami membantu membangun reputasi, meningkatkan kepercayaan pelanggan, dan menghadirkan desain web yang aman serta fleksibel."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/wordpress-dev" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="WordPress Development | Zerone Global Digital Solution" />
+        <meta
+          property="og:description"
+          content="Solusi WordPress dari Zerone Global membantu bisnis membangun website profesional, aman, dan fleksibel untuk meningkatkan reputasi dan kepercayaan pelanggan."
+        />
+        <meta property="og:url" content="https://www.zerone.id/wordpress-dev" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
+
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
-            <h3 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
               Websitee/Wordpress
               <br />
               Development
-            </h3>
-            <span className="text-justify text-[18px] md:text-[24px] ">
+            </h1>
+            <h2 className=" text-[18px] md:text-[24px] ">
               Make Your Business More Trustworthy with a Website/WordPress
-            </span>
-            <br /> <br />
+            </h2>
+            <br /> 
             <p className="">
               A website/WordPress is an online site that presents its owner's
               content. For example, if you are a clothing business owner, your

@@ -58,16 +58,16 @@ export default function Contact() {
         {/* Contact */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
-            <span className="text-justify text-[24px] ">Contact US</span>
-            <h3 className="text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-justify text-[24px] ">Contact US</h1>
+            <h2 className="text-[36px] font-bold text-black mb-6 pt-2">
               Let’s Connect and
               <br className="hidden md:inline" />
               Collaborate with Zerone
-            </h3>
-            <span className="text-justify text-[24px] pr-20">
+            </h2>
+            <h3 className="text-justify text-[24px] pr-20">
               Connect with us for project inquiries, technical support, or
               general questions. We’ll respond as soon as possible.
-            </span>
+            </h3>
             <div className="lg:w-2/3 align-middle lg:pl-6">
               {/* Phone */}
               <div className="flex mt-8 items-center">

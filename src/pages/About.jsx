@@ -1,18 +1,31 @@
 import { logos, heroImage, ilustration, ourteam, whychoose } from "../data";
 import "../css/About.css";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
+
 
 export default function About() {
   return (
     <>
-    <Helmet>
-        <title>Tentang Zerone Global | Solusi Digital Pendidikan & Institusi</title>
-        <meta 
-          name="description" 
-          content="Pelajari tentang Zerone Global, perusahaan solusi digital yang membantu sekolah, institusi, dan manajer proyek di Asia Tenggara dengan rekayasa perangkat lunak berkualitas tinggi." 
+      <Helmet>
+        <title>About Zerone Global | Solusi Digital Aman & Skalabel</title>
+        <meta
+          name="description"
+          content="Kenali Zerone Global, mitra solusi digital pendidikan & bisnis di Asia Tenggara. Hadirkan inovasi dengan software engineering berkualitas tinggi"
         />
+
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.zerone.id/about" />
+
+        <meta property="og:title" content="About Zerone Global | Solusi Digital Aman & Skalabel" />
+        <meta
+          property="og:description"
+          content="Zerone Global adalah mitra digital terpercaya untuk sekolah, organisasi, komunitas, institusi dan perusahaan di Asia Tenggara."
+        />
+        <meta property="og:url" content="https://www.zerone.id/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
       </Helmet>
+
 
       <div className="about-page bg-white pt-30">
         {/* deskripsi zerone */}

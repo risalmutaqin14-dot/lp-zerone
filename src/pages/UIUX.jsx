@@ -1,19 +1,57 @@
 import { mockup, solutionUIUX } from "../data";
+import { Helmet } from "react-helmet-async";
 
-export default function CMS() {
+
+export default function UIUX() {
   return (
     <>
       <div className="webApp pt-15 lg:pt-5 bg-white">
+        <Helmet>
+        {/* Title */}
+        <title>UI/UX Design | Zerone Global Digital Solution</title>
+
+        {/* Meta Description */}
+        <meta
+          name="description"
+          content="Zerone Global menyediakan layanan UI/UX Design untuk aplikasi dan website. Solusi desain digital kami memastikan pengalaman pengguna yang intuitif, nyaman, dan menarik sehingga meningkatkan kepercayaan serta engagement pelanggan."
+        />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://www.zerone.id/uiux" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="UI/UX Design | Zerone Global Digital Solution" />
+        <meta
+          property="og:description"
+          content="Solusi UI/UX dari Zerone Global membantu bisnis membangun aplikasi dan website dengan desain modern, intuitif, dan user-centered."
+        />
+        <meta property="og:url" content="https://www.zerone.id/uiux" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="UI/UX Design | Zerone Global Digital Solution" />
+        <meta
+          name="twitter:description"
+          content="Solusi UI/UX dari Zerone Global membantu bisnis membangun aplikasi dan website dengan desain modern, intuitif, dan user-centered."
+        />
+        <meta name="twitter:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
-            <h3 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
               UIUX Design
-            </h3>
-            <span className="text-justify text-[18px] md:text-[24px] ">
+            </h1>
+            <h2 className="text-justify text-[18px] md:text-[24px] ">
               What Makes Your Applications and Websites Easy to Access
-            </span>
-            <br /> <br />
+            </h2>
+            <br />
             <p className="[text-align:justify]">
               UI stands for user interface. Meanwhile, UX stands for user
               experience. Both play a very important role in digital products
@@ -67,11 +105,11 @@ export default function CMS() {
             <br className="hidden md:inline" />
             &nbsp;Through User-Centered UI/UX Design
           </h3>
-          <h5 className="text-[16px] md:text-[18px] text-center">
+          <h4 className="text-[16px] md:text-[18px] text-center">
             End-to-End Digital Product Design Solutions: UI/UX, User Research,
             Prototyping, and Design Systems. <br className="hidden md:inline" />
             &nbsp;Develop successful products with our team of experts.
-          </h5>
+          </h4>
         </div>
 
         <section className="features-section container mx-auto  lg:px-35 bg-white">

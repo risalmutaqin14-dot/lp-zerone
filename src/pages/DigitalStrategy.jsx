@@ -1,19 +1,42 @@
 import { mockup, solutionDigitalStrategy } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function DigitalStrategy() {
   return (
     <>
       <div className="webApp pt-15 lg:pt-5 bg-white">
+        <Helmet>
+        <title>Digital Strategy Consulting | Zerone Global Digital Solution</title>
+        <meta
+          name="description"
+          content="Zerone Global menyediakan layanan Digital Strategy Consulting untuk membantu bisnis, sekolah, dan organisasi bertransformasi dengan solusi digital modern. Kami membantu Anda memanfaatkan teknologi untuk meningkatkan efisiensi dan daya saing."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/digital-strategy-consulting" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Digital Strategy Consulting | Zerone Global Digital Solution" />
+        <meta
+          property="og:description"
+          content="Solusi Digital Strategy dari Zerone Global membantu bisnis dan organisasi beradaptasi dengan era digital untuk meningkatkan efisiensi dan daya saing."
+        />
+        <meta property="og:url" content="https://www.zerone.id/digital-strategy-consulting" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
+
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1  sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
-            <h3 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
               Digital Strategy
               <br /> Consulting
-            </h3>
-            <span className="text-justify text-[18px] md:text-[24px] ">
+            </h1>
+            <h2 className="text-justify text-[18px] md:text-[24px] ">
               The King of Modern Business: Digitalization
-            </span>
+            </h2>
             <br /> <br />
             <p className="[text-align:justify]">
               The term digital or digitization appears almost everywhere. In the
@@ -61,9 +84,9 @@ export default function DigitalStrategy() {
             Digitalization can bring sellers and buyers together in a more
             effective way. This is because <br />both parties are in the same system.
           </h3>
-          <h3 className=" text-[16px] lg:text-[20px] font-bold itaic text-center pb-10">
+          <h4 className=" text-[16px] lg:text-[20px] font-bold itaic text-center pb-10">
             Consult and tell us your needs only with Zerone!
-          </h3>
+          </h4>
         </div>
         <section className="features-section container mx-auto  lg:px-35 bg-white">
             <div className="mt-5 mb-10  grid grid-cols-1 ">

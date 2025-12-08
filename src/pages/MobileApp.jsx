@@ -1,21 +1,51 @@
 import { mockup, solutionAppDev } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function MobileApp() {
   return (
     <>
       <div className="webApp pt-15 lg:pt-5 bg-white">
+        <Helmet>
+        <title>Mobile App Development | Zerone Global Digital Solution</title>
+        <meta
+          name="description"
+          content="Zerone Global menyediakan layanan pengembangan Mobile App untuk Android & iOS. Solusi digital kami membantu bisnis dan organisasi membangun aplikasi yang scalable, aman, dan siap bersaing di pasar global."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/mobile-app" />
+
+        <meta property="og:title" content="Mobile App Development | Zerone Global Digital Solution" />
+        <meta
+          property="og:description"
+          content="Solusi Mobile App dari Zerone Global membantu bisnis dan organisasi membangun aplikasi Android & iOS yang scalable, aman, dan siap bersaing di pasar global."
+        />
+        <meta property="og:url" content="https://www.zerone.id/mobile-app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mobile App Development | Zerone Global Digital Solution" />
+        <meta
+          name="twitter:description"
+          content="Solusi Mobile App dari Zerone Global membantu bisnis dan organisasi membangun aplikasi Android & iOS yang scalable, aman, dan siap bersaing di pasar global."
+        />
+        <meta name="twitter:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
-            <h3 className="text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[36px] font-bold text-black mb-6 pt-2">
               Mobile App
               <br className="hidden md:inline" />
               Development
-            </h3>
-            <span className="text-justify text-[24px] ">
+            </h1>
+            <h2 className="text-justify text-[24px] ">
               Building the World in Your Hands
-            </span>
-            <br /> <br />
+            </h2>
+            <br /> 
             <p className="[text-align:justify]">
               Mobile technology is currently in high demand due to its ease and
               speed of access. To achieve user satisfaction and accessibility,
@@ -68,11 +98,11 @@ export default function MobileApp() {
             <br className="hidden md:inline" />
             &nbsp;Increase Business Productivity
           </h3>
-          <h5 className="text-[16px] md:text-[18px] text-center">
+          <h4 className="text-[16px] md:text-[18px] text-center">
             We build Android & iOS applications that are scalable, secure,
             Prototyping, and Design Systems. <br className="hidden md:inline" />
             &nbsp;and ready to compete in the global market
-          </h5>
+          </h4>
         </div>
 
         <section className="features-section container mx-auto  lg:px-35 bg-white">

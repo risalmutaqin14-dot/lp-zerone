@@ -1,21 +1,43 @@
 import { mockup, solutionWebApp } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function WebApp() {
   return (
     <>
       <div className="webApp pt-15 lg:pt-5 bg-white">
+         <Helmet>
+        <title>Web App Development | Zerone Global Digital Solution</title>
+        <meta
+          name="description"
+          content="Zerone Global menyediakan layanan pengembangan Web App untuk meningkatkan sistem informasi online. Solusi digital kami membantu bisnis dan organisasi mengakses data lebih cepat, efisien, dan aman."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/web-app" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Web App Development | Zerone Global Digital Solution" />
+        <meta
+          property="og:description"
+          content="Solusi Web App dari Zerone Global membantu bisnis dan organisasi mengoptimalkan sistem informasi online dengan efisiensi dan keamanan."
+        />
+        <meta property="og:url" content="https://www.zerone.id/web-app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
-            <h3 className="text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[36px] font-bold text-black mb-6 pt-2">
               Web App
               <br className="hidden md:inline" />
               Development
-            </h3>
-            <span className="text-justify text-[24px] ">
+            </h1>
+            <h2 className="text-justify text-[24px] ">
               Improve Information Systems Online
-            </span>
-            <br /> <br />
+            </h2>
+            <br />
             <p className="[text-align:justify]">
               To maximize the user experience, businesses need to develop online
               programs. With online systems/programs, it is easier and faster to

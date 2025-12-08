@@ -1,9 +1,31 @@
 import { banner, ilustration, logos, sosialmedia } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function Rajin() {
   return (
     <>
       <div className="webApp pt-20 lg:pt-5 bg-white">
+        <Helmet>
+        <title>Rajin.id | Tutoring & Tryout Platform by Zerone Global</title>
+        <meta
+          name="description"
+          content="Rajin.id adalah platform pembelajaran dan tryout UTBK-SNBT dari Zerone Global. Menyediakan kursus bahasa Inggris, bimbingan privat, serta sistem tryout online yang aman dan efektif untuk meningkatkan skor TOEFL, IELTS, dan ujian akademik lainnya."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/rajin" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Rajin.id | Tutoring & Tryout Platform by Zerone Global" />
+        <meta
+          property="og:description"
+          content="Rajin.id membantu siswa meningkatkan kemampuan akademik dengan kursus bahasa Inggris, bimbingan privat, dan tryout UTBK-SNBT yang aman dan terpercaya."
+        />
+        <meta property="og:url" content="https://www.zerone.id/rajin" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
         <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img
             className="rounded-[20px]"
@@ -104,11 +126,11 @@ export default function Rajin() {
         </div>
 
         <div className="container mx-auto px-5">
-          <h3 className="text-[24px] my-10 md:my-15 sm:text-3xl lg:text-4xl font-bold text-Black text-center">
+          <h1 className="text-[24px] my-10 md:my-15 sm:text-3xl lg:text-4xl font-bold text-Black text-center">
             Your Ultimate Learning Companion for
             <br className="hidden md:inline" /> &nbsp; Personalized Tutoring and
             Effective Tryouts
-          </h3>
+          </h1>
         </div>
 
         <div className="container mx-auto  lg:px-30 lg:mt-10">

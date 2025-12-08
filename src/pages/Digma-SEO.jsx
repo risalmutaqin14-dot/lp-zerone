@@ -1,20 +1,44 @@
 import { mockup, solutionDigmar } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function DigmaSEO() {
   return (
     <>
       <div className="webApp pt-15 bg-white lg:pt-2">
+        <Helmet>
+        {/* Title */}
+        <title>Digital Marketing & SEO | Zerone Global Digital Solution</title>
+        <meta
+          name="description"
+          content="Zerone Global menyediakan layanan Digital Marketing & SEO untuk meningkatkan visibilitas bisnis Anda. Solusi kami membantu menempatkan website di puncak hasil pencarian Google dan mempercepat pertumbuhan bisnis."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/digital-marketing" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Digital Marketing & SEO | Zerone Global Digital Solution" />
+        <meta
+          property="og:description"
+          content="Solusi Digital Marketing & SEO dari Zerone Global membantu bisnis meningkatkan visibilitas online dan menarik lebih banyak pelanggan."
+        />
+        <meta property="og:url" content="https://www.zerone.id/digital-marketing" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
+
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
-            <h3 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
               Digital Marketing
               <br /> and SEO
-            </h3>
-            <span className="text-justify text-[18px] md:text-[24px] ">
+            </h1>
+            <h2 className="text-justify text-[18px] md:text-[24px] ">
               Fast-Growing Business Tactics: Digital Marketing and SEO
-            </span>
-            <br /> <br />
+            </h2>
+            <br />
             <p className="[text-align:justify]">
               Digital marketing is advertising or promoting a business through
               digital systems such as maximizing the internet, using special

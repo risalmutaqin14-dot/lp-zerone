@@ -1,9 +1,32 @@
 import { banner, ilustration, logos, sosialmedia } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function WritingAide() {
   return (
     <>
       <div className="webApp pt-20 lg:pt-5 bg-white">
+        <Helmet>
+        <title>Writing Aide | AI-Powered Writing Assistant for TOEFL & IELTS</title>
+        <meta
+          name="description"
+          content="Writing Aide adalah platform AI dari Zerone Global yang membantu meningkatkan skor TOEFL, IELTS, dan GCSE. Dapatkan tips menulis, latihan soal, serta strategi lulus ujian dengan bantuan AI."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/writing-aide" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Writing Aide | AI-Powered Writing Assistant for TOEFL & IELTS" />
+        <meta
+          property="og:description"
+          content="Writing Aide membantu siswa meningkatkan kemampuan menulis untuk TOEFL, IELTS, dan GCSE dengan teknologi AI."
+        />
+        <meta property="og:url" content="https://www.zerone.id/writing-aide" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
+
         <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img
             className="rounded-[20px]"
@@ -88,11 +111,11 @@ export default function WritingAide() {
         </div>
 
         <div className="container mx-auto px-5">
-          <h3 className="text-[24px] my-10 md:my-15 sm:text-3xl lg:text-4xl font-bold text-Black text-center">
+          <h1 className="text-[24px] my-10 md:my-15 sm:text-3xl lg:text-4xl font-bold text-Black text-center">
             Boost Your Test Scores with AI-Powered
             <br className="hidden md:inline" /> &nbsp; Writing Assistance for
             TOEFL and IELTS Success
-          </h3>
+          </h1>
         </div>
 
         <div className="container mx-auto  lg:px-30 lg:mt-10">

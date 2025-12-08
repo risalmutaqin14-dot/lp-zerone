@@ -1,20 +1,44 @@
 import { mockup, solutionpayment } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function Payment() {
   return (
     <>
       <div className="webApp pt-15 lg:pt-5 bg-white">
+        <Helmet>
+        <title>Payment Gateway Integration | Zerone Global Digital Solution</title>
+        <meta
+          name="description"
+          content="Zerone Global menyediakan layanan Payment Gateway Integration untuk mempermudah transaksi online. Solusi kami menghubungkan pembeli dan penjual dengan sistem pembayaran yang aman, cepat, dan terintegrasi."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/payment-gateway" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Payment Gateway Integration | Zerone Global Digital Solution" />
+        <meta
+          property="og:description"
+          content="Solusi Payment Gateway dari Zerone Global memudahkan bisnis menyediakan sistem pembayaran online yang aman dan terintegrasi."
+        />
+        <meta property="og:url" content="https://www.zerone.id/payment-gateway" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+
+      </Helmet>
+
+
         {/* deskripsi zerone */}
         <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
           <div className="pr-6">
-            <h3 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
               Payment Gateway
               <br /> Integration
-            </h3>
-            <span className="text-justify text-[18px] md:text-[24px] ">
+            </h1>
+            <h2 className="text-justify text-[18px] md:text-[24px] ">
               Extra Simple Payment System
-            </span>
-            <br /> <br />
+            </h2>
+            <br />
             <p className="[text-align:justify]">
               Payment Gateway Integration is a third-party payment method that
               connects buyers and sellers on a single platform. Buyers do not

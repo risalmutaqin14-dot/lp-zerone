@@ -2,6 +2,7 @@ import React from "react";
 // Pastikan path import data sudah benar
 import cards from "../data";
 import "../css/Portfolio.css";
+import { Helmet } from "react-helmet-async";
 
 // 1. Komponen Header yang Didedikasikan
 // Membantu keterbacaan dan pemisahan kekhawatiran (separation of concerns)
@@ -9,13 +10,13 @@ const PortfolioHeader = () => (
   <div className="bg-white mx-auto pt-24 md:pt-32 pb-8 md:pb-10 max-w-6xl px-6 lg:px-8">
     <div className="text-center">
       {/* Menggunakan kelas Tailwind murni & konsisten */}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
         Checkout Our Best Portfolio
-      </h2>
-      <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+      </h1>
+      <h2 className="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
         We love to create a succeed business. Just let us know what you want to
         achieve and see a magic happen.
-      </p>
+      </h2>
     </div>
   </div>
 );
@@ -66,6 +67,27 @@ const PortfolioCard = React.memo(({ card }) => (
 function Portfolio() {
   return (
     <div className="bg-white min-h-screen">
+      <Helmet>
+        {/* Title */}
+        <title>Portfolio | Zerone Global Digital Solution</title>
+
+        {/* Meta Description */}
+        <meta
+          name="description"
+          content="Lihat portfolio terbaik dari Zerone Global. Kami membantu bisnis, sekolah, dan organisasi dengan solusi digital inovatif yang sukses."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/portfolio" />
+        <meta property="og:title" content="Portfolio | Zerone Global Digital Solution" />
+        <meta
+          property="og:description"
+          content="Lihat portfolio terbaik dari Zerone Global. Kami membantu bisnis, sekolah, dan organisasi dengan solusi digital inovatif yang sukses."
+        />
+        <meta property="og:url" content="https://www.zerone.id/portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
       {/* Menggunakan komponen Header yang baru */}
       <PortfolioHeader />
 

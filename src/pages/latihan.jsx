@@ -1,9 +1,33 @@
 import { banner, ilustration, logos } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function Latihan() {
   return (
     <>
       <div className="webApp pt-20 lg:pt-5 bg-white">
+
+        <Helmet>
+        <title>Latihan.id | Secure Online Exam Platform by Zerone Global</title>
+        <meta
+          name="description"
+          content="Latihan.id adalah solusi CBT terintegrasi untuk ujian, kuis harian, dan asesmen. Terhubung langsung dengan Edunav LMS, dilengkapi fitur keamanan canggih seperti pencegahan kecurangan, auto kick detection, kamera server, dan dukungan Safe Exam Browser (SEB)."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/latihan" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Latihan.id | Secure Online Exam Platform by Zerone Global" />
+        <meta
+          property="og:description"
+          content="Solusi CBT Latihan.id membantu sekolah dan organisasi menyelenggarakan ujian online yang aman, adil, dan efisien."
+        />
+        <meta property="og:url" content="https://www.zerone.id/latihan" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
+
         <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img
             className="rounded-[20px]"
@@ -21,9 +45,9 @@ export default function Latihan() {
 
         <div className="container mx-auto flex flex-col lg:flex-row justify-between items-start px-7 sm:px-20 lg:px-40 mt-20 ">
           <div className="lg:w-1/3">
-            <h3 className="text-lg lg:text-xl text-gray-600 mb-4">
+            <h1 className="text-lg lg:text-xl text-gray-600 mb-4">
               Our Product
-            </h3>
+            </h1>
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-700 mb-6 leading-snug">
               What is&nbsp;
               <br className="hidden md:inline" />
@@ -84,11 +108,11 @@ export default function Latihan() {
         </div>
 
         <div className="container mx-auto px-5">
-          <h3 className="text-[24px] my-10 md:my-15 sm:text-3xl lg:text-4xl font-bold text-Black text-center">
+          <h2 className="text-[24px] my-10 md:my-15 sm:text-3xl lg:text-4xl font-bold text-Black text-center">
             The Most Secure and Reliable Exam Platform
             <br className="hidden md:inline" />
             &nbsp; for a Seamless and Fair Testing Experience
-          </h3>
+          </h2>
         </div>
 
         <div className="container mx-auto  lg:px-30 lg:mt-10">

@@ -1,9 +1,36 @@
 import { banner, ilustration, logos, sosialmedia } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function Venti() {
   return (
     <>
       <div className="webApp pt-10 lg:pt-5 bg-white">
+        
+        <Helmet>
+        <title>Venti.id | Digital Event & Ticketing Management System</title>
+        <meta
+          name="description"
+          content="Venti.id adalah sistem manajemen event dan tiket digital dari Zerone Global. Mendukung registrasi digital, pembayaran, monitoring kehadiran, analitik, seat mapping, serta integrasi dengan Strava, Latihan.id dan berbagai payment gateway"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        <link rel="canonical" href="https://www.zerone.id/venti" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Venti.id | Digital Event & Ticketing Management System" />
+        <meta
+          property="og:description"
+          content="Solusi event & ticketing digital dari Zerone Global. Venti.id mendukung registrasi, pembayaran, monitoring kehadiran, dan analitik untuk semua jenis event."
+        />
+        <meta property="og:url" content="https://www.zerone.id/venti" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
+
+
         <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img
             className="rounded-[20px]"
@@ -21,9 +48,9 @@ export default function Venti() {
 
         <div className="container mx-auto flex flex-col lg:flex-row justify-between items-start px-7 sm:px-20 lg:px-40 mt-20">
           <div className="lg:w-1/3">
-            <h3 className="text-lg lg:text-xl text-gray-600 mb-4">
+            <h1 className="text-lg lg:text-xl text-gray-600 mb-4">
               Our Product
-            </h3>
+            </h1>
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-700 mb-6 leading-snug">
               What is Venti.id ?
             </h2>

@@ -1,9 +1,32 @@
 import { banner, ilustration } from "../data";
+import { Helmet } from "react-helmet-async";
+
 
 export default function JadwalKuliah() {
   return (
     <>
       <div className="webApp pt-20 lg:pt-5 bg-white">
+         <Helmet>
+        <title>JadwalKuliah | Smart College Schedule Management</title>
+        <meta
+          name="description"
+          content="JadwalKuliah adalah platform manajemen jadwal kuliah digital yang membantu mahasiswa mengatur jadwal akademik dengan mudah. Dilengkapi fitur notifikasi real-time, pencarian fleksibel, dan profil pengguna untuk pengalaman belajar yang lebih efisien."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.zerone.id/jadwalkuliah" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="JadwalKuliah | Smart College Schedule Management" />
+        <meta
+          property="og:description"
+          content="Platform JadwalKuliah membantu mahasiswa mengatur jadwal akademik dengan notifikasi real-time, pencarian fleksibel, dan profil pengguna."
+        />
+        <meta property="og:url" content="https://www.zerone.id/jadwalkuliah" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+      </Helmet>
+
+
         <div className="product-banner mt-26 container mx-auto lg:max-w-6xl hidden sm:block shadow-lg rounded-[20px]">
           <img className="rounded-[20px]" src={banner.jadwalkuliah} alt="Jadwal Kuliah Banner" />
         </div>
@@ -38,11 +61,14 @@ export default function JadwalKuliah() {
 
 
         <div className="container mx-auto px-5 motion-safe:animate-slideUp">
-          <h3 className="text-[24px] my-10 lg:pt-[110px] md:my-10 sm:text-3xl lg:text-4xl font-bold text-Black text-center">
+          <h1 className="text-lg lg:text-xl text-gray-600 mb-4">
+              Our Product
+            </h1>
+          <h2 className="text-[24px] my-10 lg:pt-[110px] md:my-10 sm:text-3xl lg:text-4xl font-bold text-Black text-center">
             Simplify Your College Life with Smart 
             <br className="hidden md:inline" />
-           <span className=""> Schedule Management and Academic Tools</span>
-          </h3>
+            Schedule Management and Academic Tools
+          </h2>
         </div>
 
         <div className="container mx-auto  lg:px-30 lg:mt-10">
