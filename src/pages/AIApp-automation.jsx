@@ -6,22 +6,38 @@ export default function AiAppAutomation() {
   return (
     <>
       <Helmet>
-        <title>AI App & Automation Development | Zerone Global Digital Solution</title>
+        <title>
+          AI App & Automation Development | Zerone Global Digital Solution
+        </title>
         <meta
           name="description"
           content="Zerone.id menyediakan jasa pengembangan aplikasi AI dan otomasi bisnis untuk meningkatkan efisiensi, mengurangi kesalahan, dan mempercepat pertumbuhan perusahaan Anda."
         />
 
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.zerone.id/ai-app-automation-development" />
+        <link
+          rel="canonical"
+          href="https://www.zerone.id/ai-app-automation-development"
+        />
 
         {/* Open Graph untuk sosial media */}
-        <meta property="og:title"
-          content="AI App & Automation Development | Zerone Global Digital Solution" />
-        <meta property="og:description" content="Solusi AI dan otomasi bisnis dari Zerone.id untuk efisiensi dan pertumbuhan lebih cepat." />
-        <meta property="og:url" content="https://www.zerone.id/ai-app-automation-development" />
+        <meta
+          property="og:title"
+          content="AI App & Automation Development | Zerone Global Digital Solution"
+        />
+        <meta
+          property="og:description"
+          content="Solusi AI dan otomasi bisnis dari Zerone.id untuk efisiensi dan pertumbuhan lebih cepat."
+        />
+        <meta
+          property="og:url"
+          content="https://www.zerone.id/ai-app-automation-development"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp"/>
+        <meta
+          property="og:image"
+          content="https://www.zerone.id/assets/meta-image-zerone.webp"
+        />
       </Helmet>
 
       <div className="webApp pt-15 md:pt-4 bg-white pb-30">
@@ -62,7 +78,7 @@ export default function AiAppAutomation() {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="24px"
-                      viewBox="http://www.w3.org/2000/svg"
+                      viewBox="0 -960 960 960"
                       width="24px"
                       fill="#0092d7"
                     >

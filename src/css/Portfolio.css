@@ -88,7 +88,6 @@
   border-radius: 20px;
   min-width: 250px;
   width: 100%;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -170,9 +169,7 @@
   color: yellow;
 }
 
-.news-card:hover .news-card__image {
-  transform: scale(1.1);
-}
+
 
 .news-card__excerpt {
   font-weight: 300;
