@@ -253,7 +253,8 @@ export const logos = {
   instagram: "/assets/Instagram.webp",
   whatsappWhite : "/assets/whatsapp.png",
   instagramWhite : "/assets/instagram.png",
-  emailWhite : "/assets/email.png"
+  emailWhite : "/assets/email.png",
+  img404 : "/assets/404.webp"
 };
 
 export const mockup = {

@@ -28,7 +28,7 @@ import Blog from "./pages/Blog";
 import PostDetail from "./pages/BlogDetail";
 import Contact from "./pages/contact";
 import FAQs from "./pages/FAQ";
-
+import NotFound from "./components/404"
 // 1. IMPORT KEDUA LIBRARY (GA4 & PIXEL)
 import ReactGA from "react-ga4";
 import ReactPixel from 'react-facebook-pixel';
@@ -90,6 +90,7 @@ function App() {
         <Route path="/post/:id" element={<PostDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/FAQs" element={<FAQs />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
