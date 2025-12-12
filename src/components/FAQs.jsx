@@ -7,11 +7,11 @@ const FAQs = () => {
 
   const faqs = [
     {
-      question: "What is Zerone.id?",
+      question: "What is zerone.id?",
       answer: (
         <div>
           <p>
-            zerOne.id.id is an information technology company that provides
+            zerone.id.id is an information technology company that provides
             integrated digital solutions. We develop systems that streamline
             administration, strengthen security, and support scalable operations
             for organizations across multiple sectors.
@@ -20,11 +20,11 @@ const FAQs = () => {
       ),
     },
     {
-      question: "What products does zerOne.id offer?",
+      question: "What products does zerone.id offer?",
       answer: (
         <div>
           <p>
-            zerOne.id provides a complete ecosystem of digital platforms
+            zerone.id provides a complete ecosystem of digital platforms
             designed to support operations, administration, learning,
             assessments, events, and data management.
           </p>
@@ -46,7 +46,7 @@ const FAQs = () => {
       ),
     },
     {
-      question: "What IT services does zerOne.id provide?",
+      question: "What IT services does zerone.id provide?",
       answer: (
         <div>
           <p>The collaboration process includes</p>
@@ -62,11 +62,11 @@ const FAQs = () => {
       ),
     },
     {
-      question: "Does zerOne.id provide onsite and online sessions?",
+      question: "Does zerone.id provide onsite and online sessions?",
       answer: (
         <div>
           <p>
-            Yes. zerOne.id can support large clients and multi branch
+            Yes. zerone.id can support large clients and multi branch
             organizations. Our systems are designed for multi unit structures
             with central dashboards and consolidated data. For example, in
             Edunav we provide an HQ Dashboard for institutions that manage
@@ -79,11 +79,11 @@ const FAQs = () => {
     },
     {
       question:
-        "Can zerOne.id handle large clients or multi branch organizations?",
+        "Can zerone.id handle large clients or multi branch organizations?",
       answer: (
         <div>
           <p>
-            zerOne.id.id is an information technology company that provides
+            zerone.id.id is an information technology company that provides
             integrated digital solutions. We develop systems that streamline
             administration, strengthen security, and support scalable operations
             for organizations across multiple sectors.
@@ -93,11 +93,11 @@ const FAQs = () => {
     },
 
     {
-      question: "Does zerOne.id offer AI solutions?",
+      question: "Does zerone.id offer AI solutions?",
       answer: (
         <div>
           <p>
-            Yes. zerOne.id delivers AI functionality across its platforms, such
+            Yes. zerone.id delivers AI functionality across its platforms, such
             as Edunav’s multi curriculum AI Lesson Plan Generator and
             WritingAide’s AI driven writing and evaluation tools. We are
             continuously expanding our AI capabilities to provide smarter, data
@@ -108,7 +108,7 @@ const FAQs = () => {
     },
 
     {
-      question: "Can zerOne.id develop custom systems?",
+      question: "Can zerone.id develop custom systems?",
       answer: (
         <div>
           <p>
@@ -120,7 +120,7 @@ const FAQs = () => {
     },
 
     {
-      question: "How does zerOne.id protect user data?",
+      question: "How does zerone.id protect user data?",
       answer: (
         <div>
           <p>
@@ -133,11 +133,11 @@ const FAQs = () => {
     },
 
     {
-      question: "Who owns the data stored in zerOne.id systems?",
+      question: "Who owns the data stored in zerone.id systems?",
       answer: (
         <div>
           <p>
-            Clients retain full ownership of their data. zerOne.id only manages
+            Clients retain full ownership of their data. zerone.id only manages
             the system and does not use client data for any other purpose.
           </p>
         </div>
@@ -152,11 +152,11 @@ const FAQs = () => {
       ),
     },
     {
-      question: "Does zerOne.id perform data backup?",
+      question: "Does zerone.id perform data backup?",
       answer: (
         <div>
           <p>
-            Yes. zerOne.id conducts daily data backups and can supply raw data
+            Yes. zerone.id conducts daily data backups and can supply raw data
             when needed. We also offer deployment options that allow
             institutions to store their data on their own private server
             infrastructure to meet operational or compliance standards.
@@ -165,7 +165,7 @@ const FAQs = () => {
       ),
     },
     {
-      question: "How does zerOne.id structure its pricing?",
+      question: "How does zerone.id structure its pricing?",
       answer: (
         <div>
           <p>
@@ -188,7 +188,7 @@ const FAQs = () => {
       ),
     },
     {
-      question: "Does zerOne.id provide training for users?",
+      question: "Does zerone.id provide training for users?",
       answer: (
         <div>
           <p>
@@ -212,7 +212,7 @@ const FAQs = () => {
     },
     {
       question:
-        "Does zerOne.id offer continuous assistance after implementation?",
+        "Does zerone.id offer continuous assistance after implementation?",
       answer: (
         <div>
           <p>
@@ -223,11 +223,11 @@ const FAQs = () => {
       ),
     },
     {
-      question: "Is zerOne.id only for schools?",
+      question: "Is zerone.id only for schools?",
       answer: (
         <div>
           <p>
-            No. zerOne.id’s solutions are designed for any organization that
+            No. zerone.id’s solutions are designed for any organization that
             needs digital transformation. Many of our products such as Venti.id,
             Latihan.id, WritingAide, and our IT services are used by companies,
             events, communities, and non profit organizations.
@@ -236,7 +236,7 @@ const FAQs = () => {
       ),
     },
     {
-      question: "Can zerOne.id integrate with external systems?",
+      question: "Can zerone.id integrate with external systems?",
       answer: (
         <div>
           <p>
@@ -248,7 +248,7 @@ const FAQs = () => {
     },
     {
       question:
-        "Does zerOne.id support payment gateways, notification systems, and multi platform access?",
+        "Does zerone.id support payment gateways, notification systems, and multi platform access?",
       answer: (
         <div>
           <p>

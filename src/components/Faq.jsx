@@ -7,11 +7,11 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: 'What is Zerone.id?',
+      question: 'What is Zerone Global Digital Solution?',
       answer: 'zerOne.id.id is an information technology company that provides integrated digital solutions. We develop systems that streamline administration, strengthen security, and support scalable operations for organizations across multiple sectors.'
     },
     {
-      question: 'What products does zerOne.id offer?',
+      question: 'What products does Zerone Global Digital Solution offer?',
       answer: (
       <div>
         <p>
@@ -34,7 +34,7 @@ const Faq = () => {
     )
     },
     {
-      question: 'What IT services does zerOne.id provide?',
+      question: 'What IT services does Zerone Global Digital Solution provide?',
       answer: (
       <div>
         <p>

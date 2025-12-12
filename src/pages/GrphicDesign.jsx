@@ -1,39 +1,49 @@
 import { mockup, solutionDesain } from "../data";
 import { Helmet } from "react-helmet-async";
 
-
 export default function GrafikDesain() {
   return (
     <>
-      <div className="webApp pt-15 lg:pt-2 bg-white">
+      <div className="webApp pt-16 lg:pt-2 bg-white">
         <Helmet>
-        <title>Graphic & Video Production | Zerone Global Digital Solution</title>
-        <meta
-          name="description"
-          content="Zerone Global menyediakan layanan Graphic Design & Video Production profesional untuk branding, promosi, dan konten marketing. Solusi kreatif kami membantu bisnis menarik perhatian pelanggan dengan visual yang kuat dan video yang memikat."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.zerone.id/graphic-design" />
+          <title>
+            Graphic & Video Production | Zerone Global Digital Solution
+          </title>
+          <meta
+            name="description"
+            content="Zerone Global provides professional Graphic Design & Video Production services for branding, promotion, and content marketing. Our creative solutions help businesses attract customers with strong visuals and engaging videos."
+          />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href="https://www.zerone.id/graphic-design" />
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Graphic & Video Production | Zerone Global Digital Solution" />
-        <meta
-          property="og:description"
-          content="Solusi Graphic Design & Video Production dari Zerone Global membantu bisnis meningkatkan branding dan promosi dengan konten visual yang profesional."
-        />
-        <meta property="og:url" content="https://www.zerone.id/graphic-design" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
-      </Helmet>
+          {/* Open Graph */}
+          <meta
+            property="og:title"
+            content="Graphic & Video Production | Zerone Global Digital Solution"
+          />
+          <meta
+            property="og:description"
+            content="Zerone Global Graphic Design & Video Production solutions help businesses improve branding and promotion with professional visual content."
+          />
+          <meta
+            property="og:url"
+            content="https://www.zerone.id/graphic-design"
+          />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://www.zerone.id/assets/meta-image-zerone.webp"
+          />
+        </Helmet>
 
         {/* deskripsi zerone */}
-        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
+        <div className="container mx-auto pt-[80px] lg:px-32 px-5 lg:mt-20 grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="pr-6">
-            <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[30px] font-bold text-black mb-6 pt-2">
               Graphic and Video
               <br /> Production
             </h1>
-            <h2 className="text-justify text-[18px] md:text-[24px] ">
+            <h2 className="md:text-justify text-[18px] md:text-[24px] ">
               Video and Graphics That Captivate Your Prospective Customers
             </h2>
             <br />
@@ -76,29 +86,71 @@ export default function GrafikDesain() {
           <div>
             <img
               src={mockup.graphic}
-              alt="Graphic and Video Production"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20 relative lg:left-[-80px] mb-10"
+              alt="Creative Graphic Design and Video Production Services by Zerone Global"
+              className="hidden lg:block w-full max-w-[500px] pt-10 lg:pt-0 lg:pl-32 md:pl-20 relative lg:left-[-80px] mb-10"
             />
           </div>
         </div>
 
-
         <div className="container mx-auto mt-10 mb-10">
-            <h3 className="text-[24px] md:text-[36px] font-bold text-center text-black mb-3 pt-2">
-              Professional Graphic Design & Video<br className="hidden md:inline" />&nbsp;Production Services
-            </h3>
-            <h5 className="text-[16px] md:text-[18px] text-center">
-              Boost your branding! Get professional graphic design and creative <br className="hidden md:inline" />&nbsp;video production services for promotional and marketing content.
-            </h5>
+          <h3 className="text-[24px] md:text-[36px] font-bold text-center text-black mb-3 pt-2">
+            Professional Graphic Design & Video
+            <br className="hidden md:inline" />
+            &nbsp;Production Services
+          </h3>
+          <h5 className="text-[16px] md:text-[18px] text-center px-4">
+            Boost your branding! Get professional graphic design and creative{" "}
+            <br className="hidden md:inline" />
+            &nbsp;video production services for promotional and marketing
+            content.
+          </h5>
         </div>
-        <section className="features-section container mx-auto  lg:px-35 bg-white">
-          <div className="mt-5 mb-10  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
-            <img src={solutionDesain.desain1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Content Management System" />
-            <img src={solutionDesain.desain2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Mobile App Development" />
-            <img src={solutionDesain.desain3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Web App Development" />
-            <iframe className="rounded-[11px] w-[370px] h-[208px] md:w-[400px] md:h-[220px]transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" src="https://www.youtube.com/embed/gdbBQZeMSco?si=ghIiIZeu5eOz3GwP&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe className="rounded-[11px] w-[370px] h-[208px] md:w-[400px] md:h-[220px]transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" src="https://www.youtube.com/embed/YzgNGhSqhxQ?si=-4fwxNqsyjSn0jtg&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe className="rounded-[11px] w-[370px] h-[208px] md:w-[400px] md:h-[220px]transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" src="https://www.youtube.com/embed/2PXPVu01XAo?si=SxET07cRO7Db7XkO&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <section className="features-section container mx-auto lg:px-32 bg-white">
+          <div className="mt-5 mb-10 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-3">
+            <img
+              src={solutionDesain.desain1}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-full object-cover"
+              alt="Social Media Graphic Design Portfolio - Zerone Global"
+            />
+            <img
+              src={solutionDesain.desain2}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-full object-cover"
+              alt="Brand Identity and Logo Design - Zerone Global"
+            />
+            <img
+              src={solutionDesain.desain3}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-full object-cover"
+              alt="Marketing Collateral Design - Zerone Global"
+            />
+
+            <iframe
+              className="rounded-[11px] w-full h-[208px] md:h-[220px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              src="https://www.youtube.com/embed/gdbBQZeMSco?si=ghIiIZeu5eOz3GwP&amp;controls=0"
+              title="Company Profile Video Production - Zerone Global"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+            <iframe
+              className="rounded-[11px] w-full h-[208px] md:h-[220px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              src="https://www.youtube.com/embed/YzgNGhSqhxQ?si=-4fwxNqsyjSn0jtg&amp;controls=0"
+              title="Promotional Video Content - Zerone Global"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+            <iframe
+              className="rounded-[11px] w-full h-[208px] md:h-[220px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              src="https://www.youtube.com/embed/2PXPVu01XAo?si=SxET07cRO7Db7XkO&amp;controls=0"
+              title="Creative Marketing Video - Zerone Global"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           </div>
         </section>
       </div>

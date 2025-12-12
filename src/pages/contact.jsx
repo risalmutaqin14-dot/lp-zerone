@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 import {
   faPhone,
   faEnvelope,
@@ -39,87 +39,105 @@ export default function Contact() {
 
   return (
     <>
-    <Helmet>
-        <title>Hubungi Kami | Zerone Global Digital Solution</title>
-        <meta 
-          name="description" 
-          content="Hubungi Zerone Global untuk pertanyaan proyek, dukungan teknis, atau kolaborasi. Temukan kontak telepon, WhatsApp, email, dan alamat kantor kami di BSD City, Indonesia." 
+      <Helmet>
+        <title>Contact Us | Zerone Global Digital Solution</title>
+
+        <meta
+          name="description"
+          content="Get in touch with Zerone Global for project inquiries, technical support, or collaboration. Find our phone number, WhatsApp, email, and office address in BSD City, Indonesia."
+        />
+        <meta
+          name="keywords"
+          content="Contact Zerone Global, IT Support Indonesia, Software House Contact, Customer Service, Business Inquiry"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.zerone.id/contact" />
-        {/* Tambahan: Opsional untuk Social Media (Open Graph) */}
-        <meta property="og:title" content="Hubungi Zerone Global untuk Solusi Digital Terbaik" />
-        <meta property="og:description" content="Kirim pesan atau hubungi kami langsung via WhatsApp/Telepon. Kami siap membantu proyek digital Anda." />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Contact Us | Zerone Global Digital Solution"
+        />
+        <meta
+          property="og:description"
+          content="Send us a message or contact us directly via WhatsApp/Phone. We are ready to assist with your digital projects."
+        />
         <meta property="og:url" content="https://www.zerone.id/contact" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://www.zerone.id/assets/meta-image-zerone.webp"
+        />
       </Helmet>
 
-      
       <div className="webApp pt-15 lg:pt-5">
-        {/* Contact */}
-        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
+        {/* Contact Section */}
+        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2">
           <div className="pr-6">
-            <h1 className="text-justify text-[24px] ">Contact US</h1>
-            <h2 className="text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-justify md:text-[24px]">Contact US</h1>
+            <h2 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
               Let’s Connect and
               <br className="hidden md:inline" />
               Collaborate with Zerone
             </h2>
-            <h3 className="text-justify text-[24px] pr-20">
+
+            <p className="text-left md:text-justify text-[16px] md:text-[20px] text-gray-600 md:pr-20 mb-8">
               Connect with us for project inquiries, technical support, or
               general questions. We’ll respond as soon as possible.
-            </h3>
-            <div className="lg:w-2/3 align-middle lg:pl-6">
+            </p>
+
+            <div className="lg:w-2/3 lg:pl-6 text-left flex flex-col items-start">
               {/* Phone */}
-              <div className="flex mt-8 items-center">
+              <div className="flex mt-8 items-center justify-start">
                 <span className="mr-4 flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-black">
                   <FontAwesomeIcon icon={faPhone} className="text-lg" />
                 </span>
                 <a
-                  href="tel:+622127846241"
-                  className="button-text text-[18px] hover:text-blue-600 transition-colors"
+                  href="tel:+02127846241"
+                  className="button-text text-[16px] md:text-[18px] hover:text-blue-600 transition-colors"
                 >
                   (021) 2784 6241
                 </a>
               </div>
 
               {/* WhatsApp */}
-              <div className="flex mt-3 items-center">
+              <div className="flex mt-3 items-center justify-start">
                 <span className="mr-4 flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-black">
                   <FontAwesomeIcon icon={faWhatsapp} className="text-lg" />
                 </span>
                 <a
-                  href="https://wa.me/6281370002999"
+                  href="https://wa.me/6281370000299?text=Hi%2C%20I%20want%20to%20ask%20about%20zerOne.id%20service"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button-text text-[18px] hover:text-blue-600 transition-colors"
+                  className="button-text text-[16px] md:text-[18px] hover:text-blue-600 transition-colors"
                 >
                   +62 813-7000-0299
                 </a>
               </div>
 
               {/* Email */}
-              <div className="flex mt-3 items-center">
+              <div className="flex mt-3 items-center justify-start">
                 <span className="mr-4 flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-black">
                   <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
                 </span>
                 <a
                   href="mailto:info@zerone.id"
-                  className="button-text text-[18px] hover:text-blue-600 transition-colors"
+                  className="button-text text-[16px] md:text-[18px] hover:text-blue-600 transition-colors"
                 >
                   info@zerone.id
                 </a>
               </div>
 
               {/* Location */}
-              <div className="flex mt-3 items-start">
-                <span className="w-25 mr-4 flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-black">
+              <div className="flex mt-3 items-start justify-start text-left">
+                <span className="mr-4 flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-black shrink-0">
                   <FontAwesomeIcon icon={faLocationDot} className="text-lg" />
                 </span>
                 <a
                   href="https://www.google.com/maps/place/My+Republic+Plaza,+Wing+A,+Zone+6+Green+Office+Park,+BSD+City,+Tangerang,+Banten,+Indonesia"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button-text text-[18px] hover:text-blue-600 transition-colors"
+                  className="button-text text-[16px] md:text-[18px] hover:text-blue-600 transition-colors"
                 >
                   My Republic Plaza, Wing A, Zone 6 Green Office Park, BSD City,
                   Tangerang, Banten – Indonesia
@@ -127,6 +145,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
+
           {/* Form */}
           <div className="p-6 rounded-[20px] shadow-md bg-[#F5F9FF]">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -205,7 +224,7 @@ export default function Contact() {
               <div className="flex mt-6 ">
                 <button
                   type="submit"
-                  className="w-[160px] transition duration-300 ease-in-out hover:scale-105 flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-4 py-3"
+                  className="w-[230px] transition duration-300 ease-in-out hover:scale-105 flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-4 py-3"
                 >
                   <span className="button-icon flex items-center bg-white rounded-full p-1 mr-2">
                     <svg
@@ -218,7 +237,9 @@ export default function Contact() {
                       <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
                     </svg>
                   </span>
-                  <span className="text-white pl-2 font-medium">Submit</span>
+                  <span className="text-white pl-2 font-medium">
+                    Talk to Our Team
+                  </span>
                 </button>
               </div>
 
@@ -236,12 +257,15 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className=" container mx-auto max-w-screen-xl my-30">
+        {/* Map Section */}
+        <div className="container mx-auto max-w-screen-xl my-30">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d701.0432617503754!2d106.65250108970972!3d-6.303182023946195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbecde2cc1b1%3A0xa154bae00576df77!2sPT.%20Global%20Zerone%20Digital!5e0!3m2!1sid!2sid!4v1762569849687!5m2!1sid!2sid"
             width="100%"
             height="400px"
             style={{ borderRadius: "20px" }}
+            title="Zerone Global Office Location"
+            loading="lazy"
           />
         </div>
       </div>

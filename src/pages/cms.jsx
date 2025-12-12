@@ -1,43 +1,49 @@
 import { mockup } from "../data";
 import { Helmet } from "react-helmet-async";
 
-
 export default function CMS() {
   return (
     <>
-      <div className="webApp pt-15 lg:pt-5 bg-white">
+      {/* TYPO FIX: pt-15 -> pt-16 */}
+      <div className="webApp pt-16 lg:pt-5 bg-white">
         <Helmet>
-        {/* Title */}
-        <title>CMS Development | Zerone Global Digital Solution</title>
+          {/* Title */}
+          <title>CMS Development | Zerone Global Digital Solution</title>
 
-        {/* Meta Description */}
-        <meta
-          name="description"
-          content="Zerone Global menyediakan layanan pengembangan Content Management System (CMS) untuk membantu bisnis mengelola konten website dengan mudah, aman, dan fleksibel. Solusi digital kami meningkatkan efisiensi dan reputasi online Anda."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.zerone.id/cms" />
+          {/* Meta Description: Translated to English for consistency */}
+          <meta
+            name="description"
+            content="Zerone Global provides Content Management System (CMS) development services to help businesses manage website content easily, securely, and flexibly. Our digital solutions improve your online efficiency and reputation."
+          />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href="https://www.zerone.id/cms" />
 
-        {/* Open Graph */}
-        <meta property="og:title" content="CMS Development | Zerone Global Digital Solution" />
-        <meta
-          property="og:description"
-          content="Solusi CMS dari Zerone Global membantu bisnis mengelola konten website dengan mudah, aman, dan fleksibel."
-        />
-        <meta property="og:url" content="https://www.zerone.id/cms" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
-      </Helmet>
+          {/* Open Graph */}
+          <meta
+            property="og:title"
+            content="CMS Development | Zerone Global Digital Solution"
+          />
+          <meta
+            property="og:description"
+            content="Zerone Global CMS solutions help businesses manage website content easily, securely, and flexibly."
+          />
+          <meta property="og:url" content="https://www.zerone.id/cms" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://www.zerone.id/assets/meta-image-zerone.webp"
+          />
+        </Helmet>
 
         {/* deskripsi zerone */}
-        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
+        <div className="container mx-auto pt-[80px] lg:px-32 px-5 lg:mt-20 grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="pr-6">
             <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
               Content Management
               <br />
               System (CMS)
             </h1>
-            <h2 className="text-justify text-[18px] md:text-[24px] ">
+            <h2 className="text-justify text-[18px] md:text-[24px]">
               CMS Solutions That Put You in Control
             </h2>
             <br />
@@ -79,16 +85,18 @@ export default function CMS() {
           <div>
             <img
               src={mockup.cms}
-              alt="CMS development"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20 relative lg:left-[-50px] left-[-5px]"
+              alt="Custom Content Management System (CMS) Dashboard Interface by Zerone Global"
+              className="hidden lg:block w-full max-w-[500px] pt-10 lg:pt-0 lg:pl-32 md:pl-20 relative lg:left-[-50px] left-[-5px]"
             />
           </div>
         </div>
+
         <div className="container mx-auto px-5">
-          <h3 className=" text-center text-[16px] lg:text-[20px] lg:mt-20 mt-10 ">
-            “Content builds relationships. Relationships are built on trust. Trust drives revenue.”
+          <h3 className="text-center text-[16px] lg:text-[20px] lg:mt-20 mt-10">
+            “Content builds relationships. Relationships are built on trust.
+            Trust drives revenue.”
           </h3>
-          <h3 className=" text-[16px] lg:text-[20px] font-bold itaic text-center pb-10">
+          <h3 className="text-[16px] lg:text-[20px] font-bold italic text-center pb-10">
             Andrew Davis
           </h3>
         </div>

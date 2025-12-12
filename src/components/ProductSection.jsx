@@ -36,28 +36,30 @@ export default function ProdukDesktop({ banner } = {}) {
   return (
     <>
       {/* Produk Tab Dekstop Vieww*/}
-      <div className="section" id="product">
+      <div className="section">
         <div className="containerProduk mx-auto pt-30 bg-white hidden lg:block ">
-          <h2 className="tagline2 text-2xl font-semibold text-gray-800 ">
+          <h2 className="tagline2 text-[24px] md:text-2xl font-semibold text-gray-800 ">
             The Future of Digital Innovation
           </h2>
-          <h3 className="tagline-description text-lg text-gray-600 my-4">
+          {/* Changed h3 to p for better SEO hierarchy (Description text) */}
+          <p className="tagline-description md:text-lg text-gray-600 my-4">
             Discover innovative digital products by Zerone Global Solution that
             <br className="hidden md:inline" />
             empower businesses to scale, optimize operations, and create lasting
             impact through technology.
-          </h3>
-          {/* Latar belakang putih di produk */}
-          {/* Setiap section di sini akan memiliki gambar dengan background putih */}
+          </p>
+
+          {/* EDUNAV SECTION */}
           <div className="section mb-50">
             <img
-              className=" md:max-w-[1050px] mx-auto rounded-[20px]"
+              className="md:max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.edunav}
               loading="lazy"
-              alt="Edunav School management system, sistem information school"
+              // Alt text optimized: Brand + Core Function + English Keywords
+              alt="Edunav - Integrated School Management System (SMS) and Student Information System"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px]  sm:mb-0">
+              <div className="w-[200px] sm:mb-0">
                 <a
                   href="/edunav"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -80,15 +82,18 @@ export default function ProdukDesktop({ banner } = {}) {
               </div>
             </div>
           </div>
+
+          {/* LATIHAN SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.latihan}
               loading="lazy"
-              alt="Latihan - platform ujian yang aman dan mendukung safe exam browser"
+              // Alt text optimized: Secure Exam Platform + Safe Exam Browser (SEB)
+              alt="Latihan - Secure Online Exam Platform supporting Safe Exam Browser (SEB)"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px]  sm:mb-0">
+              <div className="w-[200px] sm:mb-0">
                 <a
                   href="/latihan"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -105,18 +110,21 @@ export default function ProdukDesktop({ banner } = {}) {
                     </svg>
                   </span>
                   <span className="text-white pl-3 font-medium">
-                    view Product
+                    View Product
                   </span>
                 </a>
               </div>
             </div>
           </div>
+
+          {/* RAJIN SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.rajin}
               loading="lazy"
-              alt="Rajin - bimbingan belajar yang lengkap berbagai mata pelajaran dan tryout ujian"
+              // Alt text optimized: E-learning + School Tryout
+              alt="Rajin - Online Learning Platform and School Exam Preparation (Tryout) App"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px] sm:mb-0">
@@ -142,15 +150,18 @@ export default function ProdukDesktop({ banner } = {}) {
               </div>
             </div>
           </div>
+
+          {/* VENTI SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.venti}
               loading="lazy"
-              alt="Venti - event management system, tiket online"
+              // Alt text optimized: Event Management + Ticketing
+              alt="Venti - Event Management System and Online Ticketing Platform"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px]  sm:mb-0">
+              <div className="w-[200px] sm:mb-0">
                 <a
                   href="/venti"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -173,15 +184,18 @@ export default function ProdukDesktop({ banner } = {}) {
               </div>
             </div>
           </div>
+
+          {/* JADWAL KULIAH SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.jadwalkuliah}
               loading="lazy"
-              alt="Jadwalkuliah - website manajemen jadwal kuliah"
+              // Alt text optimized: University Schedule + Academic Management
+              alt="Jadwalkuliah - University Class Scheduling and Academic Management System"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px]  sm:mb-0">
+              <div className="w-[200px] sm:mb-0">
                 <a
                   href="/jadwal-kuliah"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -204,15 +218,18 @@ export default function ProdukDesktop({ banner } = {}) {
               </div>
             </div>
           </div>
+
+          {/* WRITINGAIDE SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.writingaide}
               loading="lazy"
-              alt="Writingaide - AI untuk latihan test TOEFL, IELST, GCSE"
+              // Alt text optimized: AI Writing + Specific Tests (TOEFL/IELTS)
+              alt="Writingaide - AI Writing Assistant for TOEFL, IELTS, and GCSE Preparation"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px]  sm:mb-0">
+              <div className="w-[200px] sm:mb-0">
                 <a
                   href="/writing-aide"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -235,15 +252,19 @@ export default function ProdukDesktop({ banner } = {}) {
               </div>
             </div>
           </div>
-          <div className="section mb-50">
+
+          {/* MARI DUKUNG SECTION */}
+          <div className="section mb-30">
+            {/* Cleaned up className: removed mt-0 if not needed, consistent with others */}
             <img
               className="max-w-[1050px] mx-auto rounded-[20px]"
               src={banners.maridukung}
               loading="lazy"
-              alt="Writingaide - AI untuk latihan test TOEFL, IELST, GCSE"
+              // Alt text optimized: Social Collaboration
+              alt="Mari Dukung - Digital Social Collaboration and Community Support Platform"
             />
-            <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px]  sm:mb-0">
+            <div className="flex justify-center mt-15 container mx-auto">
+              <div className="w-[200px] sm:mb-0">
                 <a
                   href="/mari-dukung"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -269,24 +290,31 @@ export default function ProdukDesktop({ banner } = {}) {
         </div>
       </div>
 
-      {/* Produk Tab tab Vieww*/}
+      {/* Produk Tab View */}
       <div className="section">
         <div className="containerProduk mx-auto bg-white block hidden lg:hidden md:block">
           <h2 className="tagline2 text-2xl font-semibold text-gray-800 ">
             The Future of Digital Innovation
           </h2>
-          <h3 className="tagline-description text-lg text-gray-600 my-4">
+
+          {/* Changed h3 to p for better SEO hierarchy */}
+          <p className="tagline-description text-lg text-gray-600 my-4 leading-relaxed">
             Discover innovative digital products by Zerone Global Solution that
             <br className="hidden md:inline" />
             empower businesses to scale, optimize operations, and create lasting
             impact through technology.
-          </h3>
+          </p>
+
+          {/* Visualizing the ecosystem helps users understand how these products connect */}
+
+          {/* EDUNAV SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[780px] mx-auto rounded-[20px] px-4 md:px-0"
               src={banners.edunav}
               loading="lazy"
-              alt="Edunav School management system, sistem informasi sekolah yang lengkap"
+              // Alt text optimized for English SEO
+              alt="Edunav - Comprehensive School Management System and Academic Information System"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px] sm:mb-0">
@@ -312,12 +340,15 @@ export default function ProdukDesktop({ banner } = {}) {
               </div>
             </div>
           </div>
+
+          {/* LATIHAN SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.latihan}
               loading="lazy"
-              alt="Latihan - platform ujian aman dan caggih, mendukung safe exam browser dll"
+              // Alt text optimized: Secure Exam + SEB Support
+              alt="Latihan - Secure Online Exam Platform with Safe Exam Browser (SEB) Support"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px] sm:mb-0">
@@ -336,22 +367,26 @@ export default function ProdukDesktop({ banner } = {}) {
                       <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
                     </svg>
                   </span>
+                  {/* Fixed capitalization: view -> View */}
                   <span className="text-white pl-3 font-medium">
-                    view Product
+                    View Product
                   </span>
                 </a>
               </div>
             </div>
           </div>
+
+          {/* RAJIN SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.rajin}
               loading="lazy"
-              alt="Rajin - bimbingan belajar"
+              // Alt text optimized: LMS + Tryout
+              alt="Rajin - Online Learning Management System and School Exam Preparation App"
             />
             <div className="flex justify-center mt-4 container mx-auto">
-              <div className="w-[200px]  sm:mb-0">
+              <div className="w-[200px] sm:mb-0">
                 <a
                   href="/rajin"
                   className="transition duration-300 ease-in-out hover:scale-105 download flex items-center border-2 bg-[linear-gradient(90deg,#00BBD7,#0092D7,#6E92D7)] border-[#00A9E8] rounded-[50px] px-3 py-3"
@@ -374,12 +409,15 @@ export default function ProdukDesktop({ banner } = {}) {
               </div>
             </div>
           </div>
+
+          {/* VENTI SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.venti}
               loading="lazy"
-              alt="Venti - event management system"
+              // Alt text optimized: Event Mgmt + Ticketing
+              alt="Venti - Digital Event Management System and Online Ticketing Platform"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px] mb-4 sm:mb-0">
@@ -405,12 +443,15 @@ export default function ProdukDesktop({ banner } = {}) {
               </div>
             </div>
           </div>
+
+          {/* JADWAL KULIAH SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.jadwalkuliah}
               loading="lazy"
-              alt="Jadwalkuliah - website manajemen jadwal kuliah"
+              // Alt text optimized: Academic Scheduling
+              alt="Jadwalkuliah - Student Academic Scheduling and Class Management System"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px] mb-4 sm:mb-0">
@@ -436,12 +477,15 @@ export default function ProdukDesktop({ banner } = {}) {
               </div>
             </div>
           </div>
+
+          {/* WRITINGAIDE SECTION */}
           <div className="section mb-50">
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.writingaide}
               loading="lazy"
-              alt="Writingaide - AI untuk latihan test TOEFL, IELST, GCSE"
+              // Fixed typo: IELST -> IELTS
+              alt="Writingaide - AI-Powered Writing Assistant for TOEFL and IELTS Preparation"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px] mb-4 sm:mb-0">
@@ -467,12 +511,15 @@ export default function ProdukDesktop({ banner } = {}) {
               </div>
             </div>
           </div>
+
+          {/* MARI DUKUNG SECTION */}
           <div className="section">
             <img
               className="max-w-[780px] mx-auto rounded-[20px]"
               src={banners.maridukung}
               loading="lazy"
-              alt="Maridukung - Platform berbagi bersama"
+              // Alt text optimized: Social Collaboration
+              alt="Maridukung - Digital Social Collaboration and Community Support Platform"
             />
             <div className="flex justify-center mt-4 container mx-auto">
               <div className="w-[200px] mb-4 sm:mb-0">
@@ -506,19 +553,25 @@ export default function ProdukDesktop({ banner } = {}) {
         <h2 className="tagline2 text-2xl font-semibold text-gray-800 ">
           The Future of Digital Innovation
         </h2>
-        <h3 className="tagline-description text-lg text-gray-600 my-4">
+        {/* Changed h3 to p for proper SEO hierarchy */}
+        <p className="tagline-description text-lg text-gray-600 my-4 leading-relaxed">
           Discover innovative digital products by Zerone Global Solution that
           <br className="hidden md:inline" />
           empower businesses to scale, optimize operations, and create lasting
           impact through technology.
-        </h3>
+        </p>
+
+        {/* Visualizing the mobile ecosystem helps users understand the suite of apps */}
+
         <div className="containerProduk mx-auto bg-white block sm:hidden overflow-x-hidden">
-          <div className="section ">
+          {/* EDUNAV MOBILE */}
+          <div className="section">
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobileedunav}
               loading="lazy"
-              alt="Edunav manajemen sekolah, sistem informasi sekolah"
+              // Alt text optimized: Mobile App + School Management Keywords
+              alt="Edunav - Mobile School Management System and Academic Information App"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
               <a
@@ -542,12 +595,15 @@ export default function ProdukDesktop({ banner } = {}) {
               </a>
             </div>
           </div>
+
+          {/* LATIHAN MOBILE */}
           <div className="section">
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobilelatihan}
               loading="lazy"
-              alt="Latihan"
+              // Alt text optimized: Secure Mobile Exam Keywords
+              alt="Latihan - Secure Mobile Online Exam Platform with Safe Exam Browser Support"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
               <a
@@ -571,12 +627,15 @@ export default function ProdukDesktop({ banner } = {}) {
               </a>
             </div>
           </div>
+
+          {/* RAJIN MOBILE */}
           <div className="section">
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobilerajin}
               loading="lazy"
-              alt="Rajin.id bimbel yang menawarkan pengalaman lebih dengan pengajar yang profesional"
+              // Alt text optimized: Mobile Learning + Tutoring Keywords
+              alt="Rajin - Mobile Online Learning Platform and Exam Preparation App"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
               <a
@@ -600,12 +659,15 @@ export default function ProdukDesktop({ banner } = {}) {
               </a>
             </div>
           </div>
+
+          {/* VENTI MOBILE */}
           <div className="section">
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobileventi}
               loading="lazy"
-              alt="Venti - website manajemen tiket acara seperti seminar, olahraga, workshop dan masih banyak lainnya"
+              // Alt text optimized: Mobile Event Ticketing Keywords
+              alt="Venti - Mobile Event Management System and Online Ticketing App"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
               <a
@@ -629,12 +691,15 @@ export default function ProdukDesktop({ banner } = {}) {
               </a>
             </div>
           </div>
+
+          {/* JADWAL KULIAH MOBILE */}
           <div className="section">
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobilejadwalkuliah}
               loading="lazy"
-              alt="Jadwalkuliah"
+              // Alt text optimized: Student Scheduling Keywords
+              alt="Jadwalkuliah - Mobile Academic Scheduling and Class Management App"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
               <a
@@ -658,12 +723,15 @@ export default function ProdukDesktop({ banner } = {}) {
               </a>
             </div>
           </div>
+
+          {/* WRITINGAIDE MOBILE */}
           <div className="section">
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobilewritingaide}
               loading="lazy"
-              alt="Writingaide"
+              // Alt text optimized: AI Writing Mobile Keywords
+              alt="Writingaide - Mobile AI Writing Assistant for TOEFL and IELTS Preparation"
             />
             <div className="w-[200px] mb-4 sm:mb-0 mx-auto">
               <a
@@ -687,11 +755,14 @@ export default function ProdukDesktop({ banner } = {}) {
               </a>
             </div>
           </div>
+
+          {/* MARI DUKUNG MOBILE */}
           <div className="section">
             <img
               className="max-w-[360px] mx-auto rounded-[20px]"
               src={banners.mobilemaridukung}
-              alt="Maridukung"
+              // Alt text optimized: Social Collaboration Mobile Keywords
+              alt="Mari Dukung - Mobile Platform for Social Collaboration and Digital Crowdfunding"
               loading="lazy"
             />
             <div className="w-[200px] sm:mb-0 mx-auto">

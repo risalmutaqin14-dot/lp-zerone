@@ -1,52 +1,56 @@
 import { mockup, solutionUIUX } from "../data";
 import { Helmet } from "react-helmet-async";
 
-
 export default function UIUX() {
   return (
     <>
-      <div className="webApp pt-15 lg:pt-5 bg-white">
+      <div className="webApp pt-16 lg:pt-5 bg-white">
         <Helmet>
-        {/* Title */}
-        <title>UI/UX Design | Zerone Global Digital Solution</title>
+          <title>UI/UX Design | Zerone Global Digital Solution</title>
 
-        {/* Meta Description */}
-        <meta
-          name="description"
-          content="Zerone Global menyediakan layanan UI/UX Design untuk aplikasi dan website. Solusi desain digital kami memastikan pengalaman pengguna yang intuitif, nyaman, dan menarik sehingga meningkatkan kepercayaan serta engagement pelanggan."
-        />
+          <meta
+            name="description"
+            content="Zerone Global provides professional UI/UX Design services for apps and websites. Our digital design solutions ensure intuitive, comfortable, and engaging user experiences to boost customer trust and engagement."
+          />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href="https://www.zerone.id/uiux" />
+          {/* Open Graph */}
+          <meta
+            property="og:title"
+            content="UI/UX Design | Zerone Global Digital Solution"
+          />
+          <meta
+            property="og:description"
+            content="Zerone Global UI/UX solutions help businesses build apps and websites with modern, intuitive, and user-centered designs."
+          />
+          <meta property="og:url" content="https://www.zerone.id/uiux" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://www.zerone.id/assets/meta-image-zerone.webp"
+          />
 
-        {/* Robots */}
-        <meta name="robots" content="index, follow" />
-
-        {/* Canonical */}
-        <link rel="canonical" href="https://www.zerone.id/uiux" />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="UI/UX Design | Zerone Global Digital Solution" />
-        <meta
-          property="og:description"
-          content="Solusi UI/UX dari Zerone Global membantu bisnis membangun aplikasi dan website dengan desain modern, intuitif, dan user-centered."
-        />
-        <meta property="og:url" content="https://www.zerone.id/uiux" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="UI/UX Design | Zerone Global Digital Solution" />
-        <meta
-          name="twitter:description"
-          content="Solusi UI/UX dari Zerone Global membantu bisnis membangun aplikasi dan website dengan desain modern, intuitif, dan user-centered."
-        />
-        <meta name="twitter:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
-      </Helmet>
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:title"
+            content="UI/UX Design | Zerone Global Digital Solution"
+          />
+          <meta
+            name="twitter:description"
+            content="Zerone Global UI/UX solutions help businesses build apps and websites with modern, intuitive, and user-centered designs."
+          />
+          <meta
+            name="twitter:image"
+            content="https://www.zerone.id/assets/meta-image-zerone.webp"
+          />
+        </Helmet>
 
         {/* deskripsi zerone */}
-        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
+        <div className="container mx-auto pt-[80px] lg:px-32 px-5 lg:mt-20 grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="pr-6">
             <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
-              UIUX Design
+              UI/UX Design
             </h1>
             <h2 className="text-justify text-[18px] md:text-[24px] ">
               What Makes Your Applications and Websites Easy to Access
@@ -93,8 +97,8 @@ export default function UIUX() {
           <div>
             <img
               src={mockup.uiux}
-              alt="UIUX Design"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
+              alt="Professional UI/UX Design Mockup for Mobile and Web Apps by Zerone Global"
+              className="hidden lg:block w-full max-w-[500px] pt-10 lg:pt-0 lg:pl-32 md:pl-20"
             />
           </div>
         </div>
@@ -105,44 +109,44 @@ export default function UIUX() {
             <br className="hidden md:inline" />
             &nbsp;Through User-Centered UI/UX Design
           </h3>
-          <h4 className="text-[16px] md:text-[18px] text-center">
+          <h4 className="text-[16px] md:text-[18px] text-center px-4">
             End-to-End Digital Product Design Solutions: UI/UX, User Research,
             Prototyping, and Design Systems. <br className="hidden md:inline" />
             &nbsp;Develop successful products with our team of experts.
           </h4>
         </div>
 
-        <section className="features-section container mx-auto  lg:px-35 bg-white">
-          <div className="mt-5 mb-10  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
+        <section className="features-section container mx-auto lg:px-32 bg-white">
+          <div className="mt-5 mb-10 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-3">
             <img
               src={solutionUIUX.uiux1}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Content Management System"
+              alt="Dashboard Interface Design Portfolio - Zerone Global"
             />
             <img
               src={solutionUIUX.uiux2}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Mobile App Development"
+              alt="Mobile App User Experience Design - Zerone Global"
             />
             <img
               src={solutionUIUX.uiux3}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Web App Development"
+              alt="Web App UI Prototype - Zerone Global"
             />
             <img
               src={solutionUIUX.uiux4}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="wordpess Development"
+              alt="E-commerce Website Design System - Zerone Global"
             />
             <img
               src={solutionUIUX.uiux5}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="uiux design"
+              alt="User-Centered Interface Design - Zerone Global"
             />
             <img
               src={solutionUIUX.uiux6}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="digital marketing"
+              alt="Digital Product Design & Strategy - Zerone Global"
             />
           </div>
         </section>

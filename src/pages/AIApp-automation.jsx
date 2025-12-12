@@ -11,23 +11,20 @@ export default function AiAppAutomation() {
         </title>
         <meta
           name="description"
-          content="Zerone.id menyediakan jasa pengembangan aplikasi AI dan otomasi bisnis untuk meningkatkan efisiensi, mengurangi kesalahan, dan mempercepat pertumbuhan perusahaan Anda."
+          content="Zerone.id provides AI app development and business automation services to increase efficiency, reduce errors, and accelerate your company's growth."
         />
-
         <meta name="robots" content="index, follow" />
         <link
           rel="canonical"
           href="https://www.zerone.id/ai-app-automation-development"
         />
-
-        {/* Open Graph untuk sosial media */}
         <meta
           property="og:title"
           content="AI App & Automation Development | Zerone Global Digital Solution"
         />
         <meta
           property="og:description"
-          content="Solusi AI dan otomasi bisnis dari Zerone.id untuk efisiensi dan pertumbuhan lebih cepat."
+          content="AI solutions and business automation from Zerone.id for better efficiency and faster growth."
         />
         <meta
           property="og:url"
@@ -40,12 +37,12 @@ export default function AiAppAutomation() {
         />
       </Helmet>
 
-      <div className="webApp pt-15 md:pt-4 bg-white pb-30">
+      <div className="webApp pt-16 md:pt-4 bg-white pb-32">
         {/* Hero Section */}
-        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
+        <div className="container mx-auto pt-[80px] lg:px-32 px-5 lg:mt-20 grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="pr-6">
-            <h1 className="text-[24px] md:text-[36px] font-bold text-black pt-2">
-              AI App &<br /> Automation Development
+            <h1 className="text-[30px] md:text-[36px] font-bold text-black pt-2">
+              AI App &<br className="hidden md:inline" /> Automation Development
             </h1>
             <br />
             <p className="[text-align:justify]">
@@ -95,8 +92,8 @@ export default function AiAppAutomation() {
           <div>
             <img
               src={mockup.zeroneAI}
-              alt="AI App & Automation Development"
-              className="w-280 pt-10 lg:pt-0 lg:pl-35 md:pl-20 relative lg:left-[-80px] mb-10"
+              alt="Custom AI Application Interface and Automation Dashboard by Zerone Global"
+              className="hidden lg:block w-full max-w-[500px] pt-10 lg:pt-0 lg:pl-32 md:pl-20 relative lg:left-[-80px] mb-10"
             />
           </div>
         </div>
@@ -114,37 +111,37 @@ export default function AiAppAutomation() {
         </div>
 
         {/* Features Section */}
-        <section className="features-section container mx-auto lg:px-35 bg-white">
+        <section className="features-section container mx-auto lg:px-32 bg-white">
           <div className="mt-5 mb-10 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-3">
             <img
               src={solutionAI.ai1}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="AI Automation Development"
+              alt="AI-Powered Business Workflow Automation System - Zerone Global"
             />
             <img
               src={solutionAI.ai2}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Smart AI Integration"
+              alt="Smart Data Integration and Error Reduction Dashboard"
             />
             <img
               src={solutionAI.ai3}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Process Automation Solutions"
+              alt="End-to-End Business Process Automation Solutions"
             />
             <img
               src={solutionAI.ai4}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Custom AI Solutions"
+              alt="Custom Machine Learning Model Development Services"
             />
             <img
               src={solutionAI.ai5}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="AI App Development"
+              alt="Intelligent Mobile App Development with AI Capabilities"
             />
             <img
               src={solutionAI.ai6}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Automated Business Systems"
+              alt="Automated Analytics and Reporting System by Zerone Global"
             />
           </div>
         </section>

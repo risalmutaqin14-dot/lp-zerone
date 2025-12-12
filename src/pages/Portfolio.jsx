@@ -83,11 +83,22 @@ function Portfolio() {
 
   return (
     <div className="bg-white min-h-screen">
-      <Helmet>
-        <title>Portfolio | Zerone Global Digital Solution</title>
-        <meta name="description" content="Lihat portfolio terbaik dari Zerone Global..." />
-        {/* Meta tags lainnya... */}
-      </Helmet>
+    <Helmet>
+      <title>Portfolio | Zerone Global Digital Solution</title>
+      <meta 
+        name="description" 
+        content="Explore Zerone Global Digital Solution’s portfolio: innovative web design, branding, and digital solutions that elevate your business." 
+      />
+      <meta name="keywords" content="portfolio, digital solution, web design, branding, Zerone Global" />
+
+      {/* Open Graph for social media */}
+      <meta property="og:title" content="Portfolio | Zerone Global Digital Solution" />
+      <meta property="og:description" content="Discover creative projects by Zerone Global Digital Solution: web design, branding, and digital innovation." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://zeroneglobal.com/portfolio" />
+      <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
+    </Helmet>
+
 
       <PortfolioHeader />
 

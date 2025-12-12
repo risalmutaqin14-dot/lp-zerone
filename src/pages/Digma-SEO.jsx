@@ -1,37 +1,49 @@
 import { mockup, solutionDigmar } from "../data";
 import { Helmet } from "react-helmet-async";
 
-
 export default function DigmaSEO() {
   return (
     <>
-      <div className="webApp pt-15 bg-white lg:pt-2">
+      <div className="webApp pt-16 bg-white lg:pt-5">
         <Helmet>
-        {/* Title */}
-        <title>Digital Marketing & SEO | Zerone Global Digital Solution</title>
-        <meta
-          name="description"
-          content="Zerone Global menyediakan layanan Digital Marketing & SEO untuk meningkatkan visibilitas bisnis Anda. Solusi kami membantu menempatkan website di puncak hasil pencarian Google dan mempercepat pertumbuhan bisnis."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.zerone.id/digital-marketing" />
+          <title>
+            Digital Marketing & SEO | Zerone Global Digital Solution
+          </title>
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Digital Marketing & SEO | Zerone Global Digital Solution" />
-        <meta
-          property="og:description"
-          content="Solusi Digital Marketing & SEO dari Zerone Global membantu bisnis meningkatkan visibilitas online dan menarik lebih banyak pelanggan."
-        />
-        <meta property="og:url" content="https://www.zerone.id/digital-marketing" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
-      </Helmet>
+          <meta
+            name="description"
+            content="Zerone Global provides Digital Marketing & SEO services to increase your business visibility. Our solutions help place your website at the top of Google search results and accelerate business growth."
+          />
+          <meta name="robots" content="index, follow" />
+          <link
+            rel="canonical"
+            href="https://www.zerone.id/digital-marketing"
+          />
 
+          {/* Open Graph */}
+          <meta
+            property="og:title"
+            content="Digital Marketing & SEO | Zerone Global Digital Solution"
+          />
+          <meta
+            property="og:description"
+            content="Zerone Global Digital Marketing & SEO solutions help businesses increase online visibility and attract more customers."
+          />
+          <meta
+            property="og:url"
+            content="https://www.zerone.id/digital-marketing"
+          />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://www.zerone.id/assets/meta-image-zerone.webp"
+          />
+        </Helmet>
 
         {/* deskripsi zerone */}
-        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
+        <div className="container mx-auto pt-[80px] lg:px-32 px-5 lg:mt-20 grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="pr-6">
-            <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[30px] font-bold text-black mb-6 pt-2">
               Digital Marketing
               <br /> and SEO
             </h1>
@@ -80,26 +92,40 @@ export default function DigmaSEO() {
           <div>
             <img
               src={mockup.digmar}
-              alt="Digital Mareting & SEO"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
+              alt="Digital Marketing and SEO Strategy Dashboard by Zerone Global"
+              className="hidden lg:block w-full max-w-[500px] pt-10 lg:pt-0 lg:pl-32 md:pl-20"
             />
           </div>
         </div>
+
         <div className="container mx-auto px-5">
           <h3 className=" text-center text-[16px] lg:text-[20px] lg:mt-20 mt-10 ">
             “It is not the job of Search Engine Optimization to make a pig fly.
-            It is the job of the SEO to <br></br>genetically re-engineer the web site so
-            that it becomes an eagle.”
+            It is the job of the SEO to <br></br>genetically re-engineer the web
+            site so that it becomes an eagle.”
           </h3>
-          <h3 className=" text-[16px] lg:text-[20px] font-bold itaic text-center pb-10">
+          <h3 className=" text-[16px] lg:text-[20px] font-bold italic text-center pb-10">
             Bruce Clay
           </h3>
         </div>
-        <section className="features-section container mx-auto  lg:px-35 bg-white">
-          <div className="mt-5 mb-10  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
-            <img src={solutionDigmar.digmar1} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Content Management System" />
-            <img src={solutionDigmar.digmar2} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Mobile App Development" />
-            <img src={solutionDigmar.digmar3} className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Web App Development" />
+
+        <section className="features-section container mx-auto lg:px-32 bg-white">
+          <div className="mt-5 mb-10 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-3">
+            <img
+              src={solutionDigmar.digmar1}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="SEO Analysis and Keyword Strategy - Zerone Global"
+            />
+            <img
+              src={solutionDigmar.digmar2}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="Social Media Marketing Campaign Results - Zerone Global"
+            />
+            <img
+              src={solutionDigmar.digmar3}
+              className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              alt="Google Analytics and Performance Reporting - Zerone Global"
+            />
           </div>
         </section>
       </div>

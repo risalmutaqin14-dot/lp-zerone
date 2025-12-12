@@ -186,7 +186,7 @@ const Navbar = () => {
                   setIsProductOpen(false);
                 }}
               >
-                AI App & Automation Develpment
+                AI App & Automation Development
               </Link>
               <Link
                 to="/web-app"
@@ -219,7 +219,7 @@ const Navbar = () => {
                   setIsProductOpen(false);
                 }}
               >
-                Wordpres Development
+                Wordpress Development
               </Link>
               <Link
                 to="/cms"

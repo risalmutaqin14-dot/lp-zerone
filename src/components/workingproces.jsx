@@ -1,54 +1,60 @@
 import React from "react";
 import "../css/workingproces.css";
+
 const cardsData = [
   {
     color: "#00bbd7",
-    icon: "fa-solid fa-user",
-    title: "Requirement",
-    content:
-      "The process of understanding system requirements",
+    // Changed to clipboard/list icon for Requirements
+    icon: "fa-solid fa-clipboard-list", 
+    title: "Requirement Analysis",
+    content: "Deep dive analysis to fully understand your system requirements and business goals.",
   },
   {
     color: "#0092d7",
-    icon: "fa-solid fa-house",
+    // Changed to pen/ruler or magic for Design
+    icon: "fa-solid fa-pen-ruler", 
     title: "UI/UX Design",
-    content:
-      "The process of designing sketches, wireframes, visuals",
+    content: "Crafting intuitive user journeys through wireframes and high-fidelity visuals.",
   },
   {
     color: "#00bbd7",
-    icon: "fa-solid fa-wifi",
-    title: "Prototype",
-    content: "Initial model to validate the design",
+    // Changed to cube/layer for Prototype (Wifi was confusing)
+    icon: "fa-solid fa-layer-group", 
+    title: "Prototyping",
+    content: "Creating interactive models to validate flow and functionality before coding.",
   },
   {
     color: "#0092d7",
-    icon: "fa-solid fa-cart-shopping",
+    // Changed to code/laptop for Development (Cart was confusing)
+    icon: "fa-solid fa-code", 
     title: "Development",
-    content:
-      "System development process based on approved designs",
+    content: "Robust system engineering and coding based on the approved design specifications.",
   },
 ];
 
 export default function ULCards() {
   return (
-    <div className="pb-[80px]">
-      <h2 className="text-[36px] font-bold text-gray-600 mb-6 text-center">
+    <div className="pb-[80px] container mx-auto px-4">
+      <h2 className="text-[24px] md:text-[36px] font-bold text-gray-600 mb-6 text-center">
         The Right Solution Through a Clear Process
       </h2>
-      <h3 className="tagline-description text-lg text-gray-600 my-4">
-        Discover the proven workflow we apply to every project. 
-        <br className="hidden md:inline" />&nbsp;
-        A clear, collaborative, and effective process designed to deliver the best solutions for your needs.
-      </h3>
-      <ul className="grid grid-cols-2 md:grid-cols-4 gap-8 ul-cards">
+      
+      {/* Changed h3 to p for correct SEO semantic structure */}
+      <p className="tagline-description md:text-lg text-gray-600 my-4 text-center leading-relaxed max-w-3xl mx-auto">
+        Discover the proven workflow we apply to every project.
+        <br className="hidden md:inline" />
+        {" "}A clear, collaborative, and effective process designed to deliver the best solutions for your needs.
+      </p>
+
+      <ul className="grid grid-cols-2 md:grid-cols-4 gap-8 ul-cards mt-12">
         {cardsData.map((card, index) => (
           <li key={index} style={{ "--accent-color": card.color }}>
             <div className="icon animate-bounce">
-              <i className={card.icon}></i>
+              {/* Added aria-hidden for accessibility */}
+              <i className={card.icon} aria-hidden="true"></i>
             </div>
-            <div className="title">{card.title}</div>
-            <div className="content">{card.content}</div>
+            <div className="title font-bold text-xl mb-2">{card.title}</div>
+            <div className="content text-gray-600 text-sm">{card.content}</div>
           </li>
         ))}
       </ul>

@@ -1,41 +1,49 @@
 import { mockup, solutionpayment } from "../data";
 import { Helmet } from "react-helmet-async";
 
-
 export default function Payment() {
   return (
     <>
-      <div className="webApp pt-15 lg:pt-5 bg-white">
+      <div className="webApp pt-16 lg:pt-5 bg-white">
         <Helmet>
-        <title>Payment Gateway Integration | Zerone Global Digital Solution</title>
-        <meta
-          name="description"
-          content="Zerone Global menyediakan layanan Payment Gateway Integration untuk mempermudah transaksi online. Solusi kami menghubungkan pembeli dan penjual dengan sistem pembayaran yang aman, cepat, dan terintegrasi."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.zerone.id/payment-gateway" />
+          <title>
+            Payment Gateway Integration | Zerone Global Digital Solution
+          </title>
+          <meta
+            name="description"
+            content="Zerone Global provides Payment Gateway Integration services to streamline online transactions. Our solutions connect buyers and sellers with secure, fast, and integrated payment systems."
+          />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href="https://www.zerone.id/payment-gateway" />
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Payment Gateway Integration | Zerone Global Digital Solution" />
-        <meta
-          property="og:description"
-          content="Solusi Payment Gateway dari Zerone Global memudahkan bisnis menyediakan sistem pembayaran online yang aman dan terintegrasi."
-        />
-        <meta property="og:url" content="https://www.zerone.id/payment-gateway" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
-
-      </Helmet>
-
+          {/* Open Graph */}
+          <meta
+            property="og:title"
+            content="Payment Gateway Integration | Zerone Global Digital Solution"
+          />
+          <meta
+            property="og:description"
+            content="Zerone Global Payment Gateway solutions make it easy for businesses to provide secure and integrated online payment systems."
+          />
+          <meta
+            property="og:url"
+            content="https://www.zerone.id/payment-gateway"
+          />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://www.zerone.id/assets/meta-image-zerone.webp"
+          />
+        </Helmet>
 
         {/* deskripsi zerone */}
-        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
+        <div className="container mx-auto pt-[80px] lg:px-32 px-5 lg:mt-20 grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="pr-6">
-            <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
+            <h1 className="text-[30px] font-bold text-black mb-6 pt-2">
               Payment Gateway
               <br /> Integration
             </h1>
-            <h2 className="text-justify text-[18px] md:text-[24px] ">
+            <h2 className="md:text-justify text-[18px] md:text-[24px] ">
               Extra Simple Payment System
             </h2>
             <br />
@@ -74,37 +82,40 @@ export default function Payment() {
           <div>
             <img
               src={mockup.payment}
-              alt="Payment Gateway Integration"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20 relative lg:left-[-80px]"
+              alt="Secure Payment Gateway Integration System Mockup by Zerone Global"
+              className="hidden lg:block w-full max-w-[500px] pt-10 lg:pt-0 lg:pl-32 md:pl-20 relative lg:left-[-80px]"
             />
           </div>
         </div>
+
         <div className="container mx-auto px-5">
           <h3 className=" text-center text-[16px] lg:text-[20px] lg:mt-20 mt-10 ">
             Confused about how to make payments that are directly connected to
             the system? Payment Gateway is the answer.
           </h3>
-          <h3 className=" text-[16px] lg:text-[20px] font-bold itaic text-center pb-10">
+          {/* TYPO FIX: itaic -> italic */}
+          <h3 className=" text-[16px] lg:text-[20px] font-bold italic text-center pb-10">
             Tell us your needs, and Zerone will make them happen, exactly as you
             want.
           </h3>
         </div>
-        <section className="features-section container mx-auto  lg:px-35 bg-white">
-          <div className="pb-20  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
+
+        <section className="features-section container mx-auto lg:px-32 bg-white">
+          <div className="pb-20 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-3">
             <img
               src={solutionpayment.payment1}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Payment Gateway Integration"
+              alt="Secure Online Payment Processing Interface - Zerone Global"
             />
             <img
               src={solutionpayment.payment2}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Payment Gateway Integration"
+              alt="Mobile Banking and E-wallet Integration - Zerone Global"
             />
             <img
               src={solutionpayment.payment3}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Payment Gateway Integration"
+              alt="Real-time Transaction Monitoring Dashboard - Zerone Global"
             />
           </div>
         </section>

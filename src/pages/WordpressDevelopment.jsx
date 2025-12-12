@@ -1,45 +1,46 @@
 import { mockup, ilustration, solutionWordpress } from "../data";
 import { Helmet } from "react-helmet-async";
 
-
 export default function WordpressDev() {
   return (
     <>
-      <div className="webApp pt-15 lg:pt-5 bg-white">
+      <div className="webApp pt-16 lg:pt-5 bg-white">
         <Helmet>
-        <title>WordPress Development | Zerone Global Digital Solution</title>
-        <meta
-          name="description"
-          content="Zerone Global menyediakan layanan pengembangan Website & WordPress profesional untuk bisnis Anda. Solusi digital kami membantu membangun reputasi, meningkatkan kepercayaan pelanggan, dan menghadirkan desain web yang aman serta fleksibel."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.zerone.id/wordpress-dev" />
+          <title>WordPress Development | Zerone Global Digital Solution</title>
+          <meta
+            name="description"
+            content="Zerone Global provides professional Website & WordPress development services. Our digital solutions help build reputation, increase customer trust, and deliver secure and flexible web designs."
+          />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href="https://www.zerone.id/wordpress-dev" />
+          <meta
+            property="og:title"
+            content="WordPress Development | Zerone Global Digital Solution"
+          />
+          <meta
+            property="og:description"
+            content="Zerone Global WordPress solutions help businesses build professional, secure, and flexible websites to improve reputation and customer trust."
+          />
+          <meta property="og:url" content="https://www.zerone.id/wordpress-dev" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://www.zerone.id/assets/meta-image-zerone.webp"
+          />
+        </Helmet>
 
-        {/* Open Graph */}
-        <meta property="og:title" content="WordPress Development | Zerone Global Digital Solution" />
-        <meta
-          property="og:description"
-          content="Solusi WordPress dari Zerone Global membantu bisnis membangun website profesional, aman, dan fleksibel untuk meningkatkan reputasi dan kepercayaan pelanggan."
-        />
-        <meta property="og:url" content="https://www.zerone.id/wordpress-dev" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.zerone.id/assets/meta-image-zerone.webp" />
-      </Helmet>
-
-
-        {/* deskripsi zerone */}
-        <div className="container mx-auto pt-[80px] lg:px-30 px-5 lg:mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-2">
+        <div className="container mx-auto pt-[80px] lg:px-32 px-5 lg:mt-20 grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="pr-6">
-            <h1 className="text-[24px] md:text-[36px] font-bold text-black mb-6 pt-2">
-              Websitee/Wordpress
+            <h1 className="text-[30px] font-bold text-black mb-6 pt-2">
+              Website/WordPress
               <br />
               Development
             </h1>
-            <h2 className=" text-[18px] md:text-[24px] ">
+            <h2 className="text-[18px] md:text-[24px]">
               Make Your Business More Trustworthy with a Website/WordPress
             </h2>
-            <br /> 
-            <p className="">
+            <br />
+            <p className="[text-align:justify]">
               A website/WordPress is an online site that presents its owner's
               content. For example, if you are a clothing business owner, your
               website/WordPress will contain clothing products. Similarly, if
@@ -74,26 +75,27 @@ export default function WordpressDev() {
           <div>
             <img
               src={mockup.wordpress}
-              alt="website/wordpress development"
-              className="w-300 pt-10 lg:pt-0 lg:pl-35 md:pl-20"
+              alt="Custom WordPress Website Development Mockup by Zerone Global"
+              className="hidden lg:block w-full max-w-[500px] pt-10 lg:pt-0 lg:pl-32 md:pl-20"
             />
           </div>
         </div>
-        <h3 className="text-[24px] md:text-[36px] text-center font-bold text-black mb-6 pt-25">
+
+        <h3 className="text-[24px] md:text-[36px] text-center font-bold text-black mb-6 pt-24">
           The advantages of having a <br />
           website/WordPress for business people
         </h3>
 
-        <div className="container mx-auto  lg:px-30 lg:mt-5 bg-[">
+        <div className="container mx-auto lg:px-32 lg:mt-5">
           <div className="mt-10 p-[30px] grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 bg-no-repeat bg-cover rounded-[20px] py-5">
             {/* Box 1 */}
             <div className="w-full text-center m-2">
               <img
                 src={ilustration.ilusAbout1}
                 className="w-20 mx-auto pb-5"
-                alt="Customer Oriented"
+                alt="Customer Trust Illustration"
               />
-              <span className="text-justify text-[16px] text-grey-600">
+              <span className="text-justify text-[16px] text-gray-600">
                 Convincing potential customers about product quality
               </span>
             </div>
@@ -103,9 +105,9 @@ export default function WordpressDev() {
               <img
                 src={ilustration.ilusAbout2}
                 className="w-20 mx-auto pb-5"
-                alt="Collaborative"
+                alt="Professional Collaboration Illustration"
               />
-              <span className="text-justify text-[16px] text-grey-600">
+              <span className="text-justify text-[16px] text-gray-600">
                 Promotions that appear professional
               </span>
             </div>
@@ -115,28 +117,28 @@ export default function WordpressDev() {
               <img
                 src={ilustration.ilusAbout3}
                 className="w-20 mx-auto pb-5"
-                alt="Support 24/7"
+                alt="Product Variety Illustration"
               />
-              <span className="text-justify text-[16px] text-grey-600">
+              <span className="text-justify text-[16px] text-gray-600">
                 Prospective customers are free to choose product variants
               </span>
             </div>
 
-            {/* Box 3 */}
+            {/* Box 4 */}
             <div className="w-full text-center m-2">
               <img
                 src={ilustration.ilusAbout3}
                 className="w-20 mx-auto pb-5"
-                alt="Support 24/7"
+                alt="Business Reputation Illustration"
               />
-              <span className="text-justify text-[16px] text-grey-600">
+              <span className="text-justify text-[16px] text-gray-600">
                 Store and seller reputation
               </span>
             </div>
           </div>
         </div>
 
-        <div className="container mx-auto mt-15 mb-10 bg-white">
+        <div className="container mx-auto mt-16 mb-10 bg-white">
           <h3 className="text-[24px] md:text-[36px] font-bold text-center text-black pb-3 pt-2">
             Professional WordPress Web Design
             <br className="hidden md:inline" />
@@ -149,37 +151,38 @@ export default function WordpressDev() {
             real results.
           </h5>
         </div>
-        <section className="features-section container mx-auto  lg:px-35 bg-white">
-          <div className="mb-20  grid grid-cols-1 gap-6 sm:grid-cols-3  lg:grid-cols-3 ">
+
+        <section className="features-section container mx-auto lg:px-32 bg-white">
+          <div className="mb-20 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-3">
             <img
               src={solutionWordpress.webpres1}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Desain website Pakar Belia Islamic Boarding School - zerone.id"
+              alt="Pakar Belia Islamic Boarding School Website Design - Zerone Global Portfolio"
             />
             <img
               src={solutionWordpress.webpres2}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Desain website HIBISCUS Internasional School - zerone.id"
+              alt="HIBISCUS International School Website Design - Zerone Global Portfolio"
             />
             <img
               src={solutionWordpress.webpres3}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Berbagai desain website Kompetisi - zerone.id"
+              alt="Competition Event Website Design - Zerone Global Portfolio"
             />
             <img
               src={solutionWordpress.webpres4}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Desain website Kesatuan Bangsa School - zerone.id"
+              alt="Kesatuan Bangsa School Website Design - Zerone Global Portfolio"
             />
             <img
               src={solutionWordpress.webpres5}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Desain website edunav.net - zerone.id"
+              alt="EduNav.net Landing Page Design - Zerone Global Portfolio"
             />
             <img
               src={solutionWordpress.webpres6}
               className="shadow-lg rounded-[11px] transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              alt="Desain website Semesta School - zerone.id"
+              alt="Semesta School Website Design - Zerone Global Portfolio"
             />
           </div>
         </section>

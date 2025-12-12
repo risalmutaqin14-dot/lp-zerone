@@ -1,11 +1,20 @@
-// Data Dummy for blogs
+export const navItems = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About Us" },
+  { id: "portfolio", label: "Portfolio" },
+  { id: "contact", label: "Contact" },
+  // Tambahkan item navigasi lainnya sesuai kebutuhan
+];
+
+
+// Data Dummy for blogs (FIXED: SEO Friendly English ALTs)
 export const blogs = [
   {
     id: 1,
     title: "Blog Post 1",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+    description: "Lorem Ipsum is simply dummy text...",
     image: "/assets/dummy-blog.jpg",
+    alt: "Illustration of Zerone Global educational technology blog article 1",
     author: "Zerone Global",
     date: "January 25, 2022",
   },
@@ -14,6 +23,7 @@ export const blogs = [
     title: "Blog Post 2",
     description: "This is a description of blog 2",
     image: "/assets/dummy-blog.jpg",
+    alt: "Digital school management tips by Zerone Global",
     author: "Zerone Global",
     date: "January 26, 2022",
   },
@@ -22,6 +32,7 @@ export const blogs = [
     title: "Blog Post 3",
     description: "This is a description of blog 3",
     image: "/assets/dummy-blog.jpg",
+    alt: "Latest school information system innovations",
     author: "Zerone Global",
     date: "January 27, 2022",
   },
@@ -30,6 +41,7 @@ export const blogs = [
     title: "Blog Post 4",
     description: "This is a description of blog 4",
     image: "/assets/dummy-blog.jpg",
+    alt: "Guide to using Edunav application for teachers",
     author: "Zerone Global",
     date: "January 28, 2022",
   },
@@ -38,6 +50,7 @@ export const blogs = [
     title: "Blog Post 5",
     description: "This is a description of blog 5",
     image: "/assets/dummy-blog.jpg",
+    alt: "Education transformation in the digital 4.0 era",
     author: "Zerone Global",
     date: "January 29, 2022",
   },
@@ -46,50 +59,54 @@ export const blogs = [
     title: "Blog Post 6",
     description: "This is a description of blog 6",
     image: "/assets/dummy-blog.jpg",
+    alt: "Zerone Digital Global Solution service advantages",
     author: "Zerone Global",
     date: "January 30, 2022",
   },
-  // Add more blogs as needed
   {
-    id: 1,
+    id: 7,
     title: "Blog Post 7",
-    description: "This is a description of blog 1",
+    description: "This is a description of blog 7",
     image: "/assets/dummy-blog.jpg",
+    alt: "Latest feature updates for Latihan.id platform",
     author: "Zerone Global",
     date: "January 25, 2022",
   },
   {
-    id: 2,
+    id: 8,
     title: "Blog Post 8",
-    description: "This is a description of blog 2",
+    description: "This is a description of blog 8",
     image: "/assets/dummy-blog.jpg",
+    alt: "Digital marketing strategies for educational institutions",
     author: "Zerone Global",
     date: "January 26, 2022",
   },
   {
-    id: 3,
+    id: 9,
     title: "Blog Post 9",
-    description: "This is a description of blog 3",
+    description: "This is a description of blog 9",
     image: "/assets/dummy-blog.jpg",
+    alt: "Latest news on Indonesian educational technology",
     author: "Zerone Global",
     date: "January 27, 2022",
   },
   {
-    id: 4,
+    id: 10,
     title: "Blog Post 10",
-    description: "This is a description of blog 4",
+    description: "This is a description of blog 10",
     image: "/assets/dummy-blog.jpg",
+    alt: "Zerone Global workshop activities with school partners",
     author: "Zerone Global",
     date: "January 28, 2022",
   },
 ];
 
-// card portfolio
+// card portfolio (FIXED: SEO Friendly English ALTs)
 const cards = [
   {
     id: 1,
     title: "Komodo Competition",
-    alt: "Komodo Competition",
+    alt: "Komodo Competition Math Event logo",
     description: "An online international math competition to hone your logic and problem-solving skills from home, take weekly quizzes, webinars, and compete globally.",
     image: "/assets/portfolio/komodo.webp",
     author: "Zerone Global",
@@ -99,33 +116,37 @@ const cards = [
   {
     id: 2,
     title: "EDUSTEAM",
+    alt: "EduSTEAM Indonesia STEAM learning platform", 
     description: "EduSTEAM – an online STEAM learning platform in Indonesia. Take interactive courses from certified teachers to hone your science, technology, engineering, art, and math skills.",
     image: "/assets/portfolio/steam.webp",
     author: "Zerone Global",
     date: "January 26, 2022",
-    link: "",
+    link: "https://edusteam.id/",
   },
   {
     id: 3,
     title: "Rajin.id",
+    alt: "Rajin.id online UTBK tryout platform application", 
     description: "An online learning and tryout platform for preparing for the UTBK (Competency Test for the National Exam), university entrance exams, and institutional exams. Access classes and tryouts practically and effectively.",
     image: "/assets/portfolio/rajinID.webp",
     author: "Zerone Global",
     date: "January 27, 2022",
     link: "https://rajin.id/",
   },
-    {
+  {
     id: 4,
     title: "ISPO",
+    alt: "ISPO national science research competition",
     description: "A national science research competition for junior high, high school, and vocational high school students. Develop your creativity, innovation, and scientific abilities through projects in biology, physics, chemistry, technology, the environment, and computers.",
     image: "/assets/portfolio/ispo.webp",
     author: "Zerone Global",
     date: "January 30, 2022",
     link: "https://www.ispo.or.id/",
-    },
-      {
+  },
+  {
     id: 5,
     title: "BESS PROJECT",
+    alt: "Bess Project school interior and laboratory design solution", 
     description: "Bess Project – a solution partner for educational institutions: design and construction of school spaces, laboratories, dormitories, and smart digital signage. Create a quality learning environment with our services.",
     image: "/assets/portfolio/bessproject.webp",
     author: "Zerone Global",
@@ -135,6 +156,7 @@ const cards = [
   {
     id: 6,
     title: "HELLOGLOB",
+    alt: "Helloglob US company incorporation services", 
     description: "Helloglob is a platform that helps individuals and businesses set up companies in the United States in an easy, safe, and structured manner. Services include establishing an LLC or Corporation, managing an EIN, trademark or patent, DUNS Number, and business address in the US without having to be present in person, with a process that complies with regulations.",
     image: "/assets/portfolio/helloglob.webp",
     author: "Zerone Global",
@@ -144,6 +166,7 @@ const cards = [
   {
     id: 7,
     title: "Festival Sains Budaya",
+    alt: "National Science and Culture Festival event poster",
     description: "Science & Culture Festival – a national event for students to hone their creativity through science, arts, and culture. Join competitions, webinars, and virtual exhibitions. Register now!",
     image: "/assets/portfolio/festivalsainsbudaya.webp",
     author: "Zerone Global",
@@ -153,6 +176,7 @@ const cards = [
   {
     id: 8,
     title: "EDUNAV",
+    alt: "Edunav cloud-based School Information System dashboard", 
     description: "A cloud-based school information system for students, teachers, and parents. Monitor academics, attendance, finances, and school communications in one platform.",
     image: "/assets/portfolio/edunav.webp",
     author: "Zerone Global",
@@ -162,6 +186,7 @@ const cards = [
   {
     id: 9,
     title: "VENTI",
+    alt: "Venti event management application for seminars and competitions", 
     description: "An online event management and discovery platform. Easily find or create events, from seminars and workshops to competitions and virtual runs.",
     image: "/assets/portfolio/venti.webp",
     author: "Zerone Global",
@@ -171,49 +196,52 @@ const cards = [
   {
     id: 10,
     title: "EDUCAMP",
+    alt: "Educamp professional teacher training program",
     description: "EduCamp – the Academy of Future Teachers program for aspiring teachers in Indonesia. Receive teaching training, classroom observations, professional mentorship, and job opportunities in schools.",
     image: "/assets/portfolio/educamp.webp",
     author: "Zerone Global",
     date: "January 30, 2022",
     link: "https://v2.educamp.co.id/",
   },
-    {
+  {
     id: 11,
     title: "LATIHAN.ID",
+    alt: "Latihan.id secure online exam platform",
     description: "An online exam and practice platform with proctoring, automated evaluation, and comprehensive reporting. Ready to help you prepare for your exams anytime.",
     image: "/assets/portfolio/latihan.webp",
     author: "Zerone Global",
     date: "January 30, 2022",
     link: "https://latihan.id/login",
   },
-    {
+  {
     id: 12,
-    title: "EDUFLLIP",
+    title: "EDUFLIP",
+    alt: "Eduflip application for flipped classroom learning method", 
     description: "Eduflip is a digital learning platform to support the flipped classroom through structured videos, interactive materials, and real-time monitoring of student progress.",
     image: "/assets/portfolio/eduflip.webp",
     author: "Zerone Global",
     date: "January 30, 2022",
-    link: "http://Eduflip.id",
+    link: "https://Eduflip.id",
   },
 ];
 export default cards;
 
 export const stackDev = {
   aws: "/assets/stack/aws.png",
-  mysql: "assets/stack/mysql.png",
-  php: "assets/stack/php.png",
-  wix: "assets/stack/wix.png",
-  java: "assets/stack/java.png",
-  android: "assets/stack/android.png",
-  google: "assets/stack/google.png",
-  laravel: "assets/stack/laravel.png",
-  wordpess: "assets/stack/wordpress.png",
-  microsoftnet: "assets/stack/microsoft.png",
-  nextjs: "assets/stack/nextjs.png",
-  varcel: "assets/stack/varcel.png",
-  react: "assets/stack/react.png",
-  node: "assets/stack/node.png",
-  flutter: "assets/stack/flutter.png",
+  mysql: "/assets/stack/mysql.png",
+  php: "/assets/stack/php.png",
+  wix: "/assets/stack/wix.png",
+  java: "/assets/stack/java.png",
+  android: "/assets/stack/android.png",
+  google: "/assets/stack/google.png",
+  laravel: "/assets/stack/laravel.png",
+  wordpress: "/assets/stack/wordpress.png",
+  microsoftnet: "/assets/stack/microsoft.png",
+  nextjs: "/assets/stack/nextjs.png",
+  vercel: "/assets/stack/vercel.png",
+  react: "/assets/stack/react.png",
+  node: "/assets/stack/node.png",
+  flutter: "/assets/stack/flutter.png",
 };
 
 export const logos = {
@@ -223,6 +251,9 @@ export const logos = {
   playstore: "/assets/playstore.png",
   appStore: "/assets/AppStore.png",
   instagram: "/assets/Instagram.webp",
+  whatsappWhite : "/assets/whatsapp.png",
+  instagramWhite : "/assets/instagram.png",
+  emailWhite : "/assets/email.png"
 };
 
 export const mockup = {
@@ -258,47 +289,47 @@ export const solutionUIUX = {
   uiux8: "/assets/mockup/UIUX/Writing Aide.webp",
 };
 export const solutionDesain = {
-  desain1: "assets/mockup/desain/zerone.webp",
-  desain2: "assets/mockup/desain/edunav.webp",
-  desain3: "assets/mockup/desain/venti.webp",
+  desain1: "/assets/mockup/desain/zerone.webp",
+  desain2: "/assets/mockup/desain/edunav.webp",
+  desain3: "/assets/mockup/desain/venti.webp",
 };
 export const solutionWordpress = {
-  webpres1: "assets/mockup/web-design/pakar-belia.webp",
-  webpres2: "assets/mockup/web-design/hibiscus.webp",
-  webpres3: "assets/mockup/web-design/kesatuan-bangsa.webp",
-  webpres4: "assets/mockup/web-design/competition-website.webp",
-  webpres5: "assets/mockup/web-design/edunav.webp",
-  webpres6: "assets/mockup/web-design/semesta.webp",
+  webpres1: "/assets/mockup/web-design/pakar-belia.webp",
+  webpres2: "/assets/mockup/web-design/hibiscus.webp",
+  webpres3: "/assets/mockup/web-design/kesatuan-bangsa.webp",
+  webpres4: "/assets/mockup/web-design/competition-website.webp",
+  webpres5: "/assets/mockup/web-design/edunav.webp",
+  webpres6: "/assets/mockup/web-design/semesta.webp",
 };
 export const solutionAppDev = {
-  appDev1: "assets/mockup/AppDev/latihan.webp",
-  appDev2: "assets/mockup/AppDev/venti.webp",
-  appDev3: "assets/mockup/AppDev/rajin.webp",
+  appDev1: "/assets/mockup/AppDev/latihan.webp",
+  appDev2: "/assets/mockup/AppDev/venti.webp",
+  appDev3: "/assets/mockup/AppDev/rajin.webp",
 };
 export const solutionWebApp = {
-  webApp1: "assets/mockup/webApp/dashboard edunav.webp",
-  webApp2: "assets/mockup/webApp/dashboard latihanID.webp",
-  webApp3: "assets/mockup/webApp/dashboard venti.webp",
+  webApp1: "/assets/mockup/webApp/dashboard edunav.webp",
+  webApp2: "/assets/mockup/webApp/dashboard latihanID.webp",
+  webApp3: "/assets/mockup/webApp/dashboard venti.webp",
 };
 export const solutionpayment = {
-  payment1: "assets/mockup/payment/payment gateway.webp",
-  payment2: "assets/mockup/payment/pay - payment gateway.webp",
-  payment3: "assets/mockup/payment/confirmation - payment gateway.webp",
+  payment1: "/assets/mockup/payment/payment gateway.webp",
+  payment2: "/assets/mockup/payment/pay - payment gateway.webp",
+  payment3: "/assets/mockup/payment/confirmation - payment gateway.webp",
 };
 export const solutionDigmar = {
-  digmar1: "assets/mockup/digmar/1.webp",
-  digmar2: "assets/mockup/digmar/2.webp",
-  digmar3: "assets/mockup/digmar/3.webp",
+  digmar1: "/assets/mockup/digmar/1.webp",
+  digmar2: "/assets/mockup/digmar/2.webp",
+  digmar3: "/assets/mockup/digmar/3.webp",
 };
 export const solutionDigitalStrategy = {
-  digstra1: "assets/mockup/digitalStrategi/digital strategy consulting.webp",
+  digstra1: "/assets/mockup/digitalStrategi/digital strategy consulting.webp",
 };
 // End Solution Data Image
 
 export const heroImage = {
   image: "/assets/device-hero.webp",
   bgHero: "/assets/bg-hero.webp",
-  visi: "/assets/Vission.png",
+  visi: "/assets/Vision.png",
   misi: "/assets/Mission.png",
   bgHorizontal: "/assets/bg-linear.webp",
   visimisi: "/assets/bg-vm.png",
@@ -324,11 +355,11 @@ export const banner = {
   mobilemaridukung: "/assets/banner-produk/Mobile/maridukung.webp",
 };
 export const sosialmedia = {
-  socialEdunav: "/assets/banner-produk/sosmed/sosmed edunav.webp",
-  socialVenti: "/assets/banner-produk/sosmed/sosmed venti.webp",
-  socialRajin: "/assets/banner-produk/sosmed/sosmed rajin.webp",
-  socialMaridukung: "/assets/banner-produk/sosmed/sosmed maridukung.webp",
-  socialWritingAide: "/assets/banner-produk/sosmed/sosmed writing aide.webp",
+  socialEdunav: "/assets/banner-produk/sosmed/sosmed-edunav.webp",
+  socialVenti: "/assets/banner-produk/sosmed/sosmed-venti.webp",
+  socialRajin: "/assets/banner-produk/sosmed/sosmed-rajin.webp",
+  socialMaridukung: "/assets/banner-produk/sosmed/sosmed-maridukung.webp",
+  socialWritingAide: "/assets/banner-produk/sosmed/sosmed-writing-aide.webp",
 };
 
 export const ourteam = {
@@ -376,13 +407,13 @@ export const ilustration = {
 };
 
 export const servicesFeatures = {
-  cms: "/assets/services/cms.png ",
+  cms: "/assets/services/cms.png",
   appDev: "/assets/services/mobile-app.png",
   webDev: "/assets/services/webDev.png",
-  wordpess: "/assets/services/wordpress.png",
+  wordpress: "/assets/services/wordpress.png",
   uiux: "/assets/services/uiux.png",
   digmar: "/assets/services/digmar.png",
-  payment: "/assets/services/payment-getway.png",
+  payment: "/assets/services/payment-gateway.png",
   desain: "/assets/services/desain-grafis.png",
   strategy: "/assets/services/strategy-consulting.png",
 };
@@ -392,110 +423,108 @@ export const partnerLogos = [
     id: 2,
     name: "Al-Azhar Serpong",
     image: "/assets/logo-partner/al-azhar-serpong.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Al-Azhar Serpong logo Edunav integrated school information system partner",
   },
-
   {
     id: 4,
     name: "Al-Azhar BSD",
     image: "/assets/logo-partner/alazhar-bsd.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Edunav implementation at Al-Azhar BSD by Zerone Digital Global Solution",
   },
   {
     id: 5,
     name: "Cahaya Rancamaya",
     image: "/assets/logo-partner/CAHAYA-RANCAMAYA.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Cahaya Rancamaya School using Edunav school management application",
   },
   {
     id: 6,
     name: "Darul Hikmah Kutoarjo",
     image: "/assets/logo-partner/darul-hikmah-kutoarjo.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Darul Hikmah Kutoarjo Edunav partner in education digitalization",
   },
   {
     id: 7,
     name: "EIBOS",
     image: "/assets/logo-partner/EIBOS.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "EIBOS logo as Edunav academic system partner",
   },
   {
     id: 8,
     name: "Fatih Bilingual School Aceh",
     image: "/assets/logo-partner/fatih-bilingual-school-aceh.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Fatih Bilingual School Aceh entrusting school information system to Edunav",
   },
   {
     id: 9,
     name: "Fatih Bilingual School",
     image: "/assets/logo-partner/fatih-bilingual-school.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Fatih Bilingual School logo official partner of Zerone Digital Global Solution",
   },
   {
     id: 10,
     name: "Horizon School",
     image: "/assets/logo-partner/horizon-school.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Edunav usage at Horizon School for school administration management",
   },
   {
     id: 11,
     name: "Karisma Bangsa",
     image: "/assets/logo-partner/KARISMA-BANGSA.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Karisma Bangsa School using modern Edunav School Information System",
   },
   {
     id: 12,
     name: "Kesatuan Bangsa",
     image: "/assets/logo-partner/KESATUAN-BANGSA.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Kesatuan Bangsa School logo Edunav IT solution partner",
   },
   {
     id: 13,
     name: "MEGA",
     image: "/assets/logo-partner/MEGA.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "MEGA education partner using Edunav digital solution",
   },
   {
     id: 14,
     name: "Prestige Bilingual School",
     image: "/assets/logo-partner/prestige-bilingual-school.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Prestige Bilingual School management digitalization via Edunav Zerone Digital",
   },
   {
     id: 15,
     name: "Pribadi Bandung",
     image: "/assets/logo-partner/PRIBADI-BANDUNG.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Pribadi Bandung School logo active user of Edunav platform",
   },
   {
     id: 16,
     name: "Pribadi Premiere School",
     image: "/assets/logo-partner/pribadi-premiere-school.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Pribadi Premiere School collaboration with Edunav school system",
   },
-
   {
     id: 18,
     name: "Sampoerna Academy",
     image: "/assets/logo-partner/sampoerna-academy.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Sampoerna Academy using Edunav school management software",
   },
   {
     id: 19,
     name: "School Logo",
     image: "/assets/logo-partner/School-Logo-mobile-300x78.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "School Partner Logo using Edunav School Information System",
   },
   {
     id: 20,
     name: "SD SMP SMA PRIBADI",
     image: "/assets/logo-partner/SD-SMP-SMA-PRIBADI.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "SD SMP SMA PRIBADI system integration with Edunav application",
   },
   {
     id: 21,
     name: "SEMESTA",
     image: "/assets/logo-partner/SEMESTA.png",
-    alt: "logo partner yang menggunakan Edunav sebagai Sistem Informasi Sekolah by. Zerone Digital Global Solution",
+    alt: "Semesta School education technology partner Edunav by Zerone Digital",
   },
 ];
