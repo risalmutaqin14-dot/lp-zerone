@@ -3,401 +3,253 @@ import { NavLink, useLocation, Link } from "react-router-dom";
 import { logos } from "../data";
 import "../css/NavbarTop.css";
 
+// 1. Definisikan Data Menu di luar komponen atau di file terpisah
+const solutionLinks = [
+  {
+    to: "/ai-app-automation-development",
+    label: "AI App & Automation Development",
+  },
+  { to: "/web-app", label: "Web App Development" },
+  { to: "/mobile-app", label: "Mobile App Development" },
+  { to: "/wordpress-dev", label: "Wordpress Development" },
+  { to: "/cms", label: "Content Management System" },
+  { to: "/uiux", label: "UIUX Design" },
+  { to: "/digital-marketing", label: "Digital Marketing & SEO" },
+  { to: "/payment-gateway", label: "Payment Gateway Integration" },
+  { to: "/graphic-design", label: "Graphic & Video Production" },
+  { to: "/digital-strategy-consulting", label: "Digital Strategy Consulting" },
+];
+
+const productLinks = [
+  { to: "/Edunav", label: "EduNav" },
+  { to: "/venti", label: "Venti" },
+  { to: "/latihan", label: "Latihan.id" },
+  { to: "/rajin", label: "Rajin.id" },
+  { to: "/writing-aide", label: "Writing Aide" },
+  { to: "/mari-dukung", label: "MariDukung.com" },
+  { to: "/jadwal-kuliah", label: "Jadwal Kuliah" },
+];
+
 const Navbar = () => {
+  // State
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSolutionOpen, setIsSolutionOpen] = useState(false);
-  const [isProductOpen, setIsProductOpen] = useState(false);
+
+  // 2. Gunakan satu state untuk melacak dropdown mana yang aktif
+  // null = tertutup, 'solution' = solution buka, 'product' = product buka
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const menuRef = useRef(null);
 
-  // Close menu when clicking outside (mobile) and lock body scroll when open
+  // Helper untuk menutup semua menu
+  const closeAllMenus = () => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
+  // Toggle Dropdown Helper
+  const toggleDropdown = (name) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
+
+  // Click Outside Handler
   useEffect(() => {
     const handleOutside = (e) => {
-      if (!menuRef.current) return;
-      if (!isMenuOpen) return;
       if (
+        isMenuOpen &&
+        menuRef.current &&
         !menuRef.current.contains(e.target) &&
         !e.target.closest(".md:hidden")
       ) {
-        setIsMenuOpen(false);
+        closeAllMenus();
       }
     };
 
     if (isMenuOpen) {
-      // document.body.style.overflow = "hidden";
       window.addEventListener("mousedown", handleOutside);
       window.addEventListener("touchstart", handleOutside);
-    } else {
-      document.body.style.overflow = "";
     }
-
     return () => {
-      document.body.style.overflow = "";
       window.removeEventListener("mousedown", handleOutside);
       window.removeEventListener("touchstart", handleOutside);
     };
   }, [isMenuOpen]);
 
+  // Scroll Handler
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Animated underline: show underline only for active item
+  // Animated Underline Logic (Optimized for React ref)
   useEffect(() => {
-    const menu = menuRef.current;
-    if (!menu) return;
+    if (!menuRef.current) return;
 
     const updateUnderline = () => {
-      const active = menu.querySelector(".nav-item.active");
-      if (active) {
-        menu.classList.add("underline-visible");
+      // Cek apakah ada elemen dengan class 'active' di dalam menu
+      const hasActive = menuRef.current.querySelector(".nav-item.active");
+      if (hasActive) {
+        menuRef.current.classList.add("underline-visible");
       } else {
-        menu.classList.remove("underline-visible");
+        menuRef.current.classList.remove("underline-visible");
       }
     };
 
-    // initial update
-    const t = setTimeout(updateUnderline, 50);
+    // Jalankan segera dan saat resize
+    updateUnderline();
     window.addEventListener("resize", updateUnderline);
-
-    return () => {
-      clearTimeout(t);
-      window.removeEventListener("resize", updateUnderline);
-    };
+    return () => window.removeEventListener("resize", updateUnderline);
   }, [location.pathname, isMenuOpen]);
 
   return (
     <div
-      className={`navbar absoulute top-0 z-[999] py-4 px-4 md:px-16 lg:px-32 ${
+      className={`navbar absolute top-0 z-[999] py-4 px-4 md:px-16 lg:px-32 transition-all duration-300 ${
         isScrolled ? "scrolled" : ""
       } ${!isHomePage ? "non-home" : ""}`}
     >
-      <nav className="mx-auto flex items-center justify-between">
-        <div className="logo">
-          <img
-            src={isHomePage && !isScrolled ? logos.whitelogo : logos.bluelogo}
-            alt="Zerone Logo"
-            className="w-[90px] md:w-[105px] h-[36px] md:h-[42px] object-contain"
-          />
+      <nav className="md:container md:mx-auto flex items-center justify-between">
+        {/* Logo */}
+        <div className="container mx-auto px-4 justify-between">
+          <div className="flex justify-between items-center">
+            <div className="logo cursor-pointer">
+              <Link to="/">
+                <img
+                  src={
+                    isHomePage && !isScrolled ? logos.whitelogo : logos.bluelogo
+                  }
+                  alt="Zerone Logo"
+                  className="w-[90px] md:w-[105px] h-[36px] md:h-[42px] object-contain"
+                />
+              </Link>
+            </div>
+
+            {/* Mobile Toggle Button */}
+            <button
+              className="mx-auto md:hidden z-50 p-2 text-current ml-50"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle Menu"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden z-50 p-2 overflow-x-hidden"
-          aria-expanded={isMenuOpen}
-          aria-controls="main-navigation"
-          onClick={() => setIsMenuOpen((s) => !s)} // Toggle menu visibility
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            {isMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
-
-        {/* Navigation Menu */}
+        {/* Menu Items */}
         <div
           id="main-navigation"
           ref={menuRef}
           className={`menu md:flex md:items-center md:gap-8 fixed md:static md:flex-1 md:justify-end 
-              ${
-                isMenuOpen
-                  ? "top-20 opacity-100 w-full bg-white flex flex-col p-4 z-40 **max-h-[calc(100vh-80px)] overflow-y-auto**" // Ketika terbuka
-                  : "top-[-100%] md:top-0 opacity-0 md:opacity-100" // Ketika tertutup
-              } transition-all duration-300 ease-in-out`}
+            ${
+              isMenuOpen
+                ? "top-20 left-0 right-0 opacity-100 bg-white flex flex-col p-4 z-40 shadow-lg max-h-[80vh] overflow-y-auto"
+                : "top-[-100%] opacity-0 md:opacity-100 md:bg-transparent"
+            } transition-all duration-300 ease-in-out`}
         >
           <NavLink
             to="/"
             className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
-            onClick={() => {
-              setIsMenuOpen(false);
-              setIsSolutionOpen(false);
-              setIsProductOpen(false);
-            }}
+            onClick={closeAllMenus}
           >
             Home
           </NavLink>
+
           <NavLink
             to="/about"
             className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
-            onClick={() => {
-              setIsMenuOpen(false);
-              setIsSolutionOpen(false);
-              setIsProductOpen(false);
-            }}
+            onClick={closeAllMenus}
           >
             About Us
           </NavLink>
 
           {/* Solution Dropdown */}
-          <div className="relative">
+          <div className="relative group">
             <button
-              className="nav-item"
-              aria-expanded={isSolutionOpen}
-              aria-controls="solution-submenu"
-              onClick={() => {
-                setIsSolutionOpen((s) => {
-                  const next = !s;
-                  if (next) setIsProductOpen(false);
-                  return next;
-                });
-              }}
+              className={`nav-item flex items-center gap-1 ${
+                activeDropdown === "solution" ? "text-blue-600" : ""
+              }`}
+              onClick={() => toggleDropdown("solution")}
             >
               Solution
+              {/* Optional: Add chevron icon */}
+              <span className="text-xs">▼</span>
             </button>
             <div
-              id="solution-submenu"
-              className={`dropdown-menu ${isSolutionOpen ? "open" : ""}`}
+              className={`dropdown-menu ${
+                activeDropdown === "solution" ? "open block" : "hidden"
+              } md:absolute md:top-full md:left-0 md:bg-white md:shadow-md md:rounded-md md:min-w-[250px]`}
             >
-              <Link
-                to="/ai-app-automation-development"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                AI App & Automation Development
-              </Link>
-              <Link
-                to="/web-app"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Web App Development
-              </Link>
-              <Link
-                to="/mobile-app"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Mobile App Development
-              </Link>
-              <Link
-                to="/wordpress-dev"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Wordpress Development
-              </Link>
-              <Link
-                to="/cms"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Content Management System
-              </Link>
-              <Link
-                to="/uiux"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                UIUX Design
-              </Link>
-              <Link
-                to="/digital-marketing"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Digital Marketing & SEO
-              </Link>
-              <Link
-                to="/payment-gateway"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Payment Gateway Integration
-              </Link>
-              <Link
-                to="/graphic-design"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Graphic & Video Production
-              </Link>
-              <Link
-                to="/digital-strategy-consulting"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Digital Strategy Consulting
-              </Link>
+              {solutionLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="dropdown-item block px-4 py-2 hover:bg-gray-100"
+                  onClick={closeAllMenus}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* Our Product Dropdown */}
-          <div className="relative">
+          {/* Product Dropdown */}
+          <div className="relative group">
             <button
-              className="nav-item"
-              aria-expanded={isProductOpen}
-              aria-controls="product-submenu"
-              onClick={() => {
-                setIsProductOpen((s) => {
-                  const next = !s;
-                  if (next) setIsSolutionOpen(false);
-                  return next;
-                });
-              }}
+              className={`nav-item flex items-center gap-1 ${
+                activeDropdown === "product" ? "text-blue-600" : ""
+              }`}
+              onClick={() => toggleDropdown("product")}
             >
               Our Product
+              <span className="text-xs">▼</span>
             </button>
             <div
-              id="product-submenu"
-              className={`dropdown-menu ${isProductOpen ? "open" : ""}`}
+              className={`dropdown-menu ${
+                activeDropdown === "product" ? "open block" : "hidden"
+              } md:absolute md:top-full md:left-0 md:bg-white md:shadow-md md:rounded-md md:min-w-[200px]`}
             >
-              <Link
-                to="/Edunav"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                EduNav
-              </Link>
-              <Link
-                to="/venti"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Venti
-              </Link>
-              <Link
-                to="/latihan"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Latihan.id
-              </Link>
-              <Link
-                to="/rajin"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Rajin.id
-              </Link>
-              <Link
-                to="/writing-aide"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Writing Aide
-              </Link>
-              <Link
-                to="/mari-dukung"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                MariDukung.com
-              </Link>
-              <Link
-                to="/jadwal-kuliah"
-                className="dropdown-item"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setIsSolutionOpen(false);
-                  setIsProductOpen(false);
-                }}
-              >
-                Jadwal Kuliah
-              </Link>
+              {productLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="dropdown-item block px-4 py-2 hover:bg-gray-100"
+                  onClick={closeAllMenus}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
 
           <NavLink
             to="/portfolio"
             className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
-            onClick={() => {
-              setIsMenuOpen(false);
-              setIsSolutionOpen(false);
-              setIsProductOpen(false);
-            }}
+            onClick={closeAllMenus}
           >
             Portfolio
           </NavLink>
@@ -405,22 +257,15 @@ const Navbar = () => {
           <NavLink
             to="/blog"
             className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
-            onClick={() => {
-              setIsMenuOpen(false);
-              setIsSolutionOpen(false);
-              setIsProductOpen(false);
-            }}
+            onClick={closeAllMenus}
           >
             Blog
           </NavLink>
+
           <NavLink
             to="/contact"
             className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
-            onClick={() => {
-              setIsMenuOpen(false);
-              setIsSolutionOpen(false);
-              setIsProductOpen(false);
-            }}
+            onClick={closeAllMenus}
           >
             Contact
           </NavLink>

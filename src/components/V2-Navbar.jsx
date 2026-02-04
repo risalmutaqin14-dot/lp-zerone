@@ -1,209 +1,206 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, Link, useLocation } from "react-router-dom";
-import { logos } from "../data"; // Pastikan path ini benar
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import "../css/V2-Navbar.css"
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  // State untuk Dropdown Desktop
-  const [isSolutionOpen, setIsSolutionOpen] = useState(false);
-  const [isProductOpen, setIsProductOpen] = useState(false);
+import React, { useState, useEffect, useRef } from "react";
+import { NavLink, useLocation, Link } from "react-router-dom";
+import { logos } from "../data";
+import "../css/NavbarTop.css";
 
-  // State untuk Dropdown Mobile (Accordion)
-  const [mobileSolutionOpen, setMobileSolutionOpen] = useState(false);
-  const [mobileProductOpen, setMobileProductOpen] = useState(false);
+// 1. Definisikan Data Menu di luar komponen atau di file terpisah
+const solutionLinks = [
+  { to: "/ai-app-automation-development", label: "AI App & Automation Development" },
+  { to: "/web-app", label: "Web App Development" },
+  { to: "/mobile-app", label: "Mobile App Development" },
+  { to: "/wordpress-dev", label: "Wordpress Development" },
+  { to: "/cms", label: "Content Management System" },
+  { to: "/uiux", label: "UIUX Design" },
+  { to: "/digital-marketing", label: "Digital Marketing & SEO" },
+  { to: "/payment-gateway", label: "Payment Gateway Integration" },
+  { to: "/graphic-design", label: "Graphic & Video Production" },
+  { to: "/digital-strategy-consulting", label: "Digital Strategy Consulting" },
+];
+
+const productLinks = [
+  { to: "/Edunav", label: "EduNav" },
+  { to: "/venti", label: "Venti" },
+  { to: "/latihan", label: "Latihan.id" },
+  { to: "/rajin", label: "Rajin.id" },
+  { to: "/writing-aide", label: "Writing Aide" },
+  { to: "/mari-dukung", label: "MariDukung.com" },
+  { to: "/jadwal-kuliah", label: "Jadwal Kuliah" },
+];
+
+const Navbar = () => {
+  // State
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  // 2. Gunakan satu state untuk melacak dropdown mana yang aktif
+  // null = tertutup, 'solution' = solution buka, 'product' = product buka
+  const [activeDropdown, setActiveDropdown] = useState(null); 
 
   const location = useLocation();
+  const isHomePage = location.pathname === "/";
+  const menuRef = useRef(null);
 
-  // Efek Scroll untuk mengubah background navbar
+  // Helper untuk menutup semua menu
+  const closeAllMenus = () => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
+  // Toggle Dropdown Helper
+  const toggleDropdown = (name) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
+
+  // Click Outside Handler
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+    const handleOutside = (e) => {
+      if (isMenuOpen && menuRef.current && !menuRef.current.contains(e.target) && !e.target.closest(".md:hidden")) {
+        closeAllMenus();
       }
     };
 
+    if (isMenuOpen) {
+      window.addEventListener("mousedown", handleOutside);
+      window.addEventListener("touchstart", handleOutside);
+    }
+    return () => {
+      window.removeEventListener("mousedown", handleOutside);
+      window.removeEventListener("touchstart", handleOutside);
+    };
+  }, [isMenuOpen]);
+
+  // Scroll Handler
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Tutup menu saat pindah halaman
+  // Animated Underline Logic (Optimized for React ref)
   useEffect(() => {
-    setIsMenuOpen(false);
-    setIsSolutionOpen(false);
-    setIsProductOpen(false);
-    setMobileSolutionOpen(false);
-    setMobileProductOpen(false);
-  }, [location]);
+    if (!menuRef.current) return;
+    
+    const updateUnderline = () => {
+        // Cek apakah ada elemen dengan class 'active' di dalam menu
+        const hasActive = menuRef.current.querySelector(".nav-item.active");
+        if (hasActive) {
+            menuRef.current.classList.add("underline-visible");
+        } else {
+            menuRef.current.classList.remove("underline-visible");
+        }
+    };
 
-  // Helper class untuk NavLink active state
-  const getNavLinkClass = ({ isActive }) => 
-    isActive ? "nav-link active" : "nav-link";
+    // Jalankan segera dan saat resize
+    updateUnderline();
+    window.addEventListener("resize", updateUnderline);
+    return () => window.removeEventListener("resize", updateUnderline);
+  }, [location.pathname, isMenuOpen]);
 
   return (
-    <>
-      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-        <div className="navbar-container">
-          
-          {/* LOGO */}
-          <Link to="/" className="logo">
-            <div className="logo-icon">
-              <img src={logos.bluelogo} alt="Logo" />
-            </div>
+    <div
+      className={`navbar absolute top-0 z-[999] py-4 px-4 md:px-16 lg:px-32 transition-all duration-300 ${
+        isScrolled ? "scrolled" : ""
+      } ${!isHomePage ? "non-home" : ""}`}
+    >
+      <nav className="container mx-auto flex items-center justify-between">
+        {/* Logo */}
+        <div className="logo cursor-pointer">
+          <Link to="/">
+            <img
+                src={isHomePage && !isScrolled ? logos.whitelogo : logos.bluelogo}
+                alt="Zerone Logo"
+                className="w-[90px] md:w-[105px] h-[36px] md:h-[42px] object-contain"
+            />
           </Link>
+        </div>
 
-          {/* DESKTOP MENU */}
-          <div className="nav-links">
-            <NavLink to="/" className={getNavLinkClass}>Home</NavLink>
-            <NavLink to="/about" className={getNavLinkClass}>About Us</NavLink>
+        {/* Mobile Toggle Button */}
+        <button
+          className="md:hidden z-50 p-2 text-current"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle Menu"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {isMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
 
-            {/* Dropdown Solution */}
-            <div 
-              className="dropdown-wrapper"
-              onMouseEnter={() => setIsSolutionOpen(true)}
-              onMouseLeave={() => setIsSolutionOpen(false)}
-            >
-              <span className={`nav-link ${isSolutionOpen ? 'active' : ''}`} style={{cursor: 'pointer'}}>
-                Solution <FontAwesomeIcon icon={faChevronDown} style={{fontSize: '12px', marginLeft: '5px'}}/>
-              </span>
-              <div className={`dropdown-menu ${isSolutionOpen ? "show" : ""}`}>
-                <Link to="/ai-app-automation-development" className="dropdown-item">AI App & Automation</Link>
-                <Link to="/web-app" className="dropdown-item">Web App Development</Link>
-                <Link to="/mobile-app" className="dropdown-item">Mobile App Development</Link>
-                <Link to="/wordpress-dev" className="dropdown-item">Wordpress Development</Link>
-                <Link to="/cms" className="dropdown-item">Content Management System</Link>
-                <Link to="/uiux" className="dropdown-item">UI/UX Design</Link>
-                <Link to="/digital-marketing" className="dropdown-item">Digital Marketing & SEO</Link>
-                <Link to="/payment-gateway" className="dropdown-item">Payment Gateway</Link>
-                <Link to="/graphic-design" className="dropdown-item">Graphic Design</Link>
-                <Link to="/digital-strategy-consulting" className="dropdown-item">Strategy Consulting</Link>
-              </div>
-            </div>
+        {/* Menu Items */}
+        <div
+          id="main-navigation"
+          ref={menuRef}
+          className={`menu md:flex md:items-center md:gap-8 fixed md:static md:flex-1 md:justify-end 
+            ${isMenuOpen 
+                ? "top-20 left-0 right-0 opacity-100 bg-white flex flex-col p-4 z-40 shadow-lg max-h-[80vh] overflow-y-auto" 
+                : "top-[-100%] opacity-0 md:opacity-100 md:bg-transparent"
+            } transition-all duration-300 ease-in-out`}
+        >
+          <NavLink to="/" className={({ isActive }) => `nav-item${isActive ? " active" : ""}`} onClick={closeAllMenus}>
+            Home
+          </NavLink>
+          
+          <NavLink to="/about" className={({ isActive }) => `nav-item${isActive ? " active" : ""}`} onClick={closeAllMenus}>
+            About Us
+          </NavLink>
 
-            {/* Dropdown Product */}
-            <div 
-              className="dropdown-wrapper"
-              onMouseEnter={() => setIsProductOpen(true)}
-              onMouseLeave={() => setIsProductOpen(false)}
-            >
-              <span className={`nav-link ${isProductOpen ? 'active' : ''}`} style={{cursor: 'pointer'}}>
-                Our Product <FontAwesomeIcon icon={faChevronDown} style={{fontSize: '12px', marginLeft: '5px'}}/>
-              </span>
-              <div className={`dropdown-menu ${isProductOpen ? "show" : ""}`}>
-                <Link to="/Edunav" className="dropdown-item">EduNav</Link>
-                <Link to="/venti" className="dropdown-item">Venti</Link>
-                <Link to="/latihan" className="dropdown-item">Latihan.id</Link>
-                <Link to="/rajin" className="dropdown-item">Rajin.id</Link>
-                <Link to="/writing-aide" className="dropdown-item">Writing Aide</Link>
-                <Link to="/mari-dukung" className="dropdown-item">MariDukung.com</Link>
-                <Link to="/jadwal-kuliah" className="dropdown-item">Jadwal Kuliah</Link>
-              </div>
-            </div>
-
-            <NavLink to="/portfolio" className={getNavLinkClass}>Portfolio</NavLink>
-            <NavLink to="/blog" className={getNavLinkClass}>Blog</NavLink>
-            <NavLink to="/contact" className={getNavLinkClass}>Contact</NavLink>
-          </div>
-
-          {/* CTA & HAMBURGER */}
-          <div style={{ display: 'flex', alignItems: 'right', gap: '1rem' }}>
-        
-
+          {/* Solution Dropdown */}
+          <div className="relative group">
             <button
-              className={`mobile-menu-btn ${isMenuOpen ? "active" : ""}`}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
+              className={`nav-item flex items-center gap-1 ${activeDropdown === 'solution' ? 'text-blue-600' : ''}`}
+              onClick={() => toggleDropdown('solution')}
             >
-              <span className="hamburger-line"></span>
-              <span className="hamburger-line"></span>
-              <span className="hamburger-line"></span>
+              Solution
+              {/* Optional: Add chevron icon */}
+              <span className="text-xs">▼</span>
             </button>
+            <div className={`dropdown-menu ${activeDropdown === 'solution' ? "open block" : "hidden"} md:absolute md:top-full md:left-0 md:bg-white md:shadow-md md:rounded-md md:min-w-[250px]`}>
+              {solutionLinks.map((link) => (
+                <Link key={link.to} to={link.to} className="dropdown-item block px-4 py-2 hover:bg-gray-100" onClick={closeAllMenus}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
+
+          {/* Product Dropdown */}
+          <div className="relative group">
+            <button
+              className={`nav-item flex items-center gap-1 ${activeDropdown === 'product' ? 'text-blue-600' : ''}`}
+              onClick={() => toggleDropdown('product')}
+            >
+              Our Product
+              <span className="text-xs">▼</span>
+            </button>
+            <div className={`dropdown-menu ${activeDropdown === 'product' ? "open block" : "hidden"} md:absolute md:top-full md:left-0 md:bg-white md:shadow-md md:rounded-md md:min-w-[200px]`}>
+              {productLinks.map((link) => (
+                <Link key={link.to} to={link.to} className="dropdown-item block px-4 py-2 hover:bg-gray-100" onClick={closeAllMenus}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <NavLink to="/portfolio" className={({ isActive }) => `nav-item${isActive ? " active" : ""}`} onClick={closeAllMenus}>
+            Portfolio
+          </NavLink>
+
+          <NavLink to="/blog" className={({ isActive }) => `nav-item${isActive ? " active" : ""}`} onClick={closeAllMenus}>
+            Blog
+          </NavLink>
+          
+          <NavLink to="/contact" className={({ isActive }) => `nav-item${isActive ? " active" : ""}`} onClick={closeAllMenus}>
+            Contact
+          </NavLink>
         </div>
       </nav>
-
-      {/* MOBILE MENU OVERLAY */}
-      <div className={`mobile-menu ${isMenuOpen ? "active" : ""}`}>
-        <div className="mobile-menu-content">
-          <button className="close-btn" onClick={() => setIsMenuOpen(false)}>
-             ✕
-          </button>
-
-          <ul className="mobile-nav-list">
-            <li className="mobile-nav-item">
-              <NavLink to="/" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
-            </li>
-            <li className="mobile-nav-item">
-              <NavLink to="/about" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>About Us</NavLink>
-            </li>
-
-            {/* Mobile Dropdown Solution */}
-            <li className="mobile-nav-item">
-              <span 
-                className="mobile-nav-link" 
-                onClick={() => setMobileSolutionOpen(!mobileSolutionOpen)}
-                style={{cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px'}}
-              >
-                Solution <FontAwesomeIcon icon={faChevronDown} style={{ fontSize: '0.8em', transform: mobileSolutionOpen ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.3s'}}/>
-              </span>
-              
-              {/* Submenu Mobile */}
-              <div style={{ 
-                height: mobileSolutionOpen ? 'auto' : '0', 
-                overflow: 'hidden', 
-                transition: 'height 0.3s ease',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '10px',
-                marginTop: mobileSolutionOpen ? '15px' : '0'
-              }}>
-                 <Link to="/web-app" className="mobile-sublink" onClick={() => setIsMenuOpen(false)}>Web App Dev</Link>
-                 <Link to="/mobile-app" className="mobile-sublink" onClick={() => setIsMenuOpen(false)}>Mobile App Dev</Link>
-                 {/* Tambahkan link lainnya sesuai kebutuhan */}
-              </div>
-            </li>
-
-             {/* Mobile Dropdown Product */}
-             <li className="mobile-nav-item">
-              <span 
-                className="mobile-nav-link" 
-                onClick={() => setMobileProductOpen(!mobileProductOpen)}
-                style={{cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px'}}
-              >
-                Products <FontAwesomeIcon icon={faChevronDown} style={{ fontSize: '0.8em', transform: mobileProductOpen ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.3s'}}/>
-              </span>
-              
-              <div style={{ 
-                height: mobileProductOpen ? 'auto' : '0', 
-                overflow: 'hidden', 
-                transition: 'height 0.3s ease',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '10px',
-                marginTop: mobileProductOpen ? '15px' : '0'
-              }}>
-                 <Link to="/Edunav" className="mobile-sublink" onClick={() => setIsMenuOpen(false)}>EduNav</Link>
-                 <Link to="/venti" className="mobile-sublink" onClick={() => setIsMenuOpen(false)}>Venti</Link>
-              </div>
-            </li>
-
-            <li className="mobile-nav-item">
-              <NavLink to="/portfolio" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Portfolio</NavLink>
-            </li>
-            <li className="mobile-nav-item">
-              <NavLink to="/blog" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Blog</NavLink>
-            </li>
-            <li className="mobile-nav-item">
-              <NavLink to="/contact" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </>
+    </div>
   );
-}
+};
+
+export default Navbar;

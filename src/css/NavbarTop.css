@@ -7,6 +7,7 @@
   box-shadow: none;
   z-index: 200;
   transition: background-color 900ms ease, box-shadow 800ms ease;
+
 }
 
 .navbar.scrolled {
@@ -204,6 +205,12 @@
 
 /* Mobile menu styles (centered) */
 @media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    box-sizing: border-box;
+  }
   .navbar.scrolled .nav-item {
     color: #fff;
   }

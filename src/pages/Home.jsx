@@ -132,29 +132,29 @@ export default function Home() {
                 solutions that matter.
               </h2>
 
-              <p className="md:text-[18px] sm:text-lg lg:text-xl text-white mb-6 leading-relaxed">
+              <p className="md:text-[18px] sm:text-lg lg:text-xl text-white mb-6 leading-relaxed pb-2">
                 PT Global Zerone Digital provides cutting-edge digital solutions
                 for education, institutions, and community engagement. Our goal
                 is to make technology simple, reliable, and impactful.
               </p>
             </div>
 
-            <div className="visiMisi overflow-hidden w-full lg:w-1/2 ">
+            <div className="visiMisi hidden md:block overflow-hidden w-full lg:w-1/2">
               <div
                 className="
-          h-[250px] 
-          sm:h-[200px] 
-          md:h-[500px] 
-          relative 
-          top-[120px] 
-          md:top-[158px] 
-          left-[-130px] 
-          sm:left-[-10px]
-          md:left-[-100px] 
-          lg:left-0 
-          right-0
-          z-20
-        "
+                  h-[250px] 
+                  sm:h-[200px] 
+                  md:h-[500px] 
+                  relative 
+                  top-[120px] 
+                  md:top-[158px] 
+                  left-[-130px] 
+                  sm:left-[-10px]
+                  md:left-[-100px] 
+                  lg:left-0 
+                  right-0
+                  z-20
+                "
               >
                 <CardSwap
                   cardDistance={80}

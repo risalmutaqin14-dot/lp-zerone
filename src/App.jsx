@@ -15,7 +15,7 @@ import DigmaSEO from "./pages/Digma-SEO";
 import Payment from "./pages/Payment";
 import GrafikDesain from "./pages/GrphicDesign";
 import DigitalStrategy from "./pages/DigitalStrategy";
-import AiAppAutomation from "./pages/AIApp-automation"
+import AiAppAutomation from "./pages/AIApp-automation";
 import EduNav from "./pages/edunav";
 import Venti from "./pages/venti";
 import Latihan from "./pages/latihan";
@@ -28,10 +28,12 @@ import Blog from "./pages/Blog";
 import PostDetail from "./pages/BlogDetail";
 import Contact from "./pages/contact";
 import FAQs from "./pages/FAQ";
-import NotFound from "./components/404"
+import NotFound from "./components/404";
+import ClientBriefForm from "./pages/ClientBriefForm";
 // 1. IMPORT KEDUA LIBRARY (GA4 & PIXEL)
 import ReactGA from "react-ga4";
 import ReactPixel from 'react-facebook-pixel';
+import Logo from "./pages/Logo";
 
 // 2. INISIALISASI ID
 const GA_MEASUREMENT_ID = "G-ZHJQ8PNSTW"; 
@@ -91,6 +93,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/FAQs" element={<FAQs />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/logo" element={<Logo />} />
+        <Route path="/brief-form" element={<ClientBriefForm />} />
       </Routes>
     </div>
   );
